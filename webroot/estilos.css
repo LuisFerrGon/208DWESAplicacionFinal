@@ -1,0 +1,113 @@
+:root{
+    --gris: #d3d3d3;
+    --grisClaro: #f0f0f5;
+    --blanco: #fff;
+    --amarilloClaro: #ffffe0;
+    --crema: #fdeba9;
+    --amarilloAnaranjado: #f6d76b;
+    --naranjaAmarillento: #ff9036;
+    --rojoError: #ff3c10;
+    --fucsia: #ff5475;
+    --rosaOscuro: #d6254d;
+    --carmin: #8b0000;
+}
+/*Reseteo*/
+*{
+    margin: 5px;
+    padding: 0px;
+}
+a:link, a:visited, a:hover, a:active{
+    color: var(--rosaOscuro);
+    text-decoration: none;
+}
+header{
+    h1{
+        text-align: center;
+        color: var(--crema);
+        background-color: var(--fucsia);
+        border-radius: 50px;
+        border: 2.5px solid var(--carmin);
+    }
+}
+main{
+    /*Página principal*/
+    #top{
+        #idiomas{
+            position: relative;
+            a{
+                transition: all 0.5s ease-in-out;
+            }
+            a:hover{
+                color: var(--carmin);
+                font-size: 20px;
+            }
+            #idiomaEscogido{
+                color: var(--carmin);
+                font-size: 20px;
+            }
+        }
+        #botones{
+            form{
+                input{
+                    color: var(--rosaOscuro);
+                    font-size: calc(40px/3);
+                }
+            }
+        }
+    }
+    #mapaAplicacion{
+        display: flex;
+        justify-self: center;
+    }
+    form{
+        .obligatorio{
+            background-color:  var(--amarilloClaro); 
+        }
+    }
+    /*Pagina log in*/
+    #formulariologin{
+        h2{
+            text-align: center;
+        }
+        table{
+            margin: 5px auto;
+            border: 0.5px solid var(--gris);
+            border-radius: 5px;
+            background-color: var(--grisClaro);
+            width: fit-content;
+        }
+    }
+    /*Pagina registro*/
+    #formularioregistro{
+        h2{
+            text-align: center;
+        }
+        table{
+            margin: 5px auto;
+            border: 0.5px solid var(--gris);
+            border-radius: 5px;
+            background-color: var(--grisClaro);
+            width: fit-content;
+            td.error{
+                color: var(--rojoError);
+            }
+        }
+    }
+}
+footer{
+    background-color: var(--blanco);
+    border-radius: 10px;
+    border: 2.5px solid var(--crema);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    p{
+        color: var(--rosaOscuro);
+    }
+    a:link, a:visited, a:hover, a:active{
+        color: var(--rosaOscuro);
+        text-decoration: none;
+    }
+}
