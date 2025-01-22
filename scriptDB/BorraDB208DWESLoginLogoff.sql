@@ -1,6 +1,13 @@
 /**
  * Author:  Luis Ferreras
- * Created: 19 dic 2024
+ * Created: 22 jan 2025
  */
-DROP DATABASE IF EXISTS DB208DWESLoginLogoff;
-DROP USER IF EXISTS 'user208DWESLoginLogoff'@'%';
+-- Script creación desarrollo
+
+-- DROP DATABASE IF EXISTS DB208DWESAppFinal;
+-- DROP USER IF EXISTS 'user208DWESAppFinal'@'%';
+
+-- Script creación explotación
+
+DROP DATABASE IF EXISTS DB208DWES;
+DROP USER IF EXISTS 'user208DWES'@'%';
