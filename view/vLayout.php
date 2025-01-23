@@ -24,7 +24,7 @@
         <footer>
             <a href="../index.html">Luis Ferreras</a>
             <a href="https://github.com/LuisFerrGon/208DWESAplicacionFinal" target="_blank">GitHub</a>
-            <p>Última revisión: <?php echo(date('d/m/Y', strtotime("22 January 2025")))?></p>
+            <p>Última revisión: <?php echo(date('d/m/Y', strtotime("23 January 2025")))?></p>
             <a href="doc/phpdoc/index.html" target="_blank">PHPDocumentator</a>
             <a href="doc/curriculum/Curriculum.pdf" target="_blank">Currículum</a>
         </footer>
