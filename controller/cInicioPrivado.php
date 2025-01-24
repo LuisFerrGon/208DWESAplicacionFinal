@@ -19,7 +19,7 @@
     }
     if(isset($_REQUEST['rest'])){
         $_SESSION['paginaAnterior']='inicioPrivado';
-        $_SESSION['paginaEnCurso']='wip';
+        $_SESSION['paginaEnCurso']='rest';
         header('Location: index.php');
         exit();
     }

@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.0 Fecha última modificación del archivo: 24/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Pagina REST añadida
      */
 
     //Validacion de formularios
@@ -26,7 +27,8 @@
         'borrarCuenta'=>'controller/cBorrarCuenta.php',
         'wip'=>'controller/cWIP.php',
         'error'=>'controller/cError.php',
-        'detalle'=>'controller/cDetalle.php'
+        'detalle'=>'controller/cDetalle.php',
+        'rest'=>'controller/cREST.php'
     ];
     //Array de las vistas
     $aVistas=[
@@ -41,6 +43,7 @@
         'borrarCuenta'=>'view/vBorrarCuenta.php',
         'wip'=>'view/vWIP.php',
         'error'=>'view/vError.php',
-        'detalle'=>'view/vDetalle.php'
+        'detalle'=>'view/vDetalle.php',
+        'rest'=>'view/vREST.php'
     ];
 ?>
