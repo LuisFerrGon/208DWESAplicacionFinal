@@ -1,7 +1,7 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 24/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 27/01/2025
      * @since 1.0.1
      */
     require_once 'model/fotoNASA.php';
@@ -16,14 +16,14 @@
          * @return null|\fotoNASA Devuelve un objeto fotoNASA si es exitoso.
          *                          Devuelve null si no es exitoso.
          * @author Luis Ferreras González
-         * @version 1.0.1 Fecha última modificación del archivo: 24/01/2025
+         * @version 1.0.1 Fecha última modificación del archivo: 27/01/2025
          * @since 1.0.1
          */
         public static function apiNasa($fecha){
             try{
                 $resultado=file_get_contents("https://api.nasa.gov/planetary/apod?api_key=".self::apiKeyNasa."&date=".$fecha->format('Y-m-d'));
                 $array=json_decode($resultado, true);
-                if($array["url"]!=null){
+                if($array["url"]!=null){//Usar indexof
                     return new fotoNASA(
                         $array['copyright'],
                         $array['date'],
