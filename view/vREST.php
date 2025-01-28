@@ -1,7 +1,7 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 24/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 28/01/2025
      * @since 1.0.1
      */
     $mensajeFotoNasaFallida=[
@@ -24,9 +24,8 @@
 </div>
 <div id="apis">
     <section class="api" id="nasa">
-        <form>
-            <input type="date" value="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>" id="fechafotoNasa" name="fechafotoNasa">
-            <input type="submit" name="cambiarFechaNasa" id="cambiarFechaNasa" value="Cambiar">
+        <form method="post">
+            <input type="date" value="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>" id="fechafotoNasa" name="fechafotoNasa" min="1995-06-16" max="<?php echo date('Y-m-d');?>">
         </form>
         <?php
             if($avRest['nasa']['url']==null){
@@ -35,12 +34,20 @@
                 echo <<<IMAGEN
                     <h2>{$avRest['nasa']['titulo']}</h2>
                     <img src="{$avRest['nasa']['url']}" alt="Imagen del día">
-                    <p>&#169;{$avRest['nasa']['copyright']}</p>
-                    <p>{$avRest['nasa']['descripcion']}</p>
-                    <p>{$avRest['nasa']['fecha']}</p>
                 IMAGEN;
+                if($avRest['nasa']['copyright']!=null){echo "<p>&#169;".$avRest['nasa']['copyright']."</p>";}
+                if($avRest['nasa']['descripcion']!=null){echo "<p>".$avRest['nasa']['descripcion']."</p>";}
+                echo "<p>".$avRest['nasa']['fecha']."</p>";
             }
         ?>
     </section>
 </div>
+<script>
+    var inputFechaNASA=document.getElementById("fechafotoNasa");
+    inputFechaNASA.addEventListener("blur", ()=>{
+        if(inputFechaNASA.value!=="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>"){
+            inputFechaNASA.parentElement.submit();
+        }
+    });
+</script>
 <div style='height: 30px'></div>
