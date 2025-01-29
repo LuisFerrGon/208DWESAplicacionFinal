@@ -23,14 +23,18 @@
             try{
                 $resultado=file_get_contents("https://api.nasa.gov/planetary/apod?api_key=".self::apiKeyNasa."&date=".$fecha->format('Y-m-d'));
                 $array=json_decode($resultado, true);
-                if(array_key_exists('title', $array) && array_key_exists('url', $array)){
-                    return new fotoNASA(
-                        (array_key_exists('copyright', $array)?$array['copyright']:null),
-                        (array_key_exists('date', $array)?$array['date']:null),
-                        (array_key_exists('explanation', $array)?$array['explanation']:null),
-                        $array['title'],
-                        $array['url']
-                    );
+                if(isset($array)){
+                    if(array_key_exists('title', $array) && array_key_exists('url', $array)){
+                        return new fotoNASA(
+                            (array_key_exists('copyright', $array)?$array['copyright']:null),
+                            (array_key_exists('date', $array)?$array['date']:null),
+                            (array_key_exists('explanation', $array)?$array['explanation']:null),
+                            $array['title'],
+                            $array['url']
+                        );
+                    }else{
+                        return null;
+                    }
                 }else{
                     return null;
                 }

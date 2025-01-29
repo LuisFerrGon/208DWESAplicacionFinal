@@ -1,12 +1,12 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.0 Fecha última modificación del archivo: 29/01/2025
      * @since 1.0.0
      */
 
     if(isset($_REQUEST['volver'])){
-        $_SESSION['paginaEnCurso']=$_SESSION['paginaAnterior'];
+        $_SESSION['paginaEnCurso']='login';
         $_SESSION['paginaAnterior']='registro';
         header('Location: index.php');
         exit();

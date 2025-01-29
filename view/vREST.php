@@ -1,7 +1,7 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 28/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 29/01/2025
      * @since 1.0.1
      */
     $mensajeFotoNasaFallida=[
@@ -44,8 +44,12 @@
 </div>
 <script>
     var inputFechaNASA=document.getElementById("fechafotoNasa");
-    inputFechaNASA.addEventListener("blur", ()=>{
-        if(inputFechaNASA.value!=="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>"){
+    let valorFechaInput=new Date(inputFechaNASA.value);
+    let fechaFotoNasa=new Date("<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>");
+    let fechaMax=new Date();
+    let fechaMin=new Date("1995-06-16");
+    inputFechaNASA.addEventListener("change", ()=>{
+        if(valorFechaInput<=fechaMax && valorFechaInput>=fechaMin && valorFechaInput!==fechaFotoNasa){
             inputFechaNASA.parentElement.submit();
         }
     });
