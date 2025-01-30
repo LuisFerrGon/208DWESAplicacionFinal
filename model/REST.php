@@ -1,10 +1,14 @@
 <?php
+    require_once 'model/fotoNASA.php';
     /**
+     * Clase REST
+     * 
+     * Clase para los rests
+     * 
      * @author Luis Ferreras González
      * @version 1.0.1 Fecha última modificación del archivo: 28/01/2025
      * @since 1.0.1
      */
-    require_once 'model/fotoNASA.php';
     class REST{
         const apiKeyNasa = "2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ";
         /**

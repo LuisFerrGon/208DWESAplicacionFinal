@@ -1,10 +1,4 @@
 <?php
-    /**
-     * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
-     * @since 1.0.0
-     */
-
     require_once 'config/confDB.php';
     /**
      * Clase DBPDO
@@ -12,8 +6,9 @@
      * Clase para crear conexiones con una base de datos
      * 
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación: 20/01/2025
+     * @version 1.0.1 Fecha última modificación: 30/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Modificación del phpDOC
      */
     class DBPDO implements DB{
         /**
@@ -21,9 +16,6 @@
          * 
          * Funcion que devuelve un objeto o una excepción dadas una sentenciaSQL y un array de paramteros
          * 
-         * @author Luis Ferreras González
-         * @version 1.0.0 Fecha última modificación: 20/01/2025
-         * @since 1.0.0
          * @param string $sentenciaSQL Cadena en la que se pone la sentencia a seguir.
          * @param mixed[] $aParametros Opcional. Array en el que se ponen los paramteros en el orden deseado.
          * @return object|PDOException Devuelve un objeto si no hay error; sino un PDOException.

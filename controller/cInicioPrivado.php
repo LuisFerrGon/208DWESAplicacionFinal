@@ -3,6 +3,7 @@
      * @author Luis Ferreras González
      * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Cambio nombre variable
      */
 
     if(isset($_REQUEST['cerrarsesion'])){
@@ -23,9 +24,9 @@
         header('Location: index.php');
         exit();
     }
-    if(isset($_REQUEST['mtoDepartamiento'])){
+    if(isset($_REQUEST['mtoDepartamento'])){
         $_SESSION['paginaAnterior']='inicioPrivado';
-        $_SESSION['paginaEnCurso']='wip';
+        $_SESSION['paginaEnCurso']='mtoDepartamento';
         header('Location: index.php');
         exit();
     }

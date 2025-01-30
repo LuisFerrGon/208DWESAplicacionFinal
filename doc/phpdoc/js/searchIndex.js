@@ -158,12 +158,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DB",
             "name": "DB",
-            "summary": "",
+            "summary": "Interfaz\u0020DB",
             "url": "classes/DB.html"
         },                {
             "fqsen": "\\DB\u003A\u003AejecutarConsulta\u0028\u0029",
             "name": "ejecutarConsulta",
-            "summary": "",
+            "summary": "Funci\u00F3n\u0020ejecutarConsulta",
             "url": "classes/DB.html#method_ejecutarConsulta"
         },                {
             "fqsen": "\\DBPDO",
@@ -178,12 +178,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
-            "summary": "",
+            "summary": "Clase\u0020ErrorApp",
             "url": "classes/ErrorApp.html"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Funcion\u0020__construct",
             "url": "classes/ErrorApp.html#method___construct"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003AgetCodError\u0028\u0029",
@@ -236,14 +236,89 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/ErrorApp.html#property_paginaSiguiente"
         },                {
+            "fqsen": "\\fotoNASA",
+            "name": "fotoNASA",
+            "summary": "Clase\u0020fotoNASA",
+            "url": "classes/fotoNASA.html"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Funcion\u0020__construct",
+            "url": "classes/fotoNASA.html#method___construct"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003AgetCopyright\u0028\u0029",
+            "name": "getCopyright",
+            "summary": "",
+            "url": "classes/fotoNASA.html#method_getCopyright"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003AgetFecha\u0028\u0029",
+            "name": "getFecha",
+            "summary": "",
+            "url": "classes/fotoNASA.html#method_getFecha"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003AgetDescripcion\u0028\u0029",
+            "name": "getDescripcion",
+            "summary": "",
+            "url": "classes/fotoNASA.html#method_getDescripcion"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003AgetTitulo\u0028\u0029",
+            "name": "getTitulo",
+            "summary": "",
+            "url": "classes/fotoNASA.html#method_getTitulo"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "",
+            "url": "classes/fotoNASA.html#method_getUrl"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A\u0024copyright",
+            "name": "copyright",
+            "summary": "",
+            "url": "classes/fotoNASA.html#property_copyright"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A\u0024fecha",
+            "name": "fecha",
+            "summary": "",
+            "url": "classes/fotoNASA.html#property_fecha"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A\u0024descripcion",
+            "name": "descripcion",
+            "summary": "",
+            "url": "classes/fotoNASA.html#property_descripcion"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A\u0024titulo",
+            "name": "titulo",
+            "summary": "",
+            "url": "classes/fotoNASA.html#property_titulo"
+        },                {
+            "fqsen": "\\fotoNASA\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/fotoNASA.html#property_url"
+        },                {
+            "fqsen": "\\REST",
+            "name": "REST",
+            "summary": "Clase\u0020REST",
+            "url": "classes/REST.html"
+        },                {
+            "fqsen": "\\REST\u003A\u003AapiNasa\u0028\u0029",
+            "name": "apiNasa",
+            "summary": "Funci\u00F3n\u0020para\u0020el\u0020REST\u0020de\u0020nasa",
+            "url": "classes/REST.html#method_apiNasa"
+        },                {
+            "fqsen": "\\REST\u003A\u003AapiKeyNasa",
+            "name": "apiKeyNasa",
+            "summary": "",
+            "url": "classes/REST.html#constant_apiKeyNasa"
+        },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
-            "summary": "",
+            "summary": "Clase\u0020DBPDO",
             "url": "classes/Usuario.html"
         },                {
             "fqsen": "\\Usuario\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Funcion\u0020__construct",
             "url": "classes/Usuario.html#method___construct"
         },                {
             "fqsen": "\\Usuario\u003A\u003AgetCodUsuario\u0028\u0029",
@@ -293,47 +368,47 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetCodUsuario\u0028\u0029",
             "name": "setCodUsuario",
-            "summary": "",
+            "summary": "Cambia\u0020el\u0020c\u00F3digo\u0020de\u0020usuario",
             "url": "classes/Usuario.html#method_setCodUsuario"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetPassword\u0028\u0029",
             "name": "setPassword",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020contrase\u00F1a\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setPassword"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetDescUsuario\u0028\u0029",
             "name": "setDescUsuario",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020descripci\u00F3n\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setDescUsuario"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetNumConexiones\u0028\u0029",
             "name": "setNumConexiones",
-            "summary": "",
+            "summary": "Cambia\u0020el\u0020numero\u0020de\u0020conexiones\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setNumConexiones"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetFechaHoraUltimaConexion\u0028\u0029",
             "name": "setFechaHoraUltimaConexion",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020fecha\u0020y\u0020hora\u0020de\u0020la\u0020\u00FAltima\u0020conexi\u00F3n\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setFechaHoraUltimaConexion"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetFechaHoraUltimaConexionAnterior\u0028\u0029",
             "name": "setFechaHoraUltimaConexionAnterior",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020fecha\u0020y\u0020hora\u0020de\u0020la\u0020conexi\u00F3n\u0020anterior\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setFechaHoraUltimaConexionAnterior"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetPerfil\u0028\u0029",
             "name": "setPerfil",
-            "summary": "",
+            "summary": "Cambia\u0020el\u0020perfil\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setPerfil"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetImagenUsuario\u0028\u0029",
             "name": "setImagenUsuario",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020imagen\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setImagenUsuario"
         },                {
             "fqsen": "\\Usuario\u003A\u003AsetListaOpinionesUsuario\u0028\u0029",
             "name": "setListaOpinionesUsuario",
-            "summary": "",
+            "summary": "Cambia\u0020la\u0020lista\u0020de\u0020opiniones\u0020del\u0020usuario",
             "url": "classes/Usuario.html#method_setListaOpinionesUsuario"
         },                {
             "fqsen": "\\Usuario\u003A\u003A\u0024codUsuario",
@@ -383,17 +458,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioDB",
             "name": "UsuarioDB",
-            "summary": "",
+            "summary": "Interfaz\u0020UsuarioDB",
             "url": "classes/UsuarioDB.html"
         },                {
             "fqsen": "\\UsuarioDB\u003A\u003AvalidarUsuario\u0028\u0029",
             "name": "validarUsuario",
-            "summary": "",
+            "summary": "Funci\u00F3n\u0020validarUsuario",
             "url": "classes/UsuarioDB.html#method_validarUsuario"
         },                {
             "fqsen": "\\UsuarioPDO",
             "name": "UsuarioPDO",
-            "summary": "",
+            "summary": "Clase\u0020UsuarioPDO",
             "url": "classes/UsuarioPDO.html"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AvalidarUsuario\u0028\u0029",

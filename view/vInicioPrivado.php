@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Cambio nombre variable
      */
     /**
      * @var array $bienvenida Array que contiene el mensaje de bienvenida.
@@ -39,7 +40,7 @@
             <input type="submit" name="rest" value="REST">
         </form>
         <form>
-            <input type="submit" name="mtoDepartamiento" value="Mantenimiento Departamentos">
+            <input type="submit" name="mtoDepartamento" value="Mantenimiento Departamentos">
         </form>
         <form>
             <input type="submit" name="error" value="Error">
