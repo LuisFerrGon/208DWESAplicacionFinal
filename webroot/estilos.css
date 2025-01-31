@@ -93,6 +93,10 @@ main{
             }
         }
     }
+    /*Inicio privado*/
+    >img#fotoNasaJs{
+        width: 50%;
+    }
     /*REST*/
     >div#apis{
         display: flex;
@@ -102,6 +106,22 @@ main{
             >img{
                 width: 100%;
             }
+        }
+    }
+    /*Mantenimiento departamentos*/
+    >form#formularioCondicionesBusqueda{
+        background-color: var(--grisClaro);
+        border: 0.5px solid var(--gris);
+        border-radius: 5px;
+    }
+    >table#tablaDepartamentos{
+        table-layout: auto;
+        width: 90%;
+        border-collapse: collapse;
+        margin-left: 5%;
+        margin-right: 5%;
+        th, td{
+            border: 1px solid var(--gris);
         }
     }
 }

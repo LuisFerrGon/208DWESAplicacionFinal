@@ -143,7 +143,7 @@
                 <dd class="phpdocumentor-tag-list__definition">
                                             <span class="phpdocumentor-tag-link">1.0.1</span>
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 30/01/2025</p>
+                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 31/01/2025</p>
 </section>
 
                                     </dd>
@@ -151,19 +151,19 @@
                     <span class="phpdocumentor-tag__name">since</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.1</span>
+                                            <span class="phpdocumentor-tag-link">1.0.0</span>
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Modificación del phpDOC</p>
-</section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">since</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.0</span>
+                                            <span class="phpdocumentor-tag-link">1.0.1</span>
                                                                                 
-                                             
+                                                 <section class="phpdocumentor-description"><p>Modificación del phpDOC, función ejecutarConsulta</p>
+</section>
+
                                     </dd>
                                             </dl>
 
@@ -234,7 +234,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DBPDO.php"><a href="files/model-dbpdo.html"><abbr title="model/DBPDO.php">DBPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -242,12 +242,13 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">ejecutarConsulta</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$sentenciaSQL</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aParametros</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object|<abbr title="\PDOException">PDOException</abbr></span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">ejecutarConsulta</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$sentenciaSQL</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aParametros</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$volverObjeto</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object|<abbr title="\PDOException">PDOException</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <section class="phpdocumentor-description"><p>Funcion que devuelve un objeto o una excepción dadas una sentenciaSQL y un array de paramteros</p>
+        <section class="phpdocumentor-description"><p>Funcion que devuelve un objeto o una excepción dadas una sentenciaSQL
+y un array de paramteros</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -257,7 +258,8 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Cadena en la que se pone la sentencia a seguir.</p>
+                    <section class="phpdocumentor-description"><p>Cadena en la que se pone la sentencia a
+seguir.</p>
 </section>
 
             </dd>
@@ -266,7 +268,19 @@
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Opcional. Array en el que se ponen los paramteros en el orden deseado.</p>
+                    <section class="phpdocumentor-description"><p>Opcional. Array en el que se ponen los
+paramteros en el orden deseado.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$volverObjeto</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Opcional, por defecto true.
+Si es true devuelve con fetchObject.
+Si es false lo devuelve sin haberlo hecho.</p>
 </section>
 
             </dd>
@@ -292,9 +306,9 @@
                     <span class="phpdocumentor-tag__name">version</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.0</span>
+                                            <span class="phpdocumentor-tag-link">1.0.1</span>
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 20/01/2025</p>
+                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 31/01/2025</p>
 </section>
 
                                     </dd>
@@ -306,6 +320,16 @@
                                                                                 
                                              
                                     </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">1.0.1</span>
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Variable $volverObjeto añadido.</p>
+</section>
+
+                                    </dd>
                                             </dl>
 
     
@@ -314,7 +338,8 @@
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">object|<abbr title="\PDOException">PDOException</abbr></span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>Devuelve un objeto si no hay error; sino un PDOException.</p>
+                <section class="phpdocumentor-description"><p>Devuelve un objeto si no hay error; sino
+un PDOException.</p>
 </section>
 
             </section>

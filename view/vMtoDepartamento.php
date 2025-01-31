@@ -1,9 +1,15 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
      * @since 1.0.1
      */
+
+    $mensajeBusquedaVacia=[
+        "es"=>'No hay departamentos que se adhieran a la busqueda.',
+        "en"=>'There aren\'t departments that fit that search.',
+        "pt"=>'There aren\'t departments that fit that search.'
+    ];
 ?>
 <div id="top">
     <section id="idiomas">
@@ -17,7 +23,7 @@
         </form>
     </section>
 </div>
-<form method="post">
+<form method="post" id="formularioCondicionesBusqueda">
     <table>
         <tbody>
             <tr>
@@ -38,27 +44,32 @@
         </tfoot>
     </table>
 </form>
-<table>
+<table id="tablaDepartamentos">
     <thead>
         <tr>
             <th span="col">Código</th>
             <th span="col">Descripción</th>
             <th span="col">Fecha creación</th>
-            <th span="col">Código</th>
+            <th span="col">Volumen</th>
             <th span="col">Fecha baja</th>
         </tr>
     </thead>
     <tbody>
         <?php
-        foreach ($aDepartamentos as $oDepartamento) {
-            $tr="<tr>"
-            . "<td>".$oDepartamento->getCodigo()."</td>"
-            . "<td>".$oDepartamento->getDescripcion()."</td>"
-            . "<td>".$oDepartamento->getFechaCreacion()."</td>"
-            . "<td>".$oDepartamento->getVolumenNegocio()."</td>"
-            . "<td>".$oDepartamento->getFechaBaja()."</td>"
+        if(count($aDepartamentos)==0){
+            echo "<tr>"
+            . "<td colspan='5'>".$mensajeBusquedaVacia[$idioma]."</td>"
             . "</tr>";
-            echo $tr;
+        }else{
+            foreach ($aDepartamentos as $oDepartamento) {
+                echo "<tr>"
+                . "<td>".$oDepartamento->getCodigo()."</td>"
+                . "<td>".$oDepartamento->getDescripcion()."</td>"
+                . "<td>".$oDepartamento->getFechaCreacion()."</td>"
+                . "<td>".$oDepartamento->getVolumenNegocio()."</td>"
+                . "<td>".$oDepartamento->getFechaBaja()."</td>"
+                . "</tr>";
+            }
         }
         ?>
     </tbody>

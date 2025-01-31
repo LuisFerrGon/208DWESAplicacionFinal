@@ -176,6 +176,101 @@ Search.appendIndex(
             "summary": "Funcion\u0020ejecutarConsulta",
             "url": "classes/DBPDO.html#method_ejecutarConsulta"
         },                {
+            "fqsen": "\\Departamento",
+            "name": "Departamento",
+            "summary": "Clase\u0020Departamento",
+            "url": "classes/Departamento.html"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Departamento.html#method___construct"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetCodigo\u0028\u0029",
+            "name": "getCodigo",
+            "summary": "",
+            "url": "classes/Departamento.html#method_getCodigo"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetDescripcion\u0028\u0029",
+            "name": "getDescripcion",
+            "summary": "",
+            "url": "classes/Departamento.html#method_getDescripcion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetFechaCreacion\u0028\u0029",
+            "name": "getFechaCreacion",
+            "summary": "",
+            "url": "classes/Departamento.html#method_getFechaCreacion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetVolumenNegocio\u0028\u0029",
+            "name": "getVolumenNegocio",
+            "summary": "",
+            "url": "classes/Departamento.html#method_getVolumenNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetFechaBaja\u0028\u0029",
+            "name": "getFechaBaja",
+            "summary": "",
+            "url": "classes/Departamento.html#method_getFechaBaja"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetCodigo\u0028\u0029",
+            "name": "setCodigo",
+            "summary": "",
+            "url": "classes/Departamento.html#method_setCodigo"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetDescripcion\u0028\u0029",
+            "name": "setDescripcion",
+            "summary": "",
+            "url": "classes/Departamento.html#method_setDescripcion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetFechaCreacion\u0028\u0029",
+            "name": "setFechaCreacion",
+            "summary": "",
+            "url": "classes/Departamento.html#method_setFechaCreacion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetVolumenNegocio\u0028\u0029",
+            "name": "setVolumenNegocio",
+            "summary": "",
+            "url": "classes/Departamento.html#method_setVolumenNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetFechaBaja\u0028\u0029",
+            "name": "setFechaBaja",
+            "summary": "",
+            "url": "classes/Departamento.html#method_setFechaBaja"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024codigo",
+            "name": "codigo",
+            "summary": "",
+            "url": "classes/Departamento.html#property_codigo"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024descripcion",
+            "name": "descripcion",
+            "summary": "",
+            "url": "classes/Departamento.html#property_descripcion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024fechaCreacion",
+            "name": "fechaCreacion",
+            "summary": "",
+            "url": "classes/Departamento.html#property_fechaCreacion"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024volumenNegocio",
+            "name": "volumenNegocio",
+            "summary": "",
+            "url": "classes/Departamento.html#property_volumenNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024fechaBaja",
+            "name": "fechaBaja",
+            "summary": "",
+            "url": "classes/Departamento.html#property_fechaBaja"
+        },                {
+            "fqsen": "\\DepartamentoPDO",
+            "name": "DepartamentoPDO",
+            "summary": "Clase\u0020DepartamentoPDO",
+            "url": "classes/DepartamentoPDO.html"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarPorDescripcion\u0028\u0029",
+            "name": "buscarPorDescripcion",
+            "summary": "Funci\u00F3n\u0020buscarPorDescripcion",
+            "url": "classes/DepartamentoPDO.html#method_buscarPorDescripcion"
+        },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
             "summary": "Clase\u0020ErrorApp",
@@ -313,7 +408,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
-            "summary": "Clase\u0020DBPDO",
+            "summary": "Clase\u0020Usuario",
             "url": "classes/Usuario.html"
         },                {
             "fqsen": "\\Usuario\u003A\u003A__construct\u0028\u0029",

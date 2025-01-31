@@ -1,7 +1,7 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
      * @since 1.0.1
      */
     require_once 'model/Departamento.php';
@@ -17,7 +17,7 @@
     }else{
         $_SESSION['descripionDep']=$_REQUEST['descripionDep'];
     }
-    $aCondiciones=[
+    $aCondicionesBusqueda=[
         ':descripcion' => "%".$_SESSION['descripionDep']."%"
     ];
     $aDepartamentos=[];
@@ -27,16 +27,16 @@
             WHERE T02_DescDepartamento LIKE :descripcion
             ;
         QUERY;
-        $resultado=DBPDO::ejecutarConsulta($consulta, $aCondiciones);
-        do{
+        $resultado=DBPDO::ejecutarConsulta($consulta, $aCondicionesBusqueda, false);
+        while($departamento=$resultado->fetchObject()){
             array_push($aDepartamentos, new Departamento(
-                $resultado["T02_CodDepartamento"],
-                $resultado["T02_DescDepartamento"],
-                $resultado["T02_FechaCreacionDepartamento"],
-                $resultado["T02_VolumenDeNegocio"],
-                $resultado["T02_FechaBajaDepartamento"]
+                $departamento->T02_CodDepartamento,
+                $departamento->T02_DescDepartamento,
+                $departamento->T02_FechaCreacionDepartamento,
+                $departamento->T02_VolumenDeNegocio,
+                $departamento->T02_FechaBajaDepartamento
             ));
-        }while($resultado->fetchObject());
+        };
     }catch(Exception $ex){
         $_SESSION['paginaAnterior']='mtoDepartamento';
         $_SESSION['paginaEnCurso']='error';
