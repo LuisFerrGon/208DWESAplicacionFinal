@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Cambio nombre variable, foto del día mediante javascript
      */
     /**
      * @var array $bienvenida Array que contiene el mensaje de bienvenida.
@@ -39,7 +40,7 @@
             <input type="submit" name="rest" value="REST">
         </form>
         <form>
-            <input type="submit" name="mtoDepartamiento" value="Mantenimiento Departamentos">
+            <input type="submit" name="mtoDepartamento" value="Mantenimiento Departamentos">
         </form>
         <form>
             <input type="submit" name="error" value="Error">
@@ -52,4 +53,22 @@
 <?php
     echo "<p>".$bienvenida[$idioma][$avInicioPrivado['conexiones']>1]."</p>";
 ?>
+<img alt="Imagen del día de NASA" id="fotoNasaJs"/>
 <div style='height: 30px'></div>
+<script type="module">
+    fetch("https://api.nasa.gov/planetary/apod?api_key=2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ")
+    .then(response=>{
+        if(response.ok){
+            return response.json();
+        }else{
+            throw new Error("Error: "+response.status);
+        }
+    })
+    .then(data=>{
+        document.getElementById("fotoNasaJs").src=data.url;
+    })
+    .catch(error=>{
+        document.getElementById("fotoNasaJs").alt="Ha ocurrido un error al intentar conseguir la imagen.";
+        console.log(error);
+    });
+</script>

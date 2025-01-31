@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Pagina REST, mtoDepartamento añadida
      */
 
     //Validacion de formularios
@@ -10,10 +11,14 @@
     //Modelos
     require_once 'model/DB.php';
     require_once 'model/DBPDO.php';
+    require_once 'model/Departamento.php';
+    require_once 'model/DepartamentoPDO.php';
     require_once 'model/ErrorApp.php';
+    require_once 'model/REST.php';
     require_once 'model/Usuario.php';
     require_once 'model/UsuarioDB.php';
     require_once 'model/UsuarioPDO.php';
+    require_once 'model/fotoNASA.php';
     //Array de los controladores
     $aControladores=[
         'inicioPublico'=>'controller/cInicioPublico.php',
@@ -26,7 +31,9 @@
         'borrarCuenta'=>'controller/cBorrarCuenta.php',
         'wip'=>'controller/cWIP.php',
         'error'=>'controller/cError.php',
-        'detalle'=>'controller/cDetalle.php'
+        'detalle'=>'controller/cDetalle.php',
+        'rest'=>'controller/cREST.php',
+        'mtoDepartamento'=>'controller/cMtoDepartamento.php'
     ];
     //Array de las vistas
     $aVistas=[
@@ -41,6 +48,8 @@
         'borrarCuenta'=>'view/vBorrarCuenta.php',
         'wip'=>'view/vWIP.php',
         'error'=>'view/vError.php',
-        'detalle'=>'view/vDetalle.php'
+        'detalle'=>'view/vDetalle.php',
+        'rest'=>'view/vREST.php',
+        'mtoDepartamento'=>'view/vMtoDepartamento.php'
     ];
 ?>

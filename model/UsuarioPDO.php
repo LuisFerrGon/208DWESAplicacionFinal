@@ -1,11 +1,14 @@
 <?php
     /**
+     * Clase UsuarioPDO
+     * 
+     * Clase para funciones de usuario
+     * 
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
      * @since 1.0.0
+     * @since 1.0.1 Modificación del phpDOC
      */
-
-
     class UsuarioPDO implements UsuarioDB{
         /**
          * Función para validar un usuario
@@ -76,7 +79,8 @@
                 return $resultado;
             }
         }
-        public static function buscarUsuarioPorCod(){}
+        public static function buscarUsuarioPorCod(){
+        }
         /**
          * Funcion de dar de alta un usuario
          * 
