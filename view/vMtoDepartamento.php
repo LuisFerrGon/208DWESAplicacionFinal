@@ -54,6 +54,7 @@
             <th span="col">Fecha creación</th>
             <th span="col">Volumen</th>
             <th span="col">Fecha baja</th>
+            <th span="col">Operaciones</th>
         </tr>
     </thead>
     <tbody>
@@ -70,6 +71,9 @@
                 . "<td>".$oDepartamento->getFechaCreacion()."</td>"
                 . "<td>".$oDepartamento->getVolumenNegocio()."</td>"
                 . "<td>".$oDepartamento->getFechaBaja()."</td>"
+                . "<td>"
+                    ."<input type='submit' id='modificar(".$oDepartamento->getCodigo().")' name=".$oDepartamento->getCodigo()." value='Modificar'>"
+                . "</td>"
                 . "</tr>";
             }
         }
