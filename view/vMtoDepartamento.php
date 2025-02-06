@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.1
+     * @since 1.0.2 Cmabio del layout
      */
 
     $mensajeBusquedaVacia=[
@@ -11,6 +12,7 @@
         "pt"=>'There aren\'t departments that fit that search.'
     ];
 ?>
+<header><h1>Mantenimiento de Departamentos</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -74,4 +76,4 @@
         ?>
     </tbody>
 </table>
-<div style='height: 30px'></div>
+<div style='height: 30px'></div></main>

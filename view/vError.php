@@ -1,11 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.0
-     */
-    /**
-     * @var array 
+     * @since 1.0.2 Cambio del layout
      */
     $mensajeError=[
         'es'=><<<ERROR
@@ -23,6 +21,7 @@
         'pt'=>"pt error"
     ];
 ?>
+<header><h1>Error</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -38,4 +37,4 @@
 <?php
     echo "<p>".$mensajeError[$idioma]."</p>";
 ?>
-<div style='height: 30px'></div>
+<div style='height: 30px'></div></main>

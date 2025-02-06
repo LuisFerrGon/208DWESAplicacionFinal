@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.1
+     * @since 1.0.2
      */
     require_once 'model/Departamento.php';
     require_once 'model/DepartamentoPDO.php';

@@ -1,9 +1,10 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.0
      * @since 1.0.1 Pagina REST, mtoDepartamento añadida
+     * @since 1.0.2 Pagina modificarDepartamento añadida
      */
 
     //Validacion de formularios
@@ -33,7 +34,8 @@
         'error'=>'controller/cError.php',
         'detalle'=>'controller/cDetalle.php',
         'rest'=>'controller/cREST.php',
-        'mtoDepartamento'=>'controller/cMtoDepartamento.php'
+        'mtoDepartamento'=>'controller/cMtoDepartamento.php',
+        'modificarDepartamento'=>'controller/cModificarDepartamento.php'
     ];
     //Array de las vistas
     $aVistas=[
@@ -50,6 +52,7 @@
         'error'=>'view/vError.php',
         'detalle'=>'view/vDetalle.php',
         'rest'=>'view/vREST.php',
-        'mtoDepartamento'=>'view/vMtoDepartamento.php'
+        'mtoDepartamento'=>'view/vMtoDepartamento.php',
+        'modificarDepartamento'=>'view/vModificarDepartamento.php'
     ];
 ?>

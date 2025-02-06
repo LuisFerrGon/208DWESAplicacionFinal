@@ -1,10 +1,12 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.0
+     * @since 1.0.2 Cambio del layout
      */
 ?>
+<header><h1>Aplicación Final</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -17,4 +19,4 @@
         </form>
     </section>
 </div>
-<img src="webroot/images/navegacion.PNG" alt="Mapa de la aplicación" id="mapaAplicacion"/>
+<img src="webroot/images/navegacion.PNG" alt="Mapa de la aplicación" id="mapaAplicacion"/></main>

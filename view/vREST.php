@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 29/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.1
+     * @since 1.0.2 Cmabio del layout
      */
     $mensajeFotoNasaFallida=[
         'es'=>"La fecha introducida no es válida",
@@ -10,6 +11,7 @@
         'pt'=>"The inputted date isn't valid"
     ]
 ?>
+<header><h1>REST</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -54,4 +56,4 @@
         }
     });
 </script>
-<div style='height: 30px'></div>
+<div style='height: 30px'></div></main>
