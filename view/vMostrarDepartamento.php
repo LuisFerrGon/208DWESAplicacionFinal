@@ -8,7 +8,7 @@
      */
 ?>
 <header>
-    <h1>Modificar Departamento</h1>
+    <h1>Mostrar Departamento</h1>
 </header>
 <main>
     <div id="top">
@@ -31,18 +31,8 @@
                         <label for="descripcionDepartamento">Descripción:</label>
                     </td>
                     <td>
-                        <input type="text" id="descripcionDepartamento" name="descripcionDepartamento" value="<?php
-                            if(empty($aErrores['descripcionDepartamento']) && !empty($_REQUEST['descripcionDepartamento'])){
-                                $departamentoEnCurso->setDescripcion($_REQUEST['descripcionDepartamento']);
-                            }
-                            echo ($departamentoEnCurso->getDescripcion());
-                        ?>" class="obligatorio" required>
+                        <input type="text" id="descripcionDepartamento" name="descripcionDepartamento" value="<?php echo ($departamentoEnCurso->getDescripcion());?>" disabled>
                     </td>
-                    <?php
-                        if(!empty($aErrores['descripcionDepartamento'])){
-                            echo "<td class='error'>".$aErrores['descripcionDepartamento']."</td>";
-                        }
-                    ?>
                 </tr>
                 <tr>
                     <td>
@@ -57,18 +47,8 @@
                         <label for="volumenDepartamento">Volumen:</label>
                     </td>
                     <td>
-                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" class="obligatorio" value="<?php
-                            if(empty($aErrores['volumenDepartamento']) && !empty($_REQUEST['volumenDepartamento'])){
-                                $departamentoEnCurso->setDescripcion($_REQUEST['volumenDepartamento']);
-                            }
-                            echo ($departamentoEnCurso->getVolumenNegocio());
-                        ?>" step="0.01" required>
+                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" value="<?php echo ($departamentoEnCurso->getVolumenNegocio());?>" step="0.01" disabled>
                     </td>
-                    <?php
-                        if(!empty($aErrores['volumenDepartamento'])){
-                            echo "<td class='error'>".$aErrores['volumenDepartamento']."</td>";
-                        }
-                    ?>
                 </tr>
                 <tr>
                     <td>
@@ -85,9 +65,6 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td>
-                        <input id="modificar" name="modificar" type="submit" value="Modificar">
-                    </td>
                     <td>
                         <input type="submit" name="volver" value="Volver">
                     </td>

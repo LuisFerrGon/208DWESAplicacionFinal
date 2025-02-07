@@ -35,7 +35,8 @@
         'detalle'=>'controller/cDetalle.php',
         'rest'=>'controller/cREST.php',
         'mtoDepartamento'=>'controller/cMtoDepartamento.php',
-        'modificarDepartamento'=>'controller/cModificarDepartamento.php'
+        'modificarDepartamento'=>'controller/cModificarDepartamento.php',
+        'mostrarDepartamento'=>'controller/cMostrarDepartamento.php'
     ];
     //Array de las vistas
     $aVistas=[
@@ -53,6 +54,7 @@
         'detalle'=>'view/vDetalle.php',
         'rest'=>'view/vREST.php',
         'mtoDepartamento'=>'view/vMtoDepartamento.php',
-        'modificarDepartamento'=>'view/vModificarDepartamento.php'
+        'modificarDepartamento'=>'view/vModificarDepartamento.php',
+        'mostrarDepartamento'=>'view/vMostrarDepartamento.php'
     ];
 ?>

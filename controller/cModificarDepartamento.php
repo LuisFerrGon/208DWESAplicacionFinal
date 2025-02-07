@@ -1,12 +1,14 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
+     * @version 2.0.2 Fecha última modificación del archivo: 07/02/2025
      * @since 1.0.2
+     * @since 2.0.2 Modificacion a modificar
      */
     $idioma=isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'en';
     require_once 'core/lValidacionFormularios.php';
     require_once 'config/confDB.php';
+    $departamentoEnCurso=$_SESSION['departamentoEnCurso'];
     if(isset($_REQUEST['volver'])){
         $_SESSION['paginaEnCurso']=$_SESSION['paginaAnterior'];
         $_SESSION['paginaAnterior']='wip';
@@ -35,7 +37,7 @@
         $entradaOK=false;
     }
     if($entradaOK){
-        DepartamentoPDO::modificarDepartamento($codigo, $_REQUEST['descripcionDepartamento'], $_REQUEST['volumenDepartamento']);
+        DepartamentoPDO::modificarDepartamento($departamentoEnCurso->getCodigo(), $_REQUEST['descripcionDepartamento'], $_REQUEST['volumenDepartamento']);
         $_SESSION['paginaEnCurso']='mtoDepartamento';
         $_SESSION['paginaAnterior']='modificarDepartamento';
         header('Location: index.php');

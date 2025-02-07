@@ -5,9 +5,11 @@
      * Clase para funciones de departamento
      * 
      * @author Luis Ferreras González
-     * @version 1.0.2 Fecha última modificación: 06/02/2025
+     * @version 2.0.2 Fecha última modificación: 07/02/2025
      * @since 1.0.1
      * @since 1.0.2 Función modificarDepartamento, buscarPorCodigo
+     * @since 2.0.2 Modificación a buscarPorCodigo
+     *              Función eliminarDepartamento
      */
     class DepartamentoPDO{
         /**
@@ -61,15 +63,16 @@
          * 
          * @param string $codigo Código del departamento a buscar
          * @author Luis Ferreras González
-         * @version 1.0.2 Fecha última modificación: 06/02/2025
+         * @version 2.0.2 Fecha última modificación: 07/02/2025
          * @since 1.0.2
+         * @since 2.0.2 Cambio de variable resultado
          */
-        public static function buscarPorCodigo($codigo) {
+        public static function buscarPorCodigo($codigo){
             $consulta=<<<SQL
                 SELECT * FROM T02_Departamento
                 WHERE T02_CodDepartamento='{$codigo}';
             SQL;
-            $resultado=DBPDO::ejecutarConsulta($consulta, null, false);
+            $resultado=DBPDO::ejecutarConsulta($consulta);
             if($resultado instanceof PDOException){
                 $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
                 $_SESSION['error']=new ErrorApp(
@@ -113,6 +116,36 @@
                 UPDATE T02_Departamento SET
                     T02_DescDepartamento='{$descripcion}',
                     T02_VolumenDeNegocio={$volumen}
+                WHERE T02_CodDepartamento='{$codigo}';
+            SQL;
+            $resultado=DBPDO::ejecutarConsulta($consulta);
+            if($resultado instanceof PDOException){
+                $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+                $_SESSION['error']=new ErrorApp(
+                    $resultado->getCode(),
+                    $resultado->getMessage(),
+                    $resultado->getFile(),
+                    $resultado->getLine(),
+                    $_SESSION['paginaAnterior']
+                );
+                $_SESSION['paginaEnCurso']='error';
+                header('Location: index.php');
+                exit();
+            }
+        }
+        /**
+         * Función eliminarDepartamento
+         * 
+         * Función para eliminar un departamento dado su código.
+         * 
+         * @param string $codigo Código del departamento a eliminar
+         * @author Luis Ferreras González
+         * @version 2.0.2 Fecha última modificación: 07/02/2025
+         * @since 2.0.2
+         */
+        public static function eliminarDepartamento($codigo){
+            $consulta=<<<SQL
+                DELETE FROM T02_Departamento
                 WHERE T02_CodDepartamento='{$codigo}';
             SQL;
             $resultado=DBPDO::ejecutarConsulta($consulta);

@@ -1,9 +1,10 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 07/02/2025
      * @since 1.0.1
-     * @since 1.0.2 Cmabio del layout
+     * @since 1.0.2 Cambio del layout
+     * @since 2.0.2 Cambio a modificación
      */
 
     $mensajeBusquedaVacia=[
@@ -72,7 +73,11 @@
                 . "<td>".$oDepartamento->getVolumenNegocio()."</td>"
                 . "<td>".$oDepartamento->getFechaBaja()."</td>"
                 . "<td>"
-                    ."<input type='submit' id='modificar(".$oDepartamento->getCodigo().")' name=".$oDepartamento->getCodigo()." value='Modificar'>"
+                    . "<form id='accionDepartamento' method='post'  action='".$_SERVER['PHP_SELF']."'>"
+                        . "<input type='submit' id='modificar".$oDepartamento->getCodigo()."' name='modificar".$oDepartamento->getCodigo()."' value='Modificar'>"
+                        . "<input type='submit' id='mostrar".$oDepartamento->getCodigo()."' name='mostrar".$oDepartamento->getCodigo()."' value='Mostrar'>"
+//                        . "<input type='submit' id='eliminar".$oDepartamento->getCodigo()."' name='eliminar".$oDepartamento->getCodigo()."' value='Eliminar'>"
+                    . "</form>"
                 . "</td>"
                 . "</tr>";
             }
