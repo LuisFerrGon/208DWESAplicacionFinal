@@ -5,28 +5,29 @@
      * Clase para crear departamentos
      * 
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación: 30/01/2025
+     * @version 1.0.2 Fecha última modificación: 06/02/2025
      * @since 1.0.1
+     * @since 1.0.2 Modificación documentación
      */
     class Departamento {
         /**
-         * @var type
+         * @var string $codigo Código del departamento
          */
         private $codigo;
         /**
-         * @var type
+         * @var string $descripcion Descripción del departamento
          */
         private $descripcion;
         /**
-         * @var type
+         * @var string $fechaCreacion Fecha de creación del departamento
          */
         private $fechaCreacion;
         /**
-         * @var type
+         * @var float $volumenNegocio Volumen del departamento
          */
         private $volumenNegocio;
         /**
-         * @var type
+         * @var string $fechaBaja Fecha de baja del departamento
          */
         private $fechaBaja;
         public function __construct($codigo, $descripcion, $fechaCreacion, $volumenNegocio, $fechaBaja=null) {
@@ -37,31 +38,31 @@
             $this->fechaBaja = $fechaBaja;
         }
         /**
-         * @return type
+         * @return string Devuelve el código del departamento
          */
         public function getCodigo() {
             return $this->codigo;
         }
         /**
-         * @return type
+         * @return string Devuelve la descripción del departamento
          */
         public function getDescripcion() {
             return $this->descripcion;
         }
         /**
-         * @return type
+         * @return string Devuelve la fecha de creación del departamento
          */
         public function getFechaCreacion() {
             return $this->fechaCreacion;
         }
         /**
-         * @return type
+         * @return float Devuelve el volumen del departamento
          */
         public function getVolumenNegocio() {
             return $this->volumenNegocio;
         }
         /**
-         * @return type
+         * @return string Devuelve la fecha de baja del departamento
          */
         public function getFechaBaja() {
             return $this->fechaBaja;
@@ -73,28 +74,24 @@
             $this->codigo = $codigo;
         }
         /**
-         * 
          * @param type $descripcion
          */
         public function setDescripcion($descripcion){
             $this->descripcion = $descripcion;
         }
         /**
-         * 
          * @param type $fechaCreacion
          */
         public function setFechaCreacion($fechaCreacion){
             $this->fechaCreacion = $fechaCreacion;
         }
         /**
-         * 
          * @param type $volumenNegocio
          */
         public function setVolumenNegocio($volumenNegocio){
             $this->volumenNegocio = $volumenNegocio;
         }
         /**
-         * 
          * @param type $fechaBaja
          */
         public function setFechaBaja($fechaBaja){

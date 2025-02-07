@@ -1,8 +1,9 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.0
+     * @since 1.0.2 Cmabio del layout
      */
     /**
      * @var array $bienvenida Array que contiene el mensaje de bienvenida.
@@ -13,6 +14,7 @@
         'pt'=>"pt wip"
     ];
 ?>
+<header><h1>Registrarse</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -40,7 +42,7 @@
                         <?php
                             if(!empty($aErrores['codigoUsuario'])){
                                 echo "<td class='error'>".$aErrores['codigoUsuario']."</td>";
-                            };
+                            }
                         ?>
                 </tr>
                 <tr>
@@ -53,7 +55,7 @@
                         <?php
                             if(!empty($aErrores['contrasenaUsuario'])){
                                 echo "<td class='error'>".$aErrores['contrasenaUsuario']."</td>";
-                            };
+                            }
                         ?>
                 </tr>
                 <tr>
@@ -66,7 +68,7 @@
                         <?php
                             if(!empty($aErrores['descripcionUsuario'])){
                                 echo "<td class='error'>".$aErrores['descripcionUsuario']."</td>";
-                            };
+                            }
                         ?>
                 </tr>
             </tbody>
@@ -80,4 +82,4 @@
         </table>
     </form>
 </div>
-<div style='height: 30px'></div>
+<div style='height: 30px'></div></main>

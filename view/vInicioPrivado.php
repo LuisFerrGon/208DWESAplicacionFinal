@@ -1,9 +1,10 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 31/01/2025
+     * @version 1.0.2 Fecha última modificación del archivo: 06/02/2025
      * @since 1.0.0
      * @since 1.0.1 Cambio nombre variable, foto del día mediante javascript
+     * @since 1.0.2 Cambio del layout
      */
     /**
      * @var array $bienvenida Array que contiene el mensaje de bienvenida.
@@ -23,6 +24,7 @@
         ]
     ];
 ?>
+<header><h1>Aplicación Final</h1></header><main>
 <div id="top">
     <section id="idiomas">
         <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
@@ -71,4 +73,4 @@
         document.getElementById("fotoNasaJs").alt="Ha ocurrido un error al intentar conseguir la imagen.";
         console.log(error);
     });
-</script>
+</script></main>

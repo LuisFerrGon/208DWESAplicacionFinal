@@ -51,16 +51,6 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#constant_DEBIL"
         },                {
-            "fqsen": "\\MAX_CODIGO",
-            "name": "MAX_CODIGO",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MAX_CODIGO"
-        },                {
-            "fqsen": "\\MIN_CODIGO",
-            "name": "MIN_CODIGO",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MIN_CODIGO"
-        },                {
             "fqsen": "\\MAX_DESC",
             "name": "MAX_DESC",
             "summary": "",
@@ -70,6 +60,26 @@ Search.appendIndex(
             "name": "MIN_DESC",
             "summary": "",
             "url": "namespaces/default.html#constant_MIN_DESC"
+        },                {
+            "fqsen": "\\MAX_VOLUMEN",
+            "name": "MAX_VOLUMEN",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MAX_VOLUMEN"
+        },                {
+            "fqsen": "\\MIN_VOLUMEN",
+            "name": "MIN_VOLUMEN",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MIN_VOLUMEN"
+        },                {
+            "fqsen": "\\MAX_CODIGO",
+            "name": "MAX_CODIGO",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MAX_CODIGO"
+        },                {
+            "fqsen": "\\MIN_CODIGO",
+            "name": "MIN_CODIGO",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MIN_CODIGO"
         },                {
             "fqsen": "\\validacionFormularios",
             "name": "validacionFormularios",
@@ -266,10 +276,20 @@ Search.appendIndex(
             "summary": "Clase\u0020DepartamentoPDO",
             "url": "classes/DepartamentoPDO.html"
         },                {
-            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarPorDescripcion\u0028\u0029",
-            "name": "buscarPorDescripcion",
-            "summary": "Funci\u00F3n\u0020buscarPorDescripcion",
-            "url": "classes/DepartamentoPDO.html#method_buscarPorDescripcion"
+            "fqsen": "\\DepartamentoPDO\u003A\u003AcargarArrayDepartamentos\u0028\u0029",
+            "name": "cargarArrayDepartamentos",
+            "summary": "Funci\u00F3n\u0020cargarArrayDepartamentos",
+            "url": "classes/DepartamentoPDO.html#method_cargarArrayDepartamentos"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarPorCodigo\u0028\u0029",
+            "name": "buscarPorCodigo",
+            "summary": "Funci\u00F3n\u0020buscarPorCodigo",
+            "url": "classes/DepartamentoPDO.html#method_buscarPorCodigo"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AmodificarDepartamento\u0028\u0029",
+            "name": "modificarDepartamento",
+            "summary": "Funci\u00F3n\u0020modificarDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_modificarDepartamento"
         },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",

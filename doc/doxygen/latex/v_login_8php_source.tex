@@ -1,0 +1,56 @@
+\doxysection{v\+Login.\+php}
+\hypertarget{v_login_8php_source}{}\label{v_login_8php_source}\index{view/vLogin.php@{view/vLogin.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00008}00008\ ?>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00009}00009\ <header><h1>Iniciar\ Sesión</h1></header><main>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00010}00010\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00011}00011\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00015}00015\ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00016}00016\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}registro"{}}\ value=\textcolor{stringliteral}{"{}Registrarse"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00023}00023\ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00024}00024\ </div>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00025}00025\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formulariologin"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00026}00026\ \ \ \ \ <h2>Log\ in</h2>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00027}00027\ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}plantilla"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}\ novalidate>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoUsuario"{}}>\mbox{\hyperlink{class_usuario}{Usuario}}:</label>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ name=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}>Contraseña:</label>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}password"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ name=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}login"{}}\ name=\textcolor{stringliteral}{"{}login"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Iniciar\ sesión"{}}>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00055}00055\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_login_8php_source_l00056}00056\ </div></main>}
+
+\end{DoxyCode}
