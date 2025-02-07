@@ -1,0 +1,80 @@
+\doxysection{Usuario\+PDO Class Reference}
+\hypertarget{class_usuario_p_d_o}{}\label{class_usuario_p_d_o}\index{UsuarioPDO@{UsuarioPDO}}
+Inheritance diagram for Usuario\+PDO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_usuario_p_d_o}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_usuario_p_d_o_ab19d20fb3fd77838839a5935ca613845}{validar\+Usuario}} (\$codigo\+Usuario, \$contrasena\+Usuario)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \doxylink{class_usuario_p_d_o}{Usuario\+PDO}
+
+Clase para funciones de usuario
+
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1 Fecha última modificación del archivo\+: 30/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+
+1.\+0.\+1 Modificación del php\+DOC 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{_usuario_p_d_o_8php_source_l00012}{12}} of file \mbox{\hyperlink{_usuario_p_d_o_8php_source}{Usuario\+PDO.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_usuario_p_d_o_ab19d20fb3fd77838839a5935ca613845}\index{UsuarioPDO@{UsuarioPDO}!validarUsuario@{validarUsuario}}
+\index{validarUsuario@{validarUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{validarUsuario()}{validarUsuario()}}
+{\footnotesize\ttfamily \label{class_usuario_p_d_o_ab19d20fb3fd77838839a5935ca613845} 
+static validar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$codigo\+Usuario}{, }\item[{}]{\$contrasena\+Usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Función para validar un usuario
+
+Función para comprobar si existe un usuario dados el código y contraseña; devuelve un objeto \doxylink{class_usuario}{Usuario} si existe y null si no o en caso de PDOException.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$codigo\+Usuario} & El codigo del usuario a validar \\
+\hline
+string & {\em \$contrasena\+Usuario} & La contraseña sin codificar ni haber añadido el codigo de usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Usuario\texorpdfstring{$\vert$}{|}null\texorpdfstring{$\vert$}{|}\+PDOException Devuelve un objeto usuario si existe. Devuelve null si no existe. Devuelve PDOExcetion en caso de error. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 Fecha última modificación\+: 20/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+
+
+Implements \mbox{\hyperlink{interface_usuario_d_b_ab19d20fb3fd77838839a5935ca613845}{Usuario\+DB}}.
+
+
+
+Definition at line \mbox{\hyperlink{_usuario_p_d_o_8php_source_l00029}{29}} of file \mbox{\hyperlink{_usuario_p_d_o_8php_source}{Usuario\+PDO.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/Usuario\+PDO.\+php\end{DoxyCompactItemize}
