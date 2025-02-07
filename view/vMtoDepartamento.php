@@ -76,7 +76,7 @@
                     . "<form id='accionDepartamento' method='post'  action='".$_SERVER['PHP_SELF']."'>"
                         . "<input type='submit' id='modificar".$oDepartamento->getCodigo()."' name='modificar".$oDepartamento->getCodigo()."' value='Modificar'>"
                         . "<input type='submit' id='mostrar".$oDepartamento->getCodigo()."' name='mostrar".$oDepartamento->getCodigo()."' value='Mostrar'>"
-//                        . "<input type='submit' id='eliminar".$oDepartamento->getCodigo()."' name='eliminar".$oDepartamento->getCodigo()."' value='Eliminar'>"
+                        . "<input type='submit' id='eliminar".$oDepartamento->getCodigo()."' name='eliminar".$oDepartamento->getCodigo()."' value='Eliminar'>"
                     . "</form>"
                 . "</td>"
                 . "</tr>";

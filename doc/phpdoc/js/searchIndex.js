@@ -291,6 +291,11 @@ Search.appendIndex(
             "summary": "Funci\u00F3n\u0020modificarDepartamento",
             "url": "classes/DepartamentoPDO.html#method_modificarDepartamento"
         },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AeliminarDepartamento\u0028\u0029",
+            "name": "eliminarDepartamento",
+            "summary": "Funci\u00F3n\u0020eliminarDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_eliminarDepartamento"
+        },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
             "summary": "Clase\u0020ErrorApp",

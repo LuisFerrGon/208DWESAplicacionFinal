@@ -1,8 +1,8 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.2 Fecha última modificación del archivo: 07/02/2025
-     * @since 2.0.2
+     * @version 2.0.3 Fecha última modificación del archivo: 07/02/2025
+     * @since 2.0.3
      */
 ?>
 <header>
@@ -63,6 +63,9 @@
             </tbody>
             <tfoot>
                 <tr>
+                    <td>
+                        <input type="submit" name="eliminar" value="Eliminar">
+                    </td>
                     <td>
                         <input type="submit" name="volver" value="Volver">
                     </td>

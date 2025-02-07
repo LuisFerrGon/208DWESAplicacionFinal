@@ -1,11 +1,12 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.2 Fecha última modificación del archivo: 07/02/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 07/02/2025
      * @since 1.0.1
      * @since 1.0.2
      * @since 2.0.2 Modificación a modificar
-     *              Mostrar, eliminar
+     *              Mostrar
+     * @since 2.0.3 Eliminar
      */
     if($resultado=preg_grep('/modificar[A-Z]{3}/', array_keys($_REQUEST))){
         $_SESSION['departamentoEnCurso']=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));
@@ -21,12 +22,13 @@
         header('Location: index.php');
         exit();
     }
-//    if($resultado=preg_grep('/eliminar[A-Z]{3}/', array_keys($_REQUEST))){
-//        $_SESSION['departamentoEnCurso']=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));
-//        DepartamentoPDO::eliminarDepartamento($_SESSION['departamentoEnCurso']->getCodigo());
-//        header('Location: index.php');
-//        exit();
-//    }
+    if($resultado=preg_grep('/eliminar[A-Z]{3}/', array_keys($_REQUEST))){
+        $_SESSION['departamentoEnCurso']=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));
+        $_SESSION['paginaEnCurso']='eliminarDepartamento';
+        $_SESSION['paginaAnterior']='mtoDepartamento';
+        header('Location: index.php');
+        exit();
+    }
     require_once 'model/Departamento.php';
     require_once 'model/DepartamentoPDO.php';
     if(isset($_REQUEST['volver'])){

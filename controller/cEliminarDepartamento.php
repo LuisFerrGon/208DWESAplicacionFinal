@@ -10,7 +10,14 @@
     $departamentoEnCurso=$_SESSION['departamentoEnCurso'];
     if(isset($_REQUEST['volver'])){
         $_SESSION['paginaEnCurso']=$_SESSION['paginaAnterior'];
-        $_SESSION['paginaAnterior']='mostrarDepartamento';
+        $_SESSION['paginaAnterior']='eliminarDepartamento';
+        header('Location: index.php');
+        exit();
+    }
+    if(isset($_REQUEST['eliminar'])){
+        DepartamentoPDO::eliminarDepartamento($departamentoEnCurso->getCodigo());
+        $_SESSION['paginaEnCurso']=$_SESSION['paginaAnterior'];
+        $_SESSION['paginaAnterior']='wip';
         header('Location: index.php');
         exit();
     }
