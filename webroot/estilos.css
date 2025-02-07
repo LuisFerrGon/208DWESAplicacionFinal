@@ -124,6 +124,22 @@ main{
             border: 1px solid var(--gris);
         }
     }
+    /*Modificar departamento*/
+    #modificarDepartamento{
+        h2{
+            text-align: center;
+        }
+        table{
+            margin: 5px auto;
+            border: 0.5px solid var(--gris);
+            border-radius: 5px;
+            background-color: var(--grisClaro);
+            width: fit-content;
+            td.error{
+                color: var(--rojoError);
+            }
+        }
+    }
 }
 footer{
     background-color: var(--blanco);
