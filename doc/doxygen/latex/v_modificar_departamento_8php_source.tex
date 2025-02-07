@@ -1,0 +1,83 @@
+\doxysection{v\+Modificar\+Departamento.\+php}
+\hypertarget{v_modificar_departamento_8php_source}{}\label{v_modificar_departamento_8php_source}\index{view/vModificarDepartamento.php@{view/vModificarDepartamento.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00007}00007\ ?>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00008}00008\ <header>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00009}00009\ \ \ \ \ <h1>Modificar\ \mbox{\hyperlink{class_departamento}{Departamento}}</h1>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00010}00010\ </header>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00011}00011\ <main>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00012}00012\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00018}00018\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00019}00019\ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}modificarDepartamento"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}>Código:</label>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ name=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ disabled>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}>Descripción:</label>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}password"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}]))\{}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}>Fecha\ de\ creación:</label>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ disabled>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}>Volumen:</label>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}number"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ name=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}]))\{}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}>Fecha\ de\ baja:</label>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ disabled>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modificar"{}}\ name=\textcolor{stringliteral}{"{}modificar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Modificar"{}}>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00081}00081\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_modificar_departamento_8php_source_l00082}00082\ </main>}
+
+\end{DoxyCode}

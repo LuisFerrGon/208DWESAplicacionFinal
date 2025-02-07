@@ -1,0 +1,84 @@
+\doxysection{Usuario.\+php}
+\hypertarget{_usuario_8php_source}{}\label{_usuario_8php_source}\index{model/Usuario.php@{model/Usuario.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00012}\mbox{\hyperlink{class_usuario}{00012}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_usuario}{Usuario}}\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$codUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$password;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$descUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$numConexiones;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$fechaHoraUltimaConexion;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$fechaHoraUltimaConexionAnterior;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$perfil;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$imagenUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \$listaOpinionesUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00065}\mbox{\hyperlink{class_usuario_a9e2a0f4d5d8767439477ae3f0f7eba1d}{00065}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a9e2a0f4d5d8767439477ae3f0f7eba1d}{\_\_construct}}(\$codUsuario,\ \$password,\ \$descUsuario,\ \$numConexiones,\ \$fechaHoraUltimaConexion,\ \$fechaHoraUltimaConexionAnterior,\ \$perfil=\textcolor{stringliteral}{'usuario'},\ \$imagenUsuario=\textcolor{keyword}{null},\ \$listaOpinionesUsuario=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>codUsuario\ =\ \$codUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>password\ =\ \$password;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>descUsuario\ =\ \$descUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>numConexiones\ =\ \$numConexiones;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>fechaHoraUltimaConexion\ =\ \$fechaHoraUltimaConexion;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>fechaHoraUltimaConexionAnterior\ =\ \$fechaHoraUltimaConexionAnterior;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>perfil\ =\ \$perfil;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>imagenUsuario\ =\ \$imagenUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>listaOpinionesUsuario\ =\ \$listaOpinionesUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00079}\mbox{\hyperlink{class_usuario_af6744d9c5d29fc68b5e9a5fb2fab245e}{00079}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_af6744d9c5d29fc68b5e9a5fb2fab245e}{getCodUsuario}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>codUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00085}\mbox{\hyperlink{class_usuario_a04e0957baeb7acde9c0c86556da2d43f}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a04e0957baeb7acde9c0c86556da2d43f}{getPassword}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>password;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00091}\mbox{\hyperlink{class_usuario_a38bc2254f1841238d4f4a4851ea5258d}{00091}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a38bc2254f1841238d4f4a4851ea5258d}{getDescUsuario}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>descUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00097}\mbox{\hyperlink{class_usuario_af98dbe147730701ce756e83e77e4dcb0}{00097}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_af98dbe147730701ce756e83e77e4dcb0}{getNumConexiones}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>numConexiones;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00103}\mbox{\hyperlink{class_usuario_abcc0f031ac30c407e3c8daeeed1adb0d}{00103}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_abcc0f031ac30c407e3c8daeeed1adb0d}{getFechaHoraUltimaConexion}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>fechaHoraUltimaConexion;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00109}\mbox{\hyperlink{class_usuario_a79bab760d5ef47d7e0406610c08b79a3}{00109}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a79bab760d5ef47d7e0406610c08b79a3}{getFechaHoraUltimaConexionAnterior}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>fechaHoraUltimaConexionAnterior;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00115}\mbox{\hyperlink{class_usuario_a22a2936d4856077edac47e6dbf430bab}{00115}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a22a2936d4856077edac47e6dbf430bab}{getPerfil}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>perfil;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00121}\mbox{\hyperlink{class_usuario_a6407f24cbacd4791115118d1f791ca01}{00121}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a6407f24cbacd4791115118d1f791ca01}{getImagenUsuario}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>imagenUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00127}\mbox{\hyperlink{class_usuario_a1d4e7acf805b9a938938831b9244f39c}{00127}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a1d4e7acf805b9a938938831b9244f39c}{getListaOpinionesUsuario}}()\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>listaOpinionesUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00135}\mbox{\hyperlink{class_usuario_a42d805d74359e24d97b4883618001f32}{00135}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a42d805d74359e24d97b4883618001f32}{setCodUsuario}}(\$codUsuario)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>codUsuario\ =\ \$codUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00143}\mbox{\hyperlink{class_usuario_a3e35c8d3dbb2c513c618a664389e0926}{00143}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a3e35c8d3dbb2c513c618a664389e0926}{setPassword}}(\$password)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>password\ =\ \$password;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00151}\mbox{\hyperlink{class_usuario_aea6878269f98da68495e26d45412e85e}{00151}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_aea6878269f98da68495e26d45412e85e}{setDescUsuario}}(\$descUsuario)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>descUsuario\ =\ \$descUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00153}00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00159}\mbox{\hyperlink{class_usuario_a613969fad4a0c809c43fcdfbf3b9bc6e}{00159}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a613969fad4a0c809c43fcdfbf3b9bc6e}{setNumConexiones}}(\$numConexiones)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>numConexiones\ =\ \$numConexiones;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00161}00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00167}\mbox{\hyperlink{class_usuario_a01f22ff506a899f494fd0de79979b881}{00167}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a01f22ff506a899f494fd0de79979b881}{setFechaHoraUltimaConexion}}(\$fechaHoraUltimaConexion)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>fechaHoraUltimaConexion\ =\ \$fechaHoraUltimaConexion;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00175}\mbox{\hyperlink{class_usuario_ae7fc52a083387dbd251de050b66ddde4}{00175}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_ae7fc52a083387dbd251de050b66ddde4}{setFechaHoraUltimaConexionAnterior}}(\$fechaHoraUltimaConexionAnterior)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>fechaHoraUltimaConexionAnterior\ =\ \$fechaHoraUltimaConexionAnterior;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00177}00177\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00183}\mbox{\hyperlink{class_usuario_a00bcf66571b2dd506829e45c6401feed}{00183}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a00bcf66571b2dd506829e45c6401feed}{setPerfil}}(\$perfil)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>perfil\ =\ \$perfil;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00191}\mbox{\hyperlink{class_usuario_a85b8c515e86b210647e052a39b6097c2}{00191}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_a85b8c515e86b210647e052a39b6097c2}{setImagenUsuario}}(\$imagenUsuario)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>imagenUsuario\ =\ \$imagenUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00193}00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00199}\mbox{\hyperlink{class_usuario_aa76aa53cc94da3d39ebc379f14083d4e}{00199}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_usuario_aa76aa53cc94da3d39ebc379f14083d4e}{setListaOpinionesUsuario}}(\$listaOpinionesUsuario)\{}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>listaOpinionesUsuario\ =\ \$listaOpinionesUsuario;}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00201}00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_8php_source_l00203}00203\ ?>}
+
+\end{DoxyCode}

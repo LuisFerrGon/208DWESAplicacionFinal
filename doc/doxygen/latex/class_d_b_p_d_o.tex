@@ -1,0 +1,85 @@
+\doxysection{DBPDO Class Reference}
+\hypertarget{class_d_b_p_d_o}{}\label{class_d_b_p_d_o}\index{DBPDO@{DBPDO}}
+Inheritance diagram for DBPDO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_b_p_d_o}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{ejecutar\+Consulta}} (\$sentencia\+SQL, \$a\+Parametros=null, \$volver\+Objeto=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{interface_d_b}{DB}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interface_d_b_a96bcec5fa550222d20f479f999619b68}{ejecutar\+Consulta}} (\$sentencia\+SQL, \$a\+Parametros)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \doxylink{class_d_b_p_d_o}{DBPDO}
+
+Clase para crear conexiones con una base de datos
+
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1 Fecha última modificación\+: 31/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+
+1.\+0.\+1 Modificación del php\+DOC, función ejecutar\+Consulta 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{_d_b_p_d_o_8php_source_l00013}{13}} of file \mbox{\hyperlink{_d_b_p_d_o_8php_source}{DBPDO.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}\index{DBPDO@{DBPDO}!ejecutarConsulta@{ejecutarConsulta}}
+\index{ejecutarConsulta@{ejecutarConsulta}!DBPDO@{DBPDO}}
+\doxysubsubsection{\texorpdfstring{ejecutarConsulta()}{ejecutarConsulta()}}
+{\footnotesize\ttfamily \label{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2} 
+static ejecutar\+Consulta (\begin{DoxyParamCaption}\item[{}]{\$sentencia\+SQL}{, }\item[{}]{\$a\+Parametros}{ = {\ttfamily null}, }\item[{}]{\$volver\+Objeto}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Funcion ejecutar\+Consulta
+
+Funcion que devuelve un objeto o una excepción dadas una sentencia\+SQL y un array de paramteros
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sentencia\+SQL} & Cadena en la que se pone la sentencia a seguir. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$a\+Parametros} & Opcional. Array en el que se ponen los paramteros en el orden deseado. \\
+\hline
+boolean & {\em \$volver\+Objeto} & Opcional, por defecto true. Si es true devuelve con fetch\+Object. Si es false lo devuelve sin haberlo hecho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object\texorpdfstring{$\vert$}{|}\+PDOException Devuelve un objeto si no hay error; sino un PDOException. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1 Fecha última modificación\+: 31/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+
+1.\+0.\+1 Variable \$volver\+Objeto añadido. 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{_d_b_p_d_o_8php_source_l00034}{34}} of file \mbox{\hyperlink{_d_b_p_d_o_8php_source}{DBPDO.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/DBPDO.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\doxysection{index.\+php}
+\hypertarget{index_8php_source}{}\label{index_8php_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//Configuración\ de\ la\ aplicación}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00009}00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confAPP.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//Configuración\ de\ la\ base\ de\ datos}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00011}00011\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//Se\ crea\ o\ inicia\ la\ sesión}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00013}00013\ \ \ \ \ session\_start();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//Si\ no\ hay\ pagina\ en\ cuso\ en\ la\ sesion\ se\ asigna\ una}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}(!isset(\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]))\{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'inicioPublico'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ Si\ la\ cookie\ está\ vacia\ se\ crea\ y\ se\ le\ pone\ un\ valor\ por\ defecto}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}(!isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}]))\{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ setcookie(\textcolor{stringliteral}{'idioma'},\ \textcolor{stringliteral}{'en'},\ time()+60,\ \textcolor{charliteral}{'/'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Si\ el\ idioma\ enviado\ está\ vacio\ o\ es\ null}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'idioma'}]))\{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ setcookie(\textcolor{stringliteral}{'idioma'},\ \$\_REQUEST[\textcolor{stringliteral}{'idioma'}],\ time()\ +\ 60,\ \textcolor{charliteral}{'/'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ '}\ .\ \$\_SERVER[\textcolor{stringliteral}{'PHP\_SELF'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//Se\ carga\ la\ página}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00029}00029\ \ \ \ \ require\_once\ \$aControladores[\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]];}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00030}00030\ ?>}
+
+\end{DoxyCode}
