@@ -1,5 +1,6 @@
 var class_departamento =
 [
+    [ "__construct", "class_departamento.html#a45f42ff9163f3679474c76ddc4edf0f7", null ],
     [ "getCodigo", "class_departamento.html#a512b3b80df8ac5b53c20e447898723a6", null ],
     [ "getDescripcion", "class_departamento.html#abfae0d5aa1f7cad2f315970e7ecd8324", null ],
     [ "getFechaBaja", "class_departamento.html#aa47a3cb459a3f1c83b6eef4bd606759a", null ],

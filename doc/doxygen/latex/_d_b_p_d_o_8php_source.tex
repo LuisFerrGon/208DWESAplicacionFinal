@@ -1,17 +1,17 @@
 \doxysection{DBPDO.\+php}
 \hypertarget{_d_b_p_d_o_8php_source}{}\label{_d_b_p_d_o_8php_source}\index{model/DBPDO.php@{model/DBPDO.php}}
-
+\mbox{\hyperlink{_d_b_p_d_o_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00002}00002\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00013}\mbox{\hyperlink{class_d_b_p_d_o}{00013}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_d_b_p_d_o}{DBPDO}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interface_d_b}{DB}}\{}
-\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00034}\mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{ejecutarConsulta}}(\$sentenciaSQL,\ \$aParametros=\textcolor{keyword}{null},\ \$volverObjeto=\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00034}\mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{ejecutarConsulta}}(\$sentenciaSQL,\ \$aParametros=\textcolor{keyword}{null},\ \$devolverPrimeraLinea=\textcolor{keyword}{true})\{}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion=\textcolor{keyword}{new}\ PDO(SERVIDOR,\ USUARIO,\ CONTRASENA);}
+\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion=\textcolor{keyword}{new}\ PDO(\mbox{\hyperlink{conf_d_b_8php_a8a7e3d4fb84cf1d2b54fb62eb182b525}{SERVIDOR}},\ \mbox{\hyperlink{conf_d_b_8php_a3207e72c5190dd5ea41d7cf9638c0675}{USUARIO}},\ \mbox{\hyperlink{conf_d_b_8php_ab087889da58829bcb6905712b3e81fac}{CONTRASENA}});}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion-\/>setAttribute(PDO::ATTR\_ERRMODE,\ PDO::ERRMODE\_EXCEPTION);}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query=\$conexion-\/>prepare(\$sentenciaSQL);}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query-\/>execute(\$aParametros);}
-\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$volverObjeto)\{}
+\DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$devolverPrimeraLinea)\{}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query-\/>fetchObject();}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
 \DoxyCodeLine{\Hypertarget{_d_b_p_d_o_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query;}

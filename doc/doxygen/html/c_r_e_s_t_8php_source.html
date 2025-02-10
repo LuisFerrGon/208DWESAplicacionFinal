@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,7 +106,7 @@ $(function(){initNavTree('c_r_e_s_t_8php_source.html',''); initResizable(true); 
   <div class="headertitle"><div class="title">cREST.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<a href="c_r_e_s_t_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    require_once <span class="stringliteral">&#39;model/REST.php&#39;</span>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;volver&#39;</span>])){</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;rest&#39;</span>;</div>
@@ -114,9 +114,9 @@ $(function(){initNavTree('c_r_e_s_t_8php_source.html',''); initResizable(true); 
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        exit();</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    $idioma=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    $oUsuarioActivo=$_SESSION[<span class="stringliteral">&#39;usuarioDAW208LoginLogoff&#39;</span>];</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    $avRest=[</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#af3460f55e0c57a63975fe152edaaf049">   14</a></span>    <a class="code hl_variable" href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a>=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">   15</a></span>    <a class="code hl_variable" href="c_detalle_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">$oUsuarioActivo</a>=$_SESSION[<span class="stringliteral">&#39;usuarioDAW208LoginLogoff&#39;</span>];</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">   16</a></span>    <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>=[</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="stringliteral">&#39;nasa&#39;</span>=&gt;[</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="stringliteral">&#39;copyright&#39;</span>=&gt;<span class="keyword">null</span>,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="stringliteral">&#39;fecha&#39;</span>=&gt;<span class="keyword">null</span>,</div>
@@ -127,27 +127,32 @@ $(function(){initNavTree('c_r_e_s_t_8php_source.html',''); initResizable(true); 
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    ];</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;fechafotoNasa&#39;</span>])){</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        $_SESSION[<span class="stringliteral">&#39;fechaNASA&#39;</span>]= date_create($_REQUEST[<span class="stringliteral">&#39;fechafotoNasa&#39;</span>]);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#ac37ecc9aa341baafa99a0af9de2ecd6e">   27</a></span>    }<span class="keywordflow">else</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        $_SESSION[<span class="stringliteral">&#39;fechaNASA&#39;</span>]=date_create();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    $oFotoNasa=<a class="code hl_function" href="class_r_e_s_t.html#a96798874633adde8fd41fbce21e6ef73">REST::apiNasa</a>($_SESSION[<span class="stringliteral">&#39;fechaNASA&#39;</span>]);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span>($oFotoNasa instanceof <a class="code hl_class" href="classfoto_n_a_s_a.html">fotoNASA</a>){</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        $avRest[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;copyright&#39;</span>]=$oFotoNasa-&gt;getCopyright();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        $avRest[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;fecha&#39;</span>]=$oFotoNasa-&gt;getFecha();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        $avRest[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;descripcion&#39;</span>]=$oFotoNasa-&gt;getDescripcion();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        $avRest[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;titulo&#39;</span>]=$oFotoNasa-&gt;getTitulo();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        $avRest[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;url&#39;</span>]=$oFotoNasa-&gt;getUrl();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">   30</a></span>    <a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>=<a class="code hl_function" href="class_r_e_s_t.html#a96798874633adde8fd41fbce21e6ef73">REST::apiNasa</a>($_SESSION[<span class="stringliteral">&#39;fechaNASA&#39;</span>]);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="c_r_e_s_t_8php.html#a9fd1a3807f50592aa57c1e2b310e8b00">   31</a></span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a> instanceof <a class="code hl_class" href="classfoto_n_a_s_a.html">fotoNASA</a>){</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;copyright&#39;</span>]=<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>-&gt;getCopyright();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;fecha&#39;</span>]=<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>-&gt;getFecha();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;descripcion&#39;</span>]=<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>-&gt;getDescripcion();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;titulo&#39;</span>]=<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>-&gt;getTitulo();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a>[<span class="stringliteral">&#39;nasa&#39;</span>][<span class="stringliteral">&#39;url&#39;</span>]=<a class="code hl_variable" href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a>-&gt;getUrl();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    require_once $aVistas[<span class="stringliteral">&#39;layout&#39;</span>];</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>?&gt;</div>
+<div class="ttc" id="ac_detalle_8php_html_ab930bc009cbf7b3aecaf44c3280298d3"><div class="ttname"><a href="c_detalle_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">$oUsuarioActivo</a></div><div class="ttdeci">$oUsuarioActivo</div><div class="ttdef"><b>Definition</b> <a href="c_detalle_8php_source.html#l00015">cDetalle.php:15</a></div></div>
+<div class="ttc" id="ac_detalle_8php_html_af3460f55e0c57a63975fe152edaaf049"><div class="ttname"><a href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a></div><div class="ttdeci">if(isset($_REQUEST[&#39;volver&#39;])) $idioma</div><div class="ttdef"><b>Definition</b> <a href="c_detalle_8php_source.html#l00014">cDetalle.php:14</a></div></div>
+<div class="ttc" id="ac_r_e_s_t_8php_html_a137294803dca43920ec1f04c6fccd016"><div class="ttname"><a href="c_r_e_s_t_8php.html#a137294803dca43920ec1f04c6fccd016">$oFotoNasa</a></div><div class="ttdeci">$oFotoNasa</div><div class="ttdef"><b>Definition</b> <a href="#l00030">cREST.php:30</a></div></div>
+<div class="ttc" id="ac_r_e_s_t_8php_html_a911bea34d27b00daf86074f93e8058b8"><div class="ttname"><a href="c_r_e_s_t_8php.html#a911bea34d27b00daf86074f93e8058b8">$avRest</a></div><div class="ttdeci">$avRest</div><div class="ttdef"><b>Definition</b> <a href="#l00016">cREST.php:16</a></div></div>
 <div class="ttc" id="aclass_r_e_s_t_html_a96798874633adde8fd41fbce21e6ef73"><div class="ttname"><a href="class_r_e_s_t.html#a96798874633adde8fd41fbce21e6ef73">REST\apiNasa</a></div><div class="ttdeci">static apiNasa($fecha)</div><div class="ttdef"><b>Definition</b> <a href="_r_e_s_t_8php_source.html#l00026">REST.php:26</a></div></div>
 <div class="ttc" id="aclassfoto_n_a_s_a_html"><div class="ttname"><a href="classfoto_n_a_s_a.html">fotoNASA</a></div><div class="ttdef"><b>Definition</b> <a href="foto_n_a_s_a_8php_source.html#l00011">fotoNASA.php:11</a></div></div>
+<div class="ttc" id="aconf_a_p_p_8php_html_a7d5be1d8baec6c38421a0ab65783fd6d"><div class="ttname"><a href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a></div><div class="ttdeci">$aVistas</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00045">confAPP.php:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><b>cREST.php</b></li>
+    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="c_r_e_s_t_8php.html">cREST.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

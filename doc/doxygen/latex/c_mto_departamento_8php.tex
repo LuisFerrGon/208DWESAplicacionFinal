@@ -1,0 +1,108 @@
+\doxysection{controller/c\+Mto\+Departamento.php File Reference}
+\hypertarget{c_mto_departamento_8php}{}\label{c_mto_departamento_8php}\index{controller/cMtoDepartamento.php@{controller/cMtoDepartamento.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+if(\$resultado=preg\+\_\+grep(\textquotesingle{}/modificar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) if( \$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_mto_departamento_8php_aa4ef10876e103af8a3955ca5310b1d2a}{if}} ( \$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST)))
+\item 
+\mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(!isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}descripion\+Dep\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_mto_departamento_8php_ab1b5f31d2c71ffc5d251882b6dcce53f}{else}}
+\item 
+\mbox{\hyperlink{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4}{\$a\+Condiciones\+Busqueda}}
+\item 
+\mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{\$a\+Departamentos}} = \mbox{\hyperlink{class_departamento_p_d_o_a9ce64bce40f1fa50bea67547e7ab2b1a}{Departamento\+PDO\+::cargar\+Array\+Departamentos}}(\$a\+Condiciones\+Busqueda)
+\item 
+\mbox{\hyperlink{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}} =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}
+\item 
+\mbox{\hyperlink{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$o\+Usuario\+Activo}} =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+Login\+Logoff\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aCondicionesBusqueda@{\$aCondicionesBusqueda}}
+\index{\$aCondicionesBusqueda@{\$aCondicionesBusqueda}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$aCondicionesBusqueda}{\$aCondicionesBusqueda}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4} 
+\$a\+Condiciones\+Busqueda}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{':descripcion'}\ =>\ \textcolor{stringliteral}{"{}\%"{}}.\$\_SESSION[\textcolor{stringliteral}{'descripionDep'}].\textcolor{stringliteral}{"{}\%"{}}}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00045}{45}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+
+\Hypertarget{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aDepartamentos@{\$aDepartamentos}}
+\index{\$aDepartamentos@{\$aDepartamentos}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$aDepartamentos}{\$aDepartamentos}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f} 
+\$a\+Departamentos = \mbox{\hyperlink{class_departamento_p_d_o_a9ce64bce40f1fa50bea67547e7ab2b1a}{Departamento\+PDO\+::cargar\+Array\+Departamentos}}(\$a\+Condiciones\+Busqueda)}
+
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00048}{48}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+
+\Hypertarget{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$idioma@{\$idioma}}
+\index{\$idioma@{\$idioma}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$idioma}{\$idioma}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8} 
+\$idioma =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00049}{49}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+
+\Hypertarget{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
+\index{\$oUsuarioActivo@{\$oUsuarioActivo}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$oUsuarioActivo}{\$oUsuarioActivo}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3} 
+\$o\+Usuario\+Activo =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+Login\+Logoff\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00050}{50}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+
+\Hypertarget{c_mto_departamento_8php_ab1b5f31d2c71ffc5d251882b6dcce53f}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!else@{else}}
+\index{else@{else}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_ab1b5f31d2c71ffc5d251882b6dcce53f} 
+\mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}} (!isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}descripion\+Dep\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'descripionDep'}]=\$\_REQUEST[\textcolor{stringliteral}{'descripionDep'}]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00042}{42}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+
+\Hypertarget{c_mto_departamento_8php_aa4ef10876e103af8a3955ca5310b1d2a}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!if@{if}}
+\index{if@{if}!cMtoDepartamento.php@{cMtoDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_aa4ef10876e103af8a3955ca5310b1d2a} 
+if( \$resultado=preg\+\_\+grep(\textquotesingle{}/modificar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) if(\$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) if(\$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) (\begin{DoxyParamCaption}\item[{}]{\$resultado}{ = {\ttfamily preg\+\_\+grep(\textquotesingle{}/eliminar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{},~array\+\_\+keys(\$\+\_\+REQUEST))}}\end{DoxyParamCaption})}
+
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0.\+3 Fecha última modificación del archivo\+: 07/02/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+1 
+
+1.\+0.\+2 
+
+2.\+0.\+2 Modificación a modificar Mostrar 
+
+2.\+0.\+3 Eliminar 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00025}{25}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
+

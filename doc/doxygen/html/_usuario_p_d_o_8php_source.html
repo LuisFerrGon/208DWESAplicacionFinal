@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,7 +106,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
   <div class="headertitle"><div class="title">UsuarioPDO.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<a href="_usuario_p_d_o_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_usuario_p_d_o.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_usuario_p_d_o.html">UsuarioPDO</a> <span class="keyword">implements</span> <a class="code hl_interface" href="interface_usuario_d_b.html">UsuarioDB</a>{</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_usuario_p_d_o.html#ab19d20fb3fd77838839a5935ca613845">   29</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_usuario_p_d_o.html#ab19d20fb3fd77838839a5935ca613845">validarUsuario</a>($codigoUsuario, $contrasenaUsuario){</div>
@@ -115,7 +115,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                SELECT * FROM T01_Usuario WHERE T01_CodUsuario=<span class="stringliteral">&#39;{$codigoUsuario}&#39;</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                AND T01_Password=SHA2(<span class="stringliteral">&#39;{$codigoUsuario}{$contrasenaUsuario}&#39;</span>, 256);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            SQL;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a8fd60946a219fd0a0f501de3cd375dd2">DBPDO::ejecutarConsulta</a>($consulta);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO::ejecutarConsulta</a>($consulta);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">if</span>($resultado instanceof PDOException){</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">return</span> $resultado;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }<span class="keywordflow">else</span>{</div>
@@ -145,7 +145,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                WHERE T01_CodUsuario=<span class="stringliteral">&#39;{$sCodigo}&#39;</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                AND T01_Password=<span class="stringliteral">&#39;{$sPassword}&#39;</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            SQL;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a8fd60946a219fd0a0f501de3cd375dd2">DBPDO::ejecutarConsulta</a>($consulta);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO::ejecutarConsulta</a>($consulta);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span>($resultado instanceof PDOException){</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">return</span> $resultado;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
@@ -159,7 +159,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            VALUES</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                (<span class="stringliteral">&#39;{$sCodigo}&#39;</span>, SHA2(<span class="stringliteral">&#39;{$sCodigo}{$sContrasena}&#39;</span>,256), <span class="stringliteral">&#39;{$sDescripcion}&#39;</span>);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            SQL;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a8fd60946a219fd0a0f501de3cd375dd2">DBPDO::ejecutarConsulta</a>($consulta);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO::ejecutarConsulta</a>($consulta);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span>($resultado instanceof PDOException){</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keywordflow">return</span> $resultado;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }<span class="keywordflow">else</span>{</div>
@@ -170,7 +170,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            $consulta=&lt;&lt;&lt;SQL</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                SELECT * FROM T01_Usuario WHERE T01_CodUsuario=<span class="stringliteral">&#39;{$sCodigo}&#39;</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            SQL;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a8fd60946a219fd0a0f501de3cd375dd2">DBPDO::ejecutarConsulta</a>($consulta);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            $resultado=<a class="code hl_function" href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO::ejecutarConsulta</a>($consulta);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">if</span>($resultado instanceof PDOException){</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                <span class="keywordflow">return</span> $resultado;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }<span class="keywordflow">else</span>{</div>
@@ -196,7 +196,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
 </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>?&gt;</div>
-<div class="ttc" id="aclass_d_b_p_d_o_html_a8fd60946a219fd0a0f501de3cd375dd2"><div class="ttname"><a href="class_d_b_p_d_o.html#a8fd60946a219fd0a0f501de3cd375dd2">DBPDO\ejecutarConsulta</a></div><div class="ttdeci">static ejecutarConsulta($sentenciaSQL, $aParametros=null, $volverObjeto=true)</div><div class="ttdef"><b>Definition</b> <a href="_d_b_p_d_o_8php_source.html#l00034">DBPDO.php:34</a></div></div>
+<div class="ttc" id="aclass_d_b_p_d_o_html_a2f25a05d5ac45285ef715d58df320fbe"><div class="ttname"><a href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO\ejecutarConsulta</a></div><div class="ttdeci">static ejecutarConsulta($sentenciaSQL, $aParametros=null, $devolverPrimeraLinea=true)</div><div class="ttdef"><b>Definition</b> <a href="_d_b_p_d_o_8php_source.html#l00034">DBPDO.php:34</a></div></div>
 <div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition</b> <a href="_usuario_8php_source.html#l00012">Usuario.php:12</a></div></div>
 <div class="ttc" id="aclass_usuario_html_a04e0957baeb7acde9c0c86556da2d43f"><div class="ttname"><a href="class_usuario.html#a04e0957baeb7acde9c0c86556da2d43f">Usuario\getPassword</a></div><div class="ttdeci">getPassword()</div><div class="ttdef"><b>Definition</b> <a href="_usuario_8php_source.html#l00085">Usuario.php:85</a></div></div>
 <div class="ttc" id="aclass_usuario_html_abcc0f031ac30c407e3c8daeeed1adb0d"><div class="ttname"><a href="class_usuario.html#abcc0f031ac30c407e3c8daeeed1adb0d">Usuario\getFechaHoraUltimaConexion</a></div><div class="ttdeci">getFechaHoraUltimaConexion()</div><div class="ttdef"><b>Definition</b> <a href="_usuario_8php_source.html#l00103">Usuario.php:103</a></div></div>
@@ -210,7 +210,7 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html',''); initResizable(tr
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3f14f6767c31cb4a1d22c13c18cc6fc3.html">model</a></li><li class="navelem"><b>UsuarioPDO.php</b></li>
+    <li class="navelem"><a class="el" href="dir_3f14f6767c31cb4a1d22c13c18cc6fc3.html">model</a></li><li class="navelem"><a class="el" href="_usuario_p_d_o_8php.html">UsuarioPDO.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

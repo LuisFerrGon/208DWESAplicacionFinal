@@ -1,0 +1,70 @@
+\doxysection{controller/c\+Error.php File Reference}
+\hypertarget{c_error_8php}{}\label{c_error_8php}\index{controller/cError.php@{controller/cError.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}error\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_error_8php_a9f91e178ee969ce2a15c83117268b9f4}{else}}
+\item 
+\mbox{\hyperlink{c_error_8php_a49771041513954a7d1b6c57ece48fa6d}{\$av\+Error}}
+\item 
+\mbox{\hyperlink{c_error_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}} =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{c_error_8php_a49771041513954a7d1b6c57ece48fa6d}\index{cError.php@{cError.php}!\$avError@{\$avError}}
+\index{\$avError@{\$avError}!cError.php@{cError.php}}
+\doxysubsubsection{\texorpdfstring{\$avError}{\$avError}}
+{\footnotesize\ttfamily \label{c_error_8php_a49771041513954a7d1b6c57ece48fa6d} 
+\$av\+Error}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'codigo'}=>\$error-\/>getCodError(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}=>\$error-\/>getDescError(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'archivo'}=>\$error-\/>getArchivoError(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'linea'}=>\$error-\/>getLineaError(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'paginaSiguiente'}=>\$error-\/>getPaginaSiguiente()}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{c_error_8php_source_l00019}{19}} of file \mbox{\hyperlink{c_error_8php_source}{c\+Error.\+php}}.
+
+\Hypertarget{c_error_8php_a9f7ca24786e24b62c75101dbc55583e8}\index{cError.php@{cError.php}!\$idioma@{\$idioma}}
+\index{\$idioma@{\$idioma}!cError.php@{cError.php}}
+\doxysubsubsection{\texorpdfstring{\$idioma}{\$idioma}}
+{\footnotesize\ttfamily \label{c_error_8php_a9f7ca24786e24b62c75101dbc55583e8} 
+\$idioma =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{c_error_8php_source_l00026}{26}} of file \mbox{\hyperlink{c_error_8php_source}{c\+Error.\+php}}.
+
+\Hypertarget{c_error_8php_a9f91e178ee969ce2a15c83117268b9f4}\index{cError.php@{cError.php}!else@{else}}
+\index{else@{else}!cError.php@{cError.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{c_error_8php_a9f91e178ee969ce2a15c83117268b9f4} 
+\mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{if}} (isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}error\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \$error=\textcolor{keyword}{new}\ \mbox{\hyperlink{class_error_app}{ErrorApp}}(\textcolor{charliteral}{'0'},\ \textcolor{stringliteral}{'Prueba\ de\ error'},\ \textcolor{stringliteral}{'Archivo'},\ \textcolor{stringliteral}{'Linea'},\ \textcolor{stringliteral}{'inicioPrivado'})}
+
+\end{DoxyCode}
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 Fecha última modificación del archivo\+: 20/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{c_error_8php_source_l00016}{16}} of file \mbox{\hyperlink{c_error_8php_source}{c\+Error.\+php}}.
+

@@ -17,7 +17,8 @@
          * 
          * @param string $sentenciaSQL Sentencia sql
          * @param array $aParametros Array de los parametros
+         * @param boolean $devolverPrimeraLinea
          */
-        public static function ejecutarConsulta($sentenciaSQL, $aParametros);
+        public static function ejecutarConsulta($sentenciaSQL, $aParametros, $devolverPrimeraLinea);
     }
 ?>

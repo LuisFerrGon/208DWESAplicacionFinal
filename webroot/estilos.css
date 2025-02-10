@@ -55,10 +55,51 @@ main{
             }
         }
     }
-    #mapaAplicacion{
-        display: flex;
-        justify-self: center;
+    /*Carrusel*/
+    .carrusel{
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        .mySlides {
+            display: none;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            img{
+                width: 900px;
+                margin-left: 45px;
+            }
+            .text {
+                color: var(--rojoError);
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: var(--rojoError);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: var(--gris);
+        }
     }
+    /* Fin Carrusel*/
     form{
         .obligatorio{
             background-color:  var(--amarilloClaro); 
@@ -157,4 +198,9 @@ footer{
         color: var(--rosaOscuro);
         text-decoration: none;
     }
+}
+/*Carrusel*/
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }

@@ -163,5 +163,39 @@
                 exit();
             }
         }
+        /**
+         * Función crearDepartamento
+         * 
+         * Función para crear un departamento
+         * 
+         * @param string $codigo Código del departamento
+         * @param string $descripcion Descripción del departamento
+         * @param float $volumen Volumen del departamento
+         * @author Luis Ferreras González
+         * @version 2.0.3 Fecha última modificación: 10/02/2025
+         * @since 2.0.3
+         */
+        public static function crearDepartamento($codigo, $descripcion, $volumen){
+            $consulta=<<<SQL
+                INSERT INTO DB208DWESAppFinal.T02_Departamento
+                    (T01_CodUsuario, T01_Password, T01_DescUsuario)
+                VALUES
+                    ('{$codigo}', '{$descripcion}', {$volumen});
+            SQL;
+            $resultado=DBPDO::ejecutarConsulta($consulta);
+            if($resultado instanceof PDOException){
+                $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+                $_SESSION['error']=new ErrorApp(
+                    $resultado->getCode(),
+                    $resultado->getMessage(),
+                    $resultado->getFile(),
+                    $resultado->getLine(),
+                    $_SESSION['paginaAnterior']
+                );
+                $_SESSION['paginaEnCurso']='error';
+                header('Location: index.php');
+                exit();
+            }
+        }
     }
 ?>

@@ -1,6 +1,6 @@
 \doxysection{Usuario\+PDO.\+php}
 \hypertarget{_usuario_p_d_o_8php_source}{}\label{_usuario_p_d_o_8php_source}\index{model/UsuarioPDO.php@{model/UsuarioPDO.php}}
-
+\mbox{\hyperlink{_usuario_p_d_o_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00012}\mbox{\hyperlink{class_usuario_p_d_o}{00012}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_usuario_p_d_o}{UsuarioPDO}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interface_usuario_d_b}{UsuarioDB}}\{}
@@ -10,7 +10,7 @@
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$codigoUsuario\}'}\ }
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=SHA2(\textcolor{stringliteral}{'\{\$codigoUsuario\}\{\$contrasenaUsuario\}'},\ 256);}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{DBPDO::ejecutarConsulta}}(\$consulta);}
+\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{DBPDO::ejecutarConsulta}}(\$consulta);}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
@@ -40,7 +40,7 @@
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'}}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=\textcolor{stringliteral}{'\{\$sPassword\}'};}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{DBPDO::ejecutarConsulta}}(\$consulta);}
+\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{DBPDO::ejecutarConsulta}}(\$consulta);}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -54,7 +54,7 @@
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ VALUES}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'\{\$sCodigo\}'},\ SHA2(\textcolor{stringliteral}{'\{\$sCodigo\}\{\$sContrasena\}'},256),\ \textcolor{stringliteral}{'\{\$sDescripcion\}'});}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{DBPDO::ejecutarConsulta}}(\$consulta);}
+\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{DBPDO::ejecutarConsulta}}(\$consulta);}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
@@ -65,7 +65,7 @@
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'};}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a8fd60946a219fd0a0f501de3cd375dd2}{DBPDO::ejecutarConsulta}}(\$consulta);}
+\DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\mbox{\hyperlink{class_d_b_p_d_o_a2f25a05d5ac45285ef715d58df320fbe}{DBPDO::ejecutarConsulta}}(\$consulta);}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
 \DoxyCodeLine{\Hypertarget{_usuario_p_d_o_8php_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}

@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,7 +106,7 @@ $(function(){initNavTree('c_error_8php_source.html',''); initResizable(true); })
   <div class="headertitle"><div class="title">cError.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<a href="c_error_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;volver&#39;</span>])){</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=$_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>];</div>
@@ -116,26 +116,29 @@ $(function(){initNavTree('c_error_8php_source.html',''); initResizable(true); })
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">if</span>(isset($_SESSION[<span class="stringliteral">&#39;error&#39;</span>])){</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        $error=$_SESSION[<span class="stringliteral">&#39;error&#39;</span>];</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="c_error_8php.html#a9f91e178ee969ce2a15c83117268b9f4">   16</a></span>    }<span class="keywordflow">else</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        $error=<span class="keyword">new</span> <a class="code hl_class" href="class_error_app.html">ErrorApp</a>(<span class="charliteral">&#39;0&#39;</span>, <span class="stringliteral">&#39;Prueba de error&#39;</span>, <span class="stringliteral">&#39;Archivo&#39;</span>, <span class="stringliteral">&#39;Linea&#39;</span>, <span class="stringliteral">&#39;inicioPrivado&#39;</span>);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    $avError=[</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="c_error_8php.html#a49771041513954a7d1b6c57ece48fa6d">   19</a></span>    <a class="code hl_variable" href="c_error_8php.html#a49771041513954a7d1b6c57ece48fa6d">$avError</a>=[</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="stringliteral">&#39;codigo&#39;</span>=&gt;$error-&gt;getCodError(),</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="stringliteral">&#39;descripcion&#39;</span>=&gt;$error-&gt;getDescError(),</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&#39;archivo&#39;</span>=&gt;$error-&gt;getArchivoError(),</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="stringliteral">&#39;linea&#39;</span>=&gt;$error-&gt;getLineaError(),</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="stringliteral">&#39;paginaSiguiente&#39;</span>=&gt;$error-&gt;getPaginaSiguiente()</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ];</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    $idioma=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    require_once $aVistas[<span class="stringliteral">&#39;layout&#39;</span>];</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="c_error_8php.html#a9f7ca24786e24b62c75101dbc55583e8">   26</a></span>    <a class="code hl_variable" href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a>=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>?&gt;</div>
+<div class="ttc" id="ac_detalle_8php_html_af3460f55e0c57a63975fe152edaaf049"><div class="ttname"><a href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a></div><div class="ttdeci">if(isset($_REQUEST[&#39;volver&#39;])) $idioma</div><div class="ttdef"><b>Definition</b> <a href="c_detalle_8php_source.html#l00014">cDetalle.php:14</a></div></div>
+<div class="ttc" id="ac_error_8php_html_a49771041513954a7d1b6c57ece48fa6d"><div class="ttname"><a href="c_error_8php.html#a49771041513954a7d1b6c57ece48fa6d">$avError</a></div><div class="ttdeci">$avError</div><div class="ttdef"><b>Definition</b> <a href="#l00019">cError.php:19</a></div></div>
 <div class="ttc" id="aclass_error_app_html"><div class="ttname"><a href="class_error_app.html">ErrorApp</a></div><div class="ttdef"><b>Definition</b> <a href="_error_app_8php_source.html#l00012">ErrorApp.php:12</a></div></div>
+<div class="ttc" id="aconf_a_p_p_8php_html_a7d5be1d8baec6c38421a0ab65783fd6d"><div class="ttname"><a href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a></div><div class="ttdeci">$aVistas</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00045">confAPP.php:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><b>cError.php</b></li>
+    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="c_error_8php.html">cError.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

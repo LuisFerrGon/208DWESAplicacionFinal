@@ -1,11 +1,11 @@
 \doxysection{REST.\+php}
 \hypertarget{_r_e_s_t_8php_source}{}\label{_r_e_s_t_8php_source}\index{model/REST.php@{model/REST.php}}
-
+\mbox{\hyperlink{_r_e_s_t_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00002}00002\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/fotoNASA.php'};}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00012}\mbox{\hyperlink{class_r_e_s_t}{00012}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_r_e_s_t}{REST}}\{}
-\DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ apiKeyNasa\ =\ \textcolor{stringliteral}{"{}2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ"{}};}
+\DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00013}\mbox{\hyperlink{class_r_e_s_t_ad13c3c00474efe09ba004fb729a54870}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_r_e_s_t_ad13c3c00474efe09ba004fb729a54870}{apiKeyNasa}}\ =\ \textcolor{stringliteral}{"{}2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ"{}};}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00026}\mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{apiNasa}}(\$fecha)\{}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
 \DoxyCodeLine{\Hypertarget{_r_e_s_t_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=file\_get\_contents(\textcolor{stringliteral}{"{}https://api.nasa.gov/planetary/apod?api\_key="{}}.self::apiKeyNasa.\textcolor{stringliteral}{"{}\&date="{}}.\$fecha-\/>format(\textcolor{stringliteral}{'Y-\/m-\/d'}));}

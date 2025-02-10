@@ -1,12 +1,13 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.3 Fecha última modificación del archivo: 07/02/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 10/02/2025
      * @since 1.0.0
      * @since 1.0.1 Pagina REST, mtoDepartamento añadida
      * @since 1.0.2 Pagina modificarDepartamento añadida
      * @since 2.0.2 Pagina mostrarDepartamento añadida
-     * @since 1.0.2 Pagina eliminarDepartamento añadida
+     *              Pagina eliminarDepartamento añadida
+     * @since 2.0.3 Pagina crearDepartamento
      */
 
     //Validacion de formularios
@@ -39,7 +40,8 @@
         'mtoDepartamento'=>'controller/cMtoDepartamento.php',
         'modificarDepartamento'=>'controller/cModificarDepartamento.php',
         'mostrarDepartamento'=>'controller/cMostrarDepartamento.php',
-        'eliminarDepartamento'=>'controller/cEliminarDepartamento.php'
+        'eliminarDepartamento'=>'controller/cEliminarDepartamento.php',
+        'crearDepartamento'=>'controller/cCrearDepartamento.php'
     ];
     //Array de las vistas
     $aVistas=[
@@ -59,6 +61,7 @@
         'mtoDepartamento'=>'view/vMtoDepartamento.php',
         'modificarDepartamento'=>'view/vModificarDepartamento.php',
         'mostrarDepartamento'=>'view/vMostrarDepartamento.php',
-        'eliminarDepartamento'=>'view/vEliminarDepartamento.php'
+        'eliminarDepartamento'=>'view/vEliminarDepartamento.php',
+        'crearDepartamento'=>'view/vCrearDepartamento.php'
     ];
 ?>

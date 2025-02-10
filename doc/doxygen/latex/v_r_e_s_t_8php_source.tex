@@ -1,6 +1,6 @@
 \doxysection{v\+REST.\+php}
 \hypertarget{v_r_e_s_t_8php_source}{}\label{v_r_e_s_t_8php_source}\index{view/vREST.php@{view/vREST.php}}
-
+\mbox{\hyperlink{v_r_e_s_t_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00008}00008\ \ \ \ \ \$mensajeFotoNasaFallida=[}
@@ -12,9 +12,9 @@
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00014}00014\ <header><h1>\mbox{\hyperlink{class_r_e_s_t}{REST}}</h1></header><main>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00015}00015\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00016}00016\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00019}\mbox{\hyperlink{v_r_e_s_t_8php_a5c3eabd6b72e04447a5f17ecc9bb0896}{00019}}\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00020}00020\ \ \ \ \ </section>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00021}00021\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ <form>}
@@ -28,15 +28,15 @@
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ name=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ min=\textcolor{stringliteral}{"{}1995-\/06-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ date('Y-\/m-\/d');?>"{}}>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ </form>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]==\textcolor{keyword}{null})\{}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>"{}}.\$mensajeFotoNasaFallida[\$idioma].\textcolor{stringliteral}{"{}</h2>"{}};}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]==\textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>"{}}.\$mensajeFotoNasaFallida[\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}].\textcolor{stringliteral}{"{}</h2>"{}};}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ <<<IMAGEN}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>\{\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]\}</h2>}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>\{\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]\}</h2>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}\{\$avRest['nasa']['url']\}"{}}\ alt=\textcolor{stringliteral}{"{}Imagen\ del\ día"{}}>}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IMAGEN;}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>\&\#169;"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>\&\#169;"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
+\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}].\textcolor{stringliteral}{"{}</p>"{}};}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ ?>}

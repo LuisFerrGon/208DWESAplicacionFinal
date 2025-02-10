@@ -21,9 +21,9 @@
          *                              seguir.
          * @param mixed[] $aParametros Opcional. Array en el que se ponen los
          *                              paramteros en el orden deseado.
-         * @param boolean $volverObjeto Opcional, por defecto true.
-         *                              Si es true devuelve con fetchObject.
-         *                              Si es false lo devuelve sin haberlo hecho.
+         * @param boolean $devolverPrimeraLinea Opcional, por defecto true.
+         *                                      Si es true devuelve con fetchObject.
+         *                                      Si es false lo devuelve sin haberlo hecho.
          * @return object|PDOException Devuelve un objeto si no hay error; sino
          *                              un PDOException.
          * @author Luis Ferreras González
@@ -31,13 +31,13 @@
          * @since 1.0.0
          * @since 1.0.1 Variable $volverObjeto añadido.
          */
-        public static function ejecutarConsulta($sentenciaSQL, $aParametros=null, $volverObjeto=true){
+        public static function ejecutarConsulta($sentenciaSQL, $aParametros=null, $devolverPrimeraLinea=true){
             try{
                 $conexion=new PDO(SERVIDOR, USUARIO, CONTRASENA);
                 $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query=$conexion->prepare($sentenciaSQL);
                 $query->execute($aParametros);
-                if($volverObjeto){
+                if($devolverPrimeraLinea){
                     return $query->fetchObject();
                 }else{
                     return $query;

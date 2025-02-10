@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,44 +106,62 @@ $(function(){initNavTree('c_mto_departamento_8php_source.html',''); initResizabl
   <div class="headertitle"><div class="title">cMtoDepartamento.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    $clavesRequest= array_keys($_REQUEST);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">if</span>($resultado=preg_grep(<span class="stringliteral">&#39;/modificar\&zwj;([A-Z]{3}\&zwj;)/&#39;</span>, $clavesRequest)){</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        $_SESSION[<span class="stringliteral">&#39;departamentoEnCurso&#39;</span>]=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -4, 3));</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;modificarDepartamento&#39;</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;mtoDepartamento&#39;</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        exit();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }    </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    require_once <span class="stringliteral">&#39;model/Departamento.php&#39;</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    require_once <span class="stringliteral">&#39;model/DepartamentoPDO.php&#39;</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;volver&#39;</span>])){</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=$_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>];</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;wip&#39;</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        exit();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span>(!isset($_REQUEST[<span class="stringliteral">&#39;descripionDep&#39;</span>])){</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        $_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>]=<span class="keyword">null</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }<span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        $_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>]=$_REQUEST[<span class="stringliteral">&#39;descripionDep&#39;</span>];</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    $aCondicionesBusqueda=[</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="stringliteral">&#39;:descripcion&#39;</span> =&gt; <span class="stringliteral">&quot;%&quot;</span>.$_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>].<span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ];</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    $aDepartamentos= <a class="code hl_function" href="class_departamento_p_d_o.html#a9ce64bce40f1fa50bea67547e7ab2b1a">DepartamentoPDO::cargarArrayDepartamentos</a>($aCondicionesBusqueda);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    $idioma=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    $oUsuarioActivo=$_SESSION[<span class="stringliteral">&#39;usuarioDAW208LoginLogoff&#39;</span>];</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    require_once $aVistas[<span class="stringliteral">&#39;layout&#39;</span>];</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>?&gt;</div>
-<div class="ttc" id="aclass_departamento_p_d_o_html_a9ce64bce40f1fa50bea67547e7ab2b1a"><div class="ttname"><a href="class_departamento_p_d_o.html#a9ce64bce40f1fa50bea67547e7ab2b1a">DepartamentoPDO\cargarArrayDepartamentos</a></div><div class="ttdeci">static cargarArrayDepartamentos($aCondiciones)</div><div class="ttdef"><b>Definition</b> <a href="_departamento_p_d_o_8php_source.html#l00024">DepartamentoPDO.php:24</a></div></div>
+<a href="c_mto_departamento_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">if</span>($resultado=preg_grep(<span class="stringliteral">&#39;/modificar[A-Z]{3}/&#39;</span>, array_keys($_REQUEST))){</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        $_SESSION[<span class="stringliteral">&#39;departamentoEnCurso&#39;</span>]=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;modificarDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;mtoDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        exit();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span>($resultado=preg_grep(<span class="stringliteral">&#39;/mostrar[A-Z]{3}/&#39;</span>, array_keys($_REQUEST))){</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        $_SESSION[<span class="stringliteral">&#39;departamentoEnCurso&#39;</span>]=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;mostrarDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;mtoDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        exit();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#aa4ef10876e103af8a3955ca5310b1d2a">   25</a></span>    <span class="keywordflow">if</span>($resultado=preg_grep(<span class="stringliteral">&#39;/eliminar[A-Z]{3}/&#39;</span>, array_keys($_REQUEST))){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        $_SESSION[<span class="stringliteral">&#39;departamentoEnCurso&#39;</span>]=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;eliminarDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;mtoDepartamento&#39;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        exit();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    require_once <span class="stringliteral">&#39;model/Departamento.php&#39;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    require_once <span class="stringliteral">&#39;model/DepartamentoPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;volver&#39;</span>])){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=$_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        $_SESSION[<span class="stringliteral">&#39;paginaAnterior&#39;</span>]=<span class="stringliteral">&#39;wip&#39;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        header(<span class="stringliteral">&#39;Location: index.php&#39;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        exit();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span>(!isset($_REQUEST[<span class="stringliteral">&#39;descripionDep&#39;</span>])){</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        $_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>]=<span class="keyword">null</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#ab1b5f31d2c71ffc5d251882b6dcce53f">   42</a></span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        $_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>]=$_REQUEST[<span class="stringliteral">&#39;descripionDep&#39;</span>];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#a042e20993351c77009ef32918e6887f4">   45</a></span>    <a class="code hl_variable" href="c_mto_departamento_8php.html#a042e20993351c77009ef32918e6887f4">$aCondicionesBusqueda</a>=[</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="stringliteral">&#39;:descripcion&#39;</span> =&gt; <span class="stringliteral">&quot;%&quot;</span>.$_SESSION[<span class="stringliteral">&#39;descripionDep&#39;</span>].<span class="stringliteral">&quot;%&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ];</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">   48</a></span>    <a class="code hl_variable" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a>= <a class="code hl_function" href="class_departamento_p_d_o.html#a9ce64bce40f1fa50bea67547e7ab2b1a">DepartamentoPDO::cargarArrayDepartamentos</a>(<a class="code hl_variable" href="c_mto_departamento_8php.html#a042e20993351c77009ef32918e6887f4">$aCondicionesBusqueda</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">   49</a></span>    <a class="code hl_variable" href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a>=isset($_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>]) ? $_COOKIE[<span class="stringliteral">&#39;idioma&#39;</span>] : <span class="stringliteral">&#39;en&#39;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="c_mto_departamento_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">   50</a></span>    <a class="code hl_variable" href="c_detalle_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">$oUsuarioActivo</a>=$_SESSION[<span class="stringliteral">&#39;usuarioDAW208LoginLogoff&#39;</span>];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>?&gt;</div>
+<div class="ttc" id="ac_detalle_8php_html_ab930bc009cbf7b3aecaf44c3280298d3"><div class="ttname"><a href="c_detalle_8php.html#ab930bc009cbf7b3aecaf44c3280298d3">$oUsuarioActivo</a></div><div class="ttdeci">$oUsuarioActivo</div><div class="ttdef"><b>Definition</b> <a href="c_detalle_8php_source.html#l00015">cDetalle.php:15</a></div></div>
+<div class="ttc" id="ac_detalle_8php_html_af3460f55e0c57a63975fe152edaaf049"><div class="ttname"><a href="c_detalle_8php.html#af3460f55e0c57a63975fe152edaaf049">$idioma</a></div><div class="ttdeci">if(isset($_REQUEST[&#39;volver&#39;])) $idioma</div><div class="ttdef"><b>Definition</b> <a href="c_detalle_8php_source.html#l00014">cDetalle.php:14</a></div></div>
+<div class="ttc" id="ac_mto_departamento_8php_html_a042e20993351c77009ef32918e6887f4"><div class="ttname"><a href="c_mto_departamento_8php.html#a042e20993351c77009ef32918e6887f4">$aCondicionesBusqueda</a></div><div class="ttdeci">$aCondicionesBusqueda</div><div class="ttdef"><b>Definition</b> <a href="#l00045">cMtoDepartamento.php:45</a></div></div>
+<div class="ttc" id="ac_mto_departamento_8php_html_aa0c3c83f69b805145e209ff0fcdb590f"><div class="ttname"><a href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a></div><div class="ttdeci">$aDepartamentos</div><div class="ttdef"><b>Definition</b> <a href="#l00048">cMtoDepartamento.php:48</a></div></div>
+<div class="ttc" id="aclass_departamento_p_d_o_html_a9ce64bce40f1fa50bea67547e7ab2b1a"><div class="ttname"><a href="class_departamento_p_d_o.html#a9ce64bce40f1fa50bea67547e7ab2b1a">DepartamentoPDO\cargarArrayDepartamentos</a></div><div class="ttdeci">static cargarArrayDepartamentos($aCondiciones)</div><div class="ttdef"><b>Definition</b> <a href="_departamento_p_d_o_8php_source.html#l00026">DepartamentoPDO.php:26</a></div></div>
+<div class="ttc" id="aconf_a_p_p_8php_html_a7d5be1d8baec6c38421a0ab65783fd6d"><div class="ttname"><a href="conf_a_p_p_8php.html#a7d5be1d8baec6c38421a0ab65783fd6d">$aVistas</a></div><div class="ttdeci">$aVistas</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00045">confAPP.php:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><b>cMtoDepartamento.php</b></li>
+    <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="c_mto_departamento_8php.html">cMtoDepartamento.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
