@@ -1,19 +1,19 @@
 \doxysection{c\+Mostrar\+Departamento.\+php}
-\hypertarget{c_mostrar_departamento_8php_source}{}\label{c_mostrar_departamento_8php_source}\index{controller/cMostrarDepartamento.php@{controller/cMostrarDepartamento.php}}
-\mbox{\hyperlink{c_mostrar_departamento_8php}{Go to the documentation of this file.}}
+\label{c_mostrar_departamento_8php_source}\index{controller/cMostrarDepartamento.php@{controller/cMostrarDepartamento.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00007}\mbox{\hyperlink{c_mostrar_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{00007}}\ \ \ \ \ \mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00008}00008\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00009}00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00010}\mbox{\hyperlink{c_mostrar_departamento_8php_aacd692316fb0f969d7898d8e88a5417b}{00010}}\ \ \ \ \ \mbox{\hyperlink{c_eliminar_departamento_8php_aacd692316fb0f969d7898d8e88a5417b}{\$departamentoEnCurso}}=\$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}];}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00011}\mbox{\hyperlink{c_mostrar_departamento_8php_a833455fe07b8e2ac9c6d3c333a2b4f62}{00011}}\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mostrarDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00016}00016\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00017}00017\ \ \ \ \ require\_once\ \mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{\$aVistas}}[\textcolor{stringliteral}{'layout'}];}
-\DoxyCodeLine{\Hypertarget{c_mostrar_departamento_8php_source_l00018}00018\ ?>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00007\ \ \ \ \ \$idioma=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{00008\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
+\DoxyCodeLine{00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
+\DoxyCodeLine{00010\ \ \ \ \ \$departamentoEnCurso=\$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}];}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mostrarDepartamento'};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{00018\ ?>}
 
 \end{DoxyCode}

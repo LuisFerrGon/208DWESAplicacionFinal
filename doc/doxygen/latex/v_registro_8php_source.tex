@@ -1,82 +1,86 @@
 \doxysection{v\+Registro.\+php}
-\hypertarget{v_registro_8php_source}{}\label{v_registro_8php_source}\index{view/vRegistro.php@{view/vRegistro.php}}
-\mbox{\hyperlink{v_registro_8php}{Go to the documentation of this file.}}
+\label{v_registro_8php_source}\index{view/vRegistro.php@{view/vRegistro.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00011}\mbox{\hyperlink{v_registro_8php_a0eb3db09c2634a632fc6f0e97f40b7f5}{00011}}\ \ \ \ \ \mbox{\hyperlink{v_mi_cuenta_8php_a0eb3db09c2634a632fc6f0e97f40b7f5}{\$mensaje}}=[}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>\textcolor{stringliteral}{"{}Se\ está\ trabajando\ en\ esta\ página\ y\ no\ se\ encuentra\ disponible."{}},}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>\textcolor{stringliteral}{"{}This\ page\ is\ being\ worked\ on\ and\ isn't\ available."{}},}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}=>\textcolor{stringliteral}{"{}pt\ wip"{}}}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00015}00015\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00016}00016\ ?>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00017}00017\ <header><h1>Registrarse</h1></header><main>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00018}00018\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00019}00019\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00022}\mbox{\hyperlink{v_registro_8php_adbfbdf3fa9117b4aa7a20e97cddd1320}{00022}}\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00023}00023\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00024}00024\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00028}00028\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00029}00029\ </div>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00030}00030\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioregistro"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00031}00031\ \ \ \ \ <h2>Registro\ de\ usuario</h2>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00032}00032\ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}plantilla"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}\ novalidate>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ <table>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoUsuario"{}}>Código:</label>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ name=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['codigoUsuario'])\ \&\&\ empty(\$aErrores['codigoUsuario'])?\$\_REQUEST['codigoUsuario']:'');?>"{}}\ required>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00043}\mbox{\hyperlink{v_registro_8php_ab8c5440809994f7c5df92302918e5a9d}{00043}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\mbox{\hyperlink{c_login_8php_a6f63c5a0557f7da205d6d99f947d58b8}{\$aErrores}}[\textcolor{stringliteral}{'codigoUsuario'}]))\{}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'codigoUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}>Contraseña:</label>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}password"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ name=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['contrasenaUsuario'])\ \&\&\ empty(\$aErrores['contrasenaUsuario'])?\$\_REQUEST['contrasenaUsuario']:'');?>"{}}\ required>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00056}\mbox{\hyperlink{v_registro_8php_ae543d0e3c0be2f81e0a4b4886a68297e}{00056}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\mbox{\hyperlink{c_login_8php_a6f63c5a0557f7da205d6d99f947d58b8}{\$aErrores}}[\textcolor{stringliteral}{'contrasenaUsuario'}]))\{}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'contrasenaUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionUsuario"{}}>Descripción:</label>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionUsuario"{}}\ name=\textcolor{stringliteral}{"{}descripcionUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['descripcionUsuario'])\ \&\&\ empty(\$aErrores['descripcionUsuario'])?\$\_REQUEST['descripcionUsuario']:'');?>"{}}\ required>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\mbox{\hyperlink{c_login_8php_a6f63c5a0557f7da205d6d99f947d58b8}{\$aErrores}}[\textcolor{stringliteral}{'descripcionUsuario'}]))\{}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'descripcionUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}registro"{}}\ name=\textcolor{stringliteral}{"{}registro"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Registrarse"{}}>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ </table>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00083}00083\ \ \ \ \ </form>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00084}00084\ </div>}
-\DoxyCodeLine{\Hypertarget{v_registro_8php_source_l00085}00085\ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div></main>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00011\ \ \ \ \ \$mensaje=[}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>\textcolor{stringliteral}{"{}Se\ está\ trabajando\ en\ esta\ página\ y\ no\ se\ encuentra\ disponible."{}},}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>\textcolor{stringliteral}{"{}This\ page\ is\ being\ worked\ on\ and\ isn't\ available."{}},}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}=>\textcolor{stringliteral}{"{}pt\ wip"{}}}
+\DoxyCodeLine{00015\ \ \ \ \ ];}
+\DoxyCodeLine{00016\ ?>}
+\DoxyCodeLine{00017\ <header>}
+\DoxyCodeLine{00018\ \ \ \ \ <h1>Registrarse</h1>}
+\DoxyCodeLine{00019\ </header>}
+\DoxyCodeLine{00020\ <main>}
+\DoxyCodeLine{00021\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00032\ \ \ \ \ </div>}
+\DoxyCodeLine{00033\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioregistro"{}}>}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ <h2>Registro\ de\ usuario</h2>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}plantilla"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}\ novalidate>}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoUsuario"{}}>Código:</label>}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ name=\textcolor{stringliteral}{"{}codigoUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['codigoUsuario'])\ \&\&\ empty(\$aErrores['codigoUsuario'])?\$\_REQUEST['codigoUsuario']:'');?>"{}}\ required>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'codigoUsuario'}]))\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'codigoUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}>Contraseña:</label>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}password"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ name=\textcolor{stringliteral}{"{}contrasenaUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['contrasenaUsuario'])\ \&\&\ empty(\$aErrores['contrasenaUsuario'])?\$\_REQUEST['contrasenaUsuario']:'');?>"{}}\ required>}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'contrasenaUsuario'}]))\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'contrasenaUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionUsuario"{}}>Descripción:</label>}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionUsuario"{}}\ name=\textcolor{stringliteral}{"{}descripcionUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(isset(\$\_REQUEST['descripcionUsuario'])\ \&\&\ empty(\$aErrores['descripcionUsuario'])?\$\_REQUEST['descripcionUsuario']:'');?>"{}}\ required>}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'descripcionUsuario'}]))\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'descripcionUsuario'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}registro"{}}\ name=\textcolor{stringliteral}{"{}registro"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Registrarse"{}}>}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{00087\ \ \ \ \ </div>}
+\DoxyCodeLine{00088\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{00089\ </main>}
 
 \end{DoxyCode}

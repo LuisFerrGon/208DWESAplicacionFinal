@@ -108,7 +108,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -140,7 +140,7 @@
                 <dd class="phpdocumentor-tag-list__definition">
                                             <span class="phpdocumentor-tag-link">2.0.2</span>
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 07/02/2025</p>
+                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 10/02/2025</p>
 </section>
 
                                     </dd>
@@ -173,6 +173,16 @@ Función eliminarDepartamento</p>
 </section>
 
                                     </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.0.3</span>
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Función crearDepartamento</p>
+</section>
+
+                                    </dd>
                                             </dl>
 
 
@@ -201,6 +211,13 @@ Función eliminarDepartamento</p>
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/DepartamentoPDO.html#method_buscarDepartamentos">buscarDepartamentos()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Función buscarDepartamentos</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/DepartamentoPDO.html#method_buscarPorCodigo">buscarPorCodigo()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -208,11 +225,11 @@ Función eliminarDepartamento</p>
 <dd>Función buscarPorCodigo</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/DepartamentoPDO.html#method_cargarArrayDepartamentos">cargarArrayDepartamentos()</a>
+    <a class="" href="classes/DepartamentoPDO.html#method_crearDepartamento">crearDepartamento()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: mixed    </span>
 </dt>
-<dd>Función cargarArrayDepartamentos</dd>
+<dd>Función crearDepartamento</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/DepartamentoPDO.html#method_eliminarDepartamento">eliminarDepartamento()</a>
@@ -248,6 +265,97 @@ Función eliminarDepartamento</p>
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_buscarDepartamentos">
+        buscarDepartamentos()
+        <a href="classes/DepartamentoPDO.html#method_buscarDepartamentos" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Función buscarDepartamentos</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">buscarDepartamentos</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aCondiciones</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <section class="phpdocumentor-description"><p>Funcion buscar departamentos dadas unas condiciones</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$aCondiciones</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array con las condiciones de busqueda</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/DepartamentoPDO.html#method_buscarDepartamentos#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Luis Ferreras González</p>
+</section>
+
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">version</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">1.0.2</span>
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 06/02/2025</p>
+</section>
+
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">1.0.2</span>
+                                                                                
+                                             
+                                    </dd>
+                                            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array con todos los departamentos que se adhieren a las condiciones</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_buscarPorCodigo">
         buscarPorCodigo()
         <a href="classes/DepartamentoPDO.html#method_buscarPorCodigo" class="headerlink"><i class="fas fa-link"></i></a>
@@ -256,7 +364,7 @@ Función eliminarDepartamento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
@@ -341,38 +449,56 @@ Función eliminarDepartamento</p>
             -public
                                     -static                    "
 >
-    <h4 class="phpdocumentor-element__name" id="method_cargarArrayDepartamentos">
-        cargarArrayDepartamentos()
-        <a href="classes/DepartamentoPDO.html#method_cargarArrayDepartamentos" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_crearDepartamento">
+        crearDepartamento()
+        <a href="classes/DepartamentoPDO.html#method_crearDepartamento" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Función cargarArrayDepartamentos</p>
+        <p class="phpdocumentor-summary">Función crearDepartamento</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">cargarArrayDepartamentos</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aCondiciones</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">crearDepartamento</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$codigo</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$descripcion</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$volumen</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <section class="phpdocumentor-description"><p>Funcion para cargar el array de departamentos</p>
+        <section class="phpdocumentor-description"><p>Función para crear un departamento</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$aCondiciones</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                <span class="phpdocumentor-signature__argument__name">$codigo</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Array con las condiciones de busqueda</p>
+                    <section class="phpdocumentor-description"><p>Código del departamento</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$descripcion</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Descripción del departamento</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$volumen</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Volumen del departamento</p>
 </section>
 
             </dd>
@@ -381,7 +507,7 @@ Función eliminarDepartamento</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/DepartamentoPDO.html#method_cargarArrayDepartamentos#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/DepartamentoPDO.html#method_crearDepartamento#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -398,9 +524,9 @@ Función eliminarDepartamento</p>
                     <span class="phpdocumentor-tag__name">version</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.2</span>
+                                            <span class="phpdocumentor-tag-link">2.0.3</span>
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 06/02/2025</p>
+                                                 <section class="phpdocumentor-description"><p>Fecha última modificación: 10/02/2025</p>
 </section>
 
                                     </dd>
@@ -408,7 +534,7 @@ Función eliminarDepartamento</p>
                     <span class="phpdocumentor-tag__name">since</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.2</span>
+                                            <span class="phpdocumentor-tag-link">2.0.3</span>
                                                                                 
                                              
                                     </dd>
@@ -416,15 +542,7 @@ Función eliminarDepartamento</p>
 
     
 
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Array con todos los departamentos que se adhieren a las condiciones</p>
-</section>
-
-            </section>
-
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -440,7 +558,7 @@ Función eliminarDepartamento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">147</span>
 
     </aside>
 
@@ -523,7 +641,7 @@ Función eliminarDepartamento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/DepartamentoPDO.php"><a href="files/model-departamentopdo.html"><abbr title="model/DepartamentoPDO.php">DepartamentoPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 
     </aside>
 
@@ -723,8 +841,9 @@ Función eliminarDepartamento</p>
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
+                                            <li class=""><a href="classes/DepartamentoPDO.html#method_buscarDepartamentos">buscarDepartamentos()</a></li>
                                             <li class=""><a href="classes/DepartamentoPDO.html#method_buscarPorCodigo">buscarPorCodigo()</a></li>
-                                            <li class=""><a href="classes/DepartamentoPDO.html#method_cargarArrayDepartamentos">cargarArrayDepartamentos()</a></li>
+                                            <li class=""><a href="classes/DepartamentoPDO.html#method_crearDepartamento">crearDepartamento()</a></li>
                                             <li class=""><a href="classes/DepartamentoPDO.html#method_eliminarDepartamento">eliminarDepartamento()</a></li>
                                             <li class=""><a href="classes/DepartamentoPDO.html#method_modificarDepartamento">modificarDepartamento()</a></li>
                                     </ul>

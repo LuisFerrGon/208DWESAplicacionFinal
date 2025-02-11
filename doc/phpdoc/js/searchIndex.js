@@ -16,15 +16,40 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#constant_CONTRASENA"
         },                {
-            "fqsen": "\\mostrarSuperglobal\u0028\u0029",
-            "name": "mostrarSuperglobal",
-            "summary": "Funcion\u0020para\u0020mostrar\u0020una\u0020variable\u0020superglobal",
-            "url": "namespaces/default.html#function_mostrarSuperglobal"
-        },                {
             "fqsen": "\\OBLIGATORIO",
             "name": "OBLIGATORIO",
             "summary": "",
             "url": "namespaces/default.html#constant_OBLIGATORIO"
+        },                {
+            "fqsen": "\\TAM_COD",
+            "name": "TAM_COD",
+            "summary": "",
+            "url": "namespaces/default.html#constant_TAM_COD"
+        },                {
+            "fqsen": "\\MAX_DESC",
+            "name": "MAX_DESC",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MAX_DESC"
+        },                {
+            "fqsen": "\\MIN_DESC",
+            "name": "MIN_DESC",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MIN_DESC"
+        },                {
+            "fqsen": "\\MAX_VOLUMEN",
+            "name": "MAX_VOLUMEN",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MAX_VOLUMEN"
+        },                {
+            "fqsen": "\\MIN_VOLUMEN",
+            "name": "MIN_VOLUMEN",
+            "summary": "",
+            "url": "namespaces/default.html#constant_MIN_VOLUMEN"
+        },                {
+            "fqsen": "\\mostrarSuperglobal\u0028\u0029",
+            "name": "mostrarSuperglobal",
+            "summary": "Funcion\u0020para\u0020mostrar\u0020una\u0020variable\u0020superglobal",
+            "url": "namespaces/default.html#function_mostrarSuperglobal"
         },                {
             "fqsen": "\\MAX_ALFABETICO",
             "name": "MAX_ALFABETICO",
@@ -50,26 +75,6 @@ Search.appendIndex(
             "name": "DEBIL",
             "summary": "",
             "url": "namespaces/default.html#constant_DEBIL"
-        },                {
-            "fqsen": "\\MAX_DESC",
-            "name": "MAX_DESC",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MAX_DESC"
-        },                {
-            "fqsen": "\\MIN_DESC",
-            "name": "MIN_DESC",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MIN_DESC"
-        },                {
-            "fqsen": "\\MAX_VOLUMEN",
-            "name": "MAX_VOLUMEN",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MAX_VOLUMEN"
-        },                {
-            "fqsen": "\\MIN_VOLUMEN",
-            "name": "MIN_VOLUMEN",
-            "summary": "",
-            "url": "namespaces/default.html#constant_MIN_VOLUMEN"
         },                {
             "fqsen": "\\MAX_CODIGO",
             "name": "MAX_CODIGO",
@@ -276,10 +281,10 @@ Search.appendIndex(
             "summary": "Clase\u0020DepartamentoPDO",
             "url": "classes/DepartamentoPDO.html"
         },                {
-            "fqsen": "\\DepartamentoPDO\u003A\u003AcargarArrayDepartamentos\u0028\u0029",
-            "name": "cargarArrayDepartamentos",
-            "summary": "Funci\u00F3n\u0020cargarArrayDepartamentos",
-            "url": "classes/DepartamentoPDO.html#method_cargarArrayDepartamentos"
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarDepartamentos\u0028\u0029",
+            "name": "buscarDepartamentos",
+            "summary": "Funci\u00F3n\u0020buscarDepartamentos",
+            "url": "classes/DepartamentoPDO.html#method_buscarDepartamentos"
         },                {
             "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarPorCodigo\u0028\u0029",
             "name": "buscarPorCodigo",
@@ -295,6 +300,11 @@ Search.appendIndex(
             "name": "eliminarDepartamento",
             "summary": "Funci\u00F3n\u0020eliminarDepartamento",
             "url": "classes/DepartamentoPDO.html#method_eliminarDepartamento"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AcrearDepartamento\u0028\u0029",
+            "name": "crearDepartamento",
+            "summary": "Funci\u00F3n\u0020crearDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_crearDepartamento"
         },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",

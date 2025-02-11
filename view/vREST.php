@@ -11,39 +11,44 @@
         'pt'=>"The inputted date isn't valid"
     ]
 ?>
-<header><h1>REST</h1></header><main>
-<div id="top">
-    <section id="idiomas">
-        <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
-        <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
-        <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
-    </section>
-    <section id="botones">
-        <form>
-            <input type="submit" name="volver" value="Volver">
-        </form>
-    </section>
-</div>
-<div id="apis">
-    <section class="api" id="nasa">
-        <form method="post">
-            <input type="date" value="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>" id="fechafotoNasa" name="fechafotoNasa" min="1995-06-16" max="<?php echo date('Y-m-d');?>">
-        </form>
-        <?php
-            if($avRest['nasa']['url']==null){
-                echo "<h2>".$mensajeFotoNasaFallida[$idioma]."</h2>";
-            }else{
-                echo <<<IMAGEN
-                    <h2>{$avRest['nasa']['titulo']}</h2>
-                    <img src="{$avRest['nasa']['url']}" alt="Imagen del día">
-                IMAGEN;
-                if($avRest['nasa']['copyright']!=null){echo "<p>&#169;".$avRest['nasa']['copyright']."</p>";}
-                if($avRest['nasa']['descripcion']!=null){echo "<p>".$avRest['nasa']['descripcion']."</p>";}
-                echo "<p>".$avRest['nasa']['fecha']."</p>";
-            }
-        ?>
-    </section>
-</div>
+<header>
+    <h1>REST</h1>
+</header>
+    <main>
+    <div id="top">
+        <section id="idiomas">
+            <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
+            <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
+            <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
+        </section>
+        <section id="botones">
+            <form>
+                <input type="submit" name="volver" value="Volver">
+            </form>
+        </section>
+    </div>
+    <div id="apis">
+        <section class="api" id="nasa">
+            <form method="post">
+                <input type="date" value="<?php echo $_SESSION['fechaNASA']->format('Y-m-d');?>" id="fechafotoNasa" name="fechafotoNasa" min="1995-06-16" max="<?php echo date('Y-m-d');?>">
+            </form>
+            <?php
+                if($avRest['nasa']['url']==null){
+                    echo "<h2>".$mensajeFotoNasaFallida[$idioma]."</h2>";
+                }else{
+                    echo <<<IMAGEN
+                        <h2>{$avRest['nasa']['titulo']}</h2>
+                        <img src="{$avRest['nasa']['url']}" alt="Imagen del día">
+                    IMAGEN;
+                    if($avRest['nasa']['copyright']!=null){echo "<p>&#169;".$avRest['nasa']['copyright']."</p>";}
+                    if($avRest['nasa']['descripcion']!=null){echo "<p>".$avRest['nasa']['descripcion']."</p>";}
+                    echo "<p>".$avRest['nasa']['fecha']."</p>";
+                }
+            ?>
+        </section>
+    </div>
+    <div style='height: 30px'></div>
+</main>
 <script>
     var inputFechaNASA=document.getElementById("fechafotoNasa");
     let valorFechaInput=new Date(inputFechaNASA.value);
@@ -56,4 +61,3 @@
         }
     });
 </script>
-<div style='height: 30px'></div></main>

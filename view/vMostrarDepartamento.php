@@ -45,7 +45,7 @@
                         <label for="volumenDepartamento">Volumen:</label>
                     </td>
                     <td>
-                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" value="<?php echo ($departamentoEnCurso->getVolumenNegocio());?>" step="0.01" disabled>
+                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" value="<?php echo ($departamentoEnCurso->getVolumenNegocio());?>" step="0.01" min="0" disabled>
                     </td>
                 </tr>
                 <tr>

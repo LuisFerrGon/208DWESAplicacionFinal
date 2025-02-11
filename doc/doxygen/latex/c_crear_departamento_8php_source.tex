@@ -1,0 +1,57 @@
+\doxysection{c\+Crear\+Departamento.\+php}
+\label{c_crear_departamento_8php_source}\index{controller/cCrearDepartamento.php@{controller/cCrearDepartamento.php}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00007\ \ \ \ \ \$idioma=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{00008\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
+\DoxyCodeLine{00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
+\DoxyCodeLine{00010\ \ \ \ \ \$departamentoEnCurso=\$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}];}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'wip'};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ define(\textcolor{stringliteral}{'OBLIGATORIO'},\ 1);}
+\DoxyCodeLine{00018\ \ \ \ \ define(\textcolor{stringliteral}{'TAM\_COD'},\ 3);}
+\DoxyCodeLine{00019\ \ \ \ \ define(\textcolor{stringliteral}{'MAX\_DESC'},\ 255);}
+\DoxyCodeLine{00020\ \ \ \ \ define(\textcolor{stringliteral}{'MIN\_DESC'},\ 1);}
+\DoxyCodeLine{00021\ \ \ \ \ define(\textcolor{stringliteral}{'MAX\_VOLUMEN'},\ PHP\_FLOAT\_MAX);}
+\DoxyCodeLine{00022\ \ \ \ \ define(\textcolor{stringliteral}{'MIN\_VOLUMEN'},\ 0);}
+\DoxyCodeLine{00023\ \ \ \ \ \$aErrores=[}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'codigoDepartamento'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcionDepartamento'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'volumenDepartamento'}=>null}
+\DoxyCodeLine{00027\ \ \ \ \ ];}
+\DoxyCodeLine{00028\ \ \ \ \ \$entradaOK=\textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ \ \ \ \ \$\_REQUEST[\textcolor{stringliteral}{'codigoDepartamento'}]=\ strtoupper(\$\_REQUEST[\textcolor{stringliteral}{'codigoDepartamento'}]);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'crear'}]))\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \$aErrores[\textcolor{stringliteral}{'codigoDepartamento'}]=\ validacionFormularios::comprobarAlfabetico(\$\_REQUEST[\textcolor{stringliteral}{'codigoDepartamento'}],\ TAM\_COD,\ TAM\_COD,\ OBLIGATORIO);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}]=\ validacionFormularios::comprobarAlfabetico(\$\_REQUEST[\textcolor{stringliteral}{'descripcionDepartamento'}],\ MAX\_DESC,\ MIN\_DESC,\ OBLIGATORIO);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}]=\ validacionFormularios::comprobarFloat(\$\_REQUEST[\textcolor{stringliteral}{'volumenDepartamento'}],\ MAX\_VOLUMEN,\ MIN\_VOLUMEN,\ OBLIGATORIO);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$aErrores[\textcolor{stringliteral}{'codigoDepartamento'}]==\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=\ DepartamentoPDO::buscarPorCodigo(\$\_REQUEST[\textcolor{stringliteral}{'descripcionDepartamento'}]);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$aErrores[\textcolor{stringliteral}{'codigoDepartamento'}]=\textcolor{stringliteral}{"{}Este\ código\ de\ departamento\ ya\ está\ en\ uso."{}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\$aErrores\ as\ \$value)\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$value!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$entradaOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \$entradaOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}(\$entradaOK)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ DepartamentoPDO::crearDepartamento(\$\_REQUEST[\textcolor{stringliteral}{'codigoDepartamento'}],\ \$\_REQUEST[\textcolor{stringliteral}{'descripcionDepartamento'}],\ \$\_REQUEST[\textcolor{stringliteral}{'volumenDepartamento'}]);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'crearDepartamento'};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{00056\ ?>}
+
+\end{DoxyCode}

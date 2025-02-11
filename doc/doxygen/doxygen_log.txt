@@ -202,7 +202,7 @@ FORTRAN_COMMENT_AFTER  = 72
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
 #---------------------------------------------------------------------------
-SOURCE_BROWSER         = YES
+SOURCE_BROWSER         = NO
 INLINE_SOURCES         = NO
 STRIP_CODE_COMMENTS    = YES
 REFERENCED_BY_RELATION = NO
@@ -232,8 +232,8 @@ HTML_STYLESHEET        =
 HTML_EXTRA_STYLESHEET  =
 HTML_EXTRA_FILES       =
 HTML_COLORSTYLE        = AUTO_LIGHT
-HTML_COLORSTYLE_HUE    = 175
-HTML_COLORSTYLE_SAT    = 121
+HTML_COLORSTYLE_HUE    = 183
+HTML_COLORSTYLE_SAT    = 190
 HTML_COLORSTYLE_GAMMA  = 40
 HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = NO

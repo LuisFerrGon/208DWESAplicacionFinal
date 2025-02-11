@@ -1,59 +1,63 @@
 \doxysection{v\+REST.\+php}
-\hypertarget{v_r_e_s_t_8php_source}{}\label{v_r_e_s_t_8php_source}\index{view/vREST.php@{view/vREST.php}}
-\mbox{\hyperlink{v_r_e_s_t_8php}{Go to the documentation of this file.}}
+\label{v_r_e_s_t_8php_source}\index{view/vREST.php@{view/vREST.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00008}00008\ \ \ \ \ \$mensajeFotoNasaFallida=[}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>\textcolor{stringliteral}{"{}La\ fecha\ introducida\ no\ es\ válida"{}},}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>\textcolor{stringliteral}{"{}The\ inputted\ date\ isn't\ valid"{}},}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}=>\textcolor{stringliteral}{"{}The\ inputted\ date\ isn't\ valid"{}}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00012}00012\ \ \ \ \ ]}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00013}00013\ ?>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00014}00014\ <header><h1>\mbox{\hyperlink{class_r_e_s_t}{REST}}</h1></header><main>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00015}00015\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00016}00016\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00019}\mbox{\hyperlink{v_r_e_s_t_8php_a5c3eabd6b72e04447a5f17ecc9bb0896}{00019}}\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00020}00020\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00021}00021\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00025}00025\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00026}00026\ </div>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00027}00027\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}apis"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00028}00028\ \ \ \ \ <section\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}api"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}nasa"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ <form\ method=\textcolor{stringliteral}{"{}post"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ name=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ min=\textcolor{stringliteral}{"{}1995-\/06-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ date('Y-\/m-\/d');?>"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]==\textcolor{keyword}{null})\{}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>"{}}.\$mensajeFotoNasaFallida[\mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}].\textcolor{stringliteral}{"{}</h2>"{}};}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ <<<IMAGEN}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>\{\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]\}</h2>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}\{\$avRest['nasa']['url']\}"{}}\ alt=\textcolor{stringliteral}{"{}Imagen\ del\ día"{}}>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IMAGEN;}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>\&\#169;"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}].\textcolor{stringliteral}{"{}</p>"{}};}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00045}00045\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00046}00046\ </div>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00047}00047\ <script>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00048}00048\ \ \ \ \ var\ inputFechaNASA=document.getElementById(\textcolor{stringliteral}{"{}fechafotoNasa"{}});}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00049}00049\ \ \ \ \ let\ valorFechaInput=\textcolor{keyword}{new}\ Date(inputFechaNASA.value);}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00050}00050\ \ \ \ \ let\ fechaFotoNasa=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}});}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00051}00051\ \ \ \ \ let\ fechaMax=\textcolor{keyword}{new}\ Date();}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00052}00052\ \ \ \ \ let\ fechaMin=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}1995-\/06-\/16"{}});}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00053}00053\ \ \ \ \ inputFechaNASA.addEventListener(\textcolor{stringliteral}{"{}change"{}},\ ()=>\{}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(valorFechaInput<=fechaMax\ \&\&\ valorFechaInput>=fechaMin\ \&\&\ valorFechaInput!==fechaFotoNasa)\{}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ inputFechaNASA.parentElement.submit();}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00057}00057\ \ \ \ \ \});}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00058}00058\ </script>}
-\DoxyCodeLine{\Hypertarget{v_r_e_s_t_8php_source_l00059}00059\ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div></main>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00008\ \ \ \ \ \$mensajeFotoNasaFallida=[}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>\textcolor{stringliteral}{"{}La\ fecha\ introducida\ no\ es\ válida"{}},}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>\textcolor{stringliteral}{"{}The\ inputted\ date\ isn't\ valid"{}},}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}=>\textcolor{stringliteral}{"{}The\ inputted\ date\ isn't\ valid"{}}}
+\DoxyCodeLine{00012\ \ \ \ \ ]}
+\DoxyCodeLine{00013\ ?>}
+\DoxyCodeLine{00014\ <header>}
+\DoxyCodeLine{00015\ \ \ \ \ <h1>REST</h1>}
+\DoxyCodeLine{00016\ </header>}
+\DoxyCodeLine{00017\ \ \ \ \ <main>}
+\DoxyCodeLine{00018\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00029\ \ \ \ \ </div>}
+\DoxyCodeLine{00030\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}apis"{}}>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ <section\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}api"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}nasa"{}}>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ <form\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ name=\textcolor{stringliteral}{"{}fechafotoNasa"{}}\ min=\textcolor{stringliteral}{"{}1995-\/06-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ date('Y-\/m-\/d');?>"{}}>}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]==\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>"{}}.\$mensajeFotoNasaFallida[\$idioma].\textcolor{stringliteral}{"{}</h2>"{}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ <<<IMAGEN}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>\{\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]\}</h2>}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}\{\$avRest['nasa']['url']\}"{}}\ alt=\textcolor{stringliteral}{"{}Imagen\ del\ día"{}}>}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IMAGEN;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>\&\#169;"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]!=\textcolor{keyword}{null})\{echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}</p>"{}};\}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}].\textcolor{stringliteral}{"{}</p>"{}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00049\ \ \ \ \ </div>}
+\DoxyCodeLine{00050\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{00051\ </main>}
+\DoxyCodeLine{00052\ <script>}
+\DoxyCodeLine{00053\ \ \ \ \ var\ inputFechaNASA=document.getElementById(\textcolor{stringliteral}{"{}fechafotoNasa"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ let\ valorFechaInput=\textcolor{keyword}{new}\ Date(inputFechaNASA.value);}
+\DoxyCodeLine{00055\ \ \ \ \ let\ fechaFotoNasa=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}});}
+\DoxyCodeLine{00056\ \ \ \ \ let\ fechaMax=\textcolor{keyword}{new}\ Date();}
+\DoxyCodeLine{00057\ \ \ \ \ let\ fechaMin=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}1995-\/06-\/16"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ inputFechaNASA.addEventListener(\textcolor{stringliteral}{"{}change"{}},\ ()=>\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(valorFechaInput<=fechaMax\ \&\&\ valorFechaInput>=fechaMin\ \&\&\ valorFechaInput!==fechaFotoNasa)\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ inputFechaNASA.parentElement.submit();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \});}
+\DoxyCodeLine{00063\ </script>}
 
 \end{DoxyCode}

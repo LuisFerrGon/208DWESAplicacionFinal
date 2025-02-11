@@ -165,6 +165,14 @@ main{
             border: 1px solid var(--gris);
         }
     }
+    >form#crear{
+        text-align: center;
+        >input#crear{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
     /*Modificar departamento*/
     #modificarDepartamento{
         h2{

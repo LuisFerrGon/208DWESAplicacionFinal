@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usuario_0',['USUARIO',['../conf_d_b_8php.html#a3207e72c5190dd5ea41d7cf9638c0675',1,'confDB.php']]]
+  ['tam_5fcod_0',['TAM_COD',['../c_crear_departamento_8php.html#ada9a882d0541da20ee22141a4dab3d38',1,'cCrearDepartamento.php']]]
 ];

@@ -1,13 +1,17 @@
 var searchData=
 [
-  ['validarcp_0',['validarCp',['../classvalidacion_formularios.html#ac2b6ff7cb10eff8ac14a92b6541058ff',1,'validacionFormularios']]],
-  ['validardni_1',['validarDni',['../classvalidacion_formularios.html#a1fe73429d216aa57bfdce69e5920294e',1,'validacionFormularios']]],
-  ['validarelementoenlista_2',['validarElementoEnLista',['../classvalidacion_formularios.html#ac062142050452a39309e2adb87ce5683',1,'validacionFormularios']]],
-  ['validaremail_3',['validarEmail',['../classvalidacion_formularios.html#a631fc4952fe300300173eb5cdaaa1868',1,'validacionFormularios']]],
-  ['validarfecha_4',['validarFecha',['../classvalidacion_formularios.html#ab4641ed6cc37b66c56c36363197e7743',1,'validacionFormularios']]],
-  ['validarnombrearchivo_5',['validarNombreArchivo',['../classvalidacion_formularios.html#ac31b51a4360039b6bc19367ac435ef6a',1,'validacionFormularios']]],
-  ['validarpassword_6',['validarPassword',['../classvalidacion_formularios.html#af487c571a7b5832ce18d00af44672cad',1,'validacionFormularios']]],
-  ['validartelefono_7',['validarTelefono',['../classvalidacion_formularios.html#a9c273bf39ac276793c325b174de7eb2e',1,'validacionFormularios']]],
-  ['validarurl_8',['validarURL',['../classvalidacion_formularios.html#aed5f622812dec4069aaf35b5d8247a25',1,'validacionFormularios']]],
-  ['validarusuario_9',['validarUsuario',['../interface_usuario_d_b.html#ab19d20fb3fd77838839a5935ca613845',1,'UsuarioDB\validarUsuario()'],['../class_usuario_p_d_o.html#ab19d20fb3fd77838839a5935ca613845',1,'UsuarioPDO\validarUsuario()']]]
+  ['setcodigo_0',['setCodigo',['../class_departamento.html#ab1de44f1aabad68469687c9125240bda',1,'Departamento']]],
+  ['setcodusuario_1',['setCodUsuario',['../class_usuario.html#a42d805d74359e24d97b4883618001f32',1,'Usuario']]],
+  ['setdescripcion_2',['setDescripcion',['../class_departamento.html#a5620fc707f8da33cfdcbfebcbf19c5d3',1,'Departamento']]],
+  ['setdescusuario_3',['setDescUsuario',['../class_usuario.html#aea6878269f98da68495e26d45412e85e',1,'Usuario']]],
+  ['setfechabaja_4',['setFechaBaja',['../class_departamento.html#a68c2222da2f038066702eb7906cd1bbf',1,'Departamento']]],
+  ['setfechacreacion_5',['setFechaCreacion',['../class_departamento.html#a621d85438e6f4cad85c6d2817834c7d8',1,'Departamento']]],
+  ['setfechahoraultimaconexion_6',['setFechaHoraUltimaConexion',['../class_usuario.html#a01f22ff506a899f494fd0de79979b881',1,'Usuario']]],
+  ['setfechahoraultimaconexionanterior_7',['setFechaHoraUltimaConexionAnterior',['../class_usuario.html#ae7fc52a083387dbd251de050b66ddde4',1,'Usuario']]],
+  ['setimagenusuario_8',['setImagenUsuario',['../class_usuario.html#a85b8c515e86b210647e052a39b6097c2',1,'Usuario']]],
+  ['setlistaopinionesusuario_9',['setListaOpinionesUsuario',['../class_usuario.html#aa76aa53cc94da3d39ebc379f14083d4e',1,'Usuario']]],
+  ['setnumconexiones_10',['setNumConexiones',['../class_usuario.html#a613969fad4a0c809c43fcdfbf3b9bc6e',1,'Usuario']]],
+  ['setpassword_11',['setPassword',['../class_usuario.html#a3e35c8d3dbb2c513c618a664389e0926',1,'Usuario']]],
+  ['setperfil_12',['setPerfil',['../class_usuario.html#a00bcf66571b2dd506829e45c6401feed',1,'Usuario']]],
+  ['setvolumennegocio_13',['setVolumenNegocio',['../class_departamento.html#a04a5f6da90892d5c07dd2d54a83a782b',1,'Departamento']]]
 ];

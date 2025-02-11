@@ -1,7 +1,7 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.3 Fecha última modificación del archivo: 10/02/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 11/02/2025
      * @since 2.0.3
      */
 ?>
@@ -13,7 +13,7 @@
         <section id="botones">
         </section>
     </div>
-    <form name="modificarDepartamento" id="modificarDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form name="modificarDepartamento" id="modificarDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>
         <table>
             <tbody>
                 <tr>
@@ -27,8 +27,13 @@
                             }else{
                                 echo null;
                             }
-                        ?>" required>
+                        ?>" class="obligatorio" required>
                     </td>
+                    <?php
+                        if(!empty($aErrores['codigoDepartamento'])){
+                            echo "<td class='error'>".$aErrores['codigoDepartamento']."</td>";
+                        }
+                    ?>
                 </tr>
                 <tr>
                     <td>
@@ -60,7 +65,7 @@
                             }else{
                                 echo 0;
                             }
-                        ?>" step="0.01" required>
+                        ?>" step="0.01" min="0" required>
                     </td>
                     <?php
                         if(!empty($aErrores['volumenDepartamento'])){
@@ -82,3 +87,9 @@
         </table>
     </form>
 </main>
+<script>
+    let codigo=document.getElementById("codigoDepartamento");
+    codigo.addEventListener("blur", ()=>{
+        codigo.value=codigo.value.toUpperCase();
+    });
+</script>

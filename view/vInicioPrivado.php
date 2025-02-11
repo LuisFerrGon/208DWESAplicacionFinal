@@ -24,39 +24,43 @@
         ]
     ];
 ?>
-<header><h1>Aplicación Final</h1></header><main>
-<div id="top">
-    <section id="idiomas">
-        <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
-        <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
-        <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
-    </section>
-    <section id="botones">
-        <form>
-            <input type="submit" name="cerrarsesion" value="Cerrar Sesión">
-        </form>
-        <form>
-            <input type="submit" name="detalle" value="Detalle">
-        </form>
-        <form>
-            <input type="submit" name="rest" value="REST">
-        </form>
-        <form>
-            <input type="submit" name="mtoDepartamento" value="Mantenimiento Departamentos">
-        </form>
-        <form>
-            <input type="submit" name="error" value="Error">
-        </form>
-        <form>
-            <input type="submit" name="cuenta" value="<?php echo $avInicioPrivado['descripcion'];?>">
-        </form>
-    </section>
-</div>
-<?php
-    echo "<p>".$bienvenida[$idioma][$avInicioPrivado['conexiones']>1]."</p>";
-?>
-<img alt="Imagen del día de NASA" id="fotoNasaJs"/>
-<div style='height: 30px'></div>
+<header>
+    <h1>Aplicación Final</h1>
+</header>
+<main>
+    <div id="top">
+        <section id="idiomas">
+            <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
+            <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
+            <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
+        </section>
+        <section id="botones">
+            <form>
+                <input type="submit" name="cerrarsesion" value="Cerrar Sesión">
+            </form>
+            <form>
+                <input type="submit" name="detalle" value="Detalle">
+            </form>
+            <form>
+                <input type="submit" name="rest" value="REST">
+            </form>
+            <form>
+                <input type="submit" name="mtoDepartamento" value="Mantenimiento Departamentos">
+            </form>
+            <form>
+                <input type="submit" name="error" value="Error">
+            </form>
+            <form>
+                <input type="submit" name="cuenta" value="<?php echo $avInicioPrivado['descripcion'];?>">
+            </form>
+        </section>
+    </div>
+    <?php
+        echo "<p>".$bienvenida[$idioma][$avInicioPrivado['conexiones']>1]."</p>";
+    ?>
+    <img alt="Imagen del día de NASA" id="fotoNasaJs"/>
+    <div style='height: 30px'></div>
+</main>
 <script type="module">
     fetch("https://api.nasa.gov/planetary/apod?api_key=2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ")
     .then(response=>{
@@ -73,4 +77,4 @@
         document.getElementById("fotoNasaJs").alt="Ha ocurrido un error al intentar conseguir la imagen.";
         console.log(error);
     });
-</script></main>
+</script>

@@ -1,61 +1,63 @@
 \doxysection{conf\+APP.\+php}
-\hypertarget{conf_a_p_p_8php_source}{}\label{conf_a_p_p_8php_source}\index{config/confAPP.php@{config/confAPP.php}}
-\mbox{\hyperlink{conf_a_p_p_8php}{Go to the documentation of this file.}}
+\label{conf_a_p_p_8php_source}\index{config/confAPP.php@{config/confAPP.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//Validacion\ de\ formularios}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00013}00013\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//Modelos}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00015}00015\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DB.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00016}00016\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DBPDO.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00017}00017\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Departamento.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00018}00018\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DepartamentoPDO.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00019}00019\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/ErrorApp.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00020}00020\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/REST.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00021}00021\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Usuario.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00022}00022\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/UsuarioDB.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00023}00023\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/UsuarioPDO.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00024}00024\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/fotoNASA.php'};}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//Array\ de\ los\ controladores}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00026}\mbox{\hyperlink{conf_a_p_p_8php_a7d4dfcce3eeb0ad6c5dfe30f7140cf19}{00026}}\ \ \ \ \ \mbox{\hyperlink{conf_a_p_p_8php_a7d4dfcce3eeb0ad6c5dfe30f7140cf19}{\$aControladores}}=[}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPublico'}=>\textcolor{stringliteral}{'controller/cInicioPublico.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'login'}=>\textcolor{stringliteral}{'controller/cLogin.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPrivado'}=>\textcolor{stringliteral}{'controller/cInicioPrivado.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tecnologias'}=>\textcolor{stringliteral}{'controller/cTecnologias.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rss'}=>\textcolor{stringliteral}{'controller/cRSS.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'registro'}=>\textcolor{stringliteral}{'controller/cRegistro.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'miCuenta'}=>\textcolor{stringliteral}{'controller/cMiCuenta.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'borrarCuenta'}=>\textcolor{stringliteral}{'controller/cBorrarCuenta.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wip'}=>\textcolor{stringliteral}{'controller/cWIP.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'error'}=>\textcolor{stringliteral}{'controller/cError.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'detalle'}=>\textcolor{stringliteral}{'controller/cDetalle.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rest'}=>\textcolor{stringliteral}{'controller/cREST.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mtoDepartamento'}=>\textcolor{stringliteral}{'controller/cMtoDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'modificarDepartamento'}=>\textcolor{stringliteral}{'controller/cModificarDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mostrarDepartamento'}=>\textcolor{stringliteral}{'controller/cMostrarDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'eliminarDepartamento'}=>\textcolor{stringliteral}{'controller/cEliminarDepartamento.php'}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00043}00043\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//Array\ de\ las\ vistas}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00045}\mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{00045}}\ \ \ \ \ \mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{\$aVistas}}=[}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'layout'}=>\textcolor{stringliteral}{'view/vLayout.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPublico'}=>\textcolor{stringliteral}{'view/vInicioPublico.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'login'}=>\textcolor{stringliteral}{'view/vLogin.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPrivado'}=>\textcolor{stringliteral}{'view/vInicioPrivado.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tecnologias'}=>\textcolor{stringliteral}{'view/view/vTecnologias.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rss'}=>\textcolor{stringliteral}{'view/vRSS.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'registro'}=>\textcolor{stringliteral}{'view/vRegistro.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'miCuenta'}=>\textcolor{stringliteral}{'view/vMiCuenta.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'borrarCuenta'}=>\textcolor{stringliteral}{'view/vBorrarCuenta.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wip'}=>\textcolor{stringliteral}{'view/vWIP.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'error'}=>\textcolor{stringliteral}{'view/vError.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'detalle'}=>\textcolor{stringliteral}{'view/vDetalle.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rest'}=>\textcolor{stringliteral}{'view/vREST.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mtoDepartamento'}=>\textcolor{stringliteral}{'view/vMtoDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'modificarDepartamento'}=>\textcolor{stringliteral}{'view/vModificarDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mostrarDepartamento'}=>\textcolor{stringliteral}{'view/vMostrarDepartamento.php'},}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'eliminarDepartamento'}=>\textcolor{stringliteral}{'view/vEliminarDepartamento.php'}}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00063}00063\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{conf_a_p_p_8php_source_l00064}00064\ ?>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//Validacion\ de\ formularios}}
+\DoxyCodeLine{00014\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//Modelos}}
+\DoxyCodeLine{00016\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DB.php'};}
+\DoxyCodeLine{00017\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DBPDO.php'};}
+\DoxyCodeLine{00018\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Departamento.php'};}
+\DoxyCodeLine{00019\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DepartamentoPDO.php'};}
+\DoxyCodeLine{00020\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/ErrorApp.php'};}
+\DoxyCodeLine{00021\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/REST.php'};}
+\DoxyCodeLine{00022\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Usuario.php'};}
+\DoxyCodeLine{00023\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/UsuarioDB.php'};}
+\DoxyCodeLine{00024\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/UsuarioPDO.php'};}
+\DoxyCodeLine{00025\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/fotoNASA.php'};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Array\ de\ los\ controladores}}
+\DoxyCodeLine{00027\ \ \ \ \ \$aControladores=[}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPublico'}=>\textcolor{stringliteral}{'controller/cInicioPublico.php'},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'login'}=>\textcolor{stringliteral}{'controller/cLogin.php'},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPrivado'}=>\textcolor{stringliteral}{'controller/cInicioPrivado.php'},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tecnologias'}=>\textcolor{stringliteral}{'controller/cTecnologias.php'},}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rss'}=>\textcolor{stringliteral}{'controller/cRSS.php'},}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'registro'}=>\textcolor{stringliteral}{'controller/cRegistro.php'},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'miCuenta'}=>\textcolor{stringliteral}{'controller/cMiCuenta.php'},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'borrarCuenta'}=>\textcolor{stringliteral}{'controller/cBorrarCuenta.php'},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wip'}=>\textcolor{stringliteral}{'controller/cWIP.php'},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'error'}=>\textcolor{stringliteral}{'controller/cError.php'},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'detalle'}=>\textcolor{stringliteral}{'controller/cDetalle.php'},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rest'}=>\textcolor{stringliteral}{'controller/cREST.php'},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mtoDepartamento'}=>\textcolor{stringliteral}{'controller/cMtoDepartamento.php'},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'modificarDepartamento'}=>\textcolor{stringliteral}{'controller/cModificarDepartamento.php'},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mostrarDepartamento'}=>\textcolor{stringliteral}{'controller/cMostrarDepartamento.php'},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'eliminarDepartamento'}=>\textcolor{stringliteral}{'controller/cEliminarDepartamento.php'},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'crearDepartamento'}=>\textcolor{stringliteral}{'controller/cCrearDepartamento.php'}}
+\DoxyCodeLine{00045\ \ \ \ \ ];}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Array\ de\ las\ vistas}}
+\DoxyCodeLine{00047\ \ \ \ \ \$aVistas=[}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'layout'}=>\textcolor{stringliteral}{'view/vLayout.php'},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPublico'}=>\textcolor{stringliteral}{'view/vInicioPublico.php'},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'login'}=>\textcolor{stringliteral}{'view/vLogin.php'},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'inicioPrivado'}=>\textcolor{stringliteral}{'view/vInicioPrivado.php'},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tecnologias'}=>\textcolor{stringliteral}{'view/view/vTecnologias.php'},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rss'}=>\textcolor{stringliteral}{'view/vRSS.php'},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'registro'}=>\textcolor{stringliteral}{'view/vRegistro.php'},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'miCuenta'}=>\textcolor{stringliteral}{'view/vMiCuenta.php'},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'borrarCuenta'}=>\textcolor{stringliteral}{'view/vBorrarCuenta.php'},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wip'}=>\textcolor{stringliteral}{'view/vWIP.php'},}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'error'}=>\textcolor{stringliteral}{'view/vError.php'},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'detalle'}=>\textcolor{stringliteral}{'view/vDetalle.php'},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'rest'}=>\textcolor{stringliteral}{'view/vREST.php'},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mtoDepartamento'}=>\textcolor{stringliteral}{'view/vMtoDepartamento.php'},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'modificarDepartamento'}=>\textcolor{stringliteral}{'view/vModificarDepartamento.php'},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mostrarDepartamento'}=>\textcolor{stringliteral}{'view/vMostrarDepartamento.php'},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'eliminarDepartamento'}=>\textcolor{stringliteral}{'view/vEliminarDepartamento.php'},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'crearDepartamento'}=>\textcolor{stringliteral}{'view/vCrearDepartamento.php'}}
+\DoxyCodeLine{00066\ \ \ \ \ ];}
+\DoxyCodeLine{00067\ ?>}
 
 \end{DoxyCode}

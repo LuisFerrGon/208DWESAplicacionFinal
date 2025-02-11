@@ -5,17 +5,18 @@
      * Clase para funciones de departamento
      * 
      * @author Luis Ferreras González
-     * @version 2.0.2 Fecha última modificación: 07/02/2025
+     * @version 2.0.2 Fecha última modificación: 10/02/2025
      * @since 1.0.1
      * @since 1.0.2 Función modificarDepartamento, buscarPorCodigo
      * @since 2.0.2 Modificación a buscarPorCodigo
      *              Función eliminarDepartamento
+     * @since 2.0.3 Función crearDepartamento
      */
     class DepartamentoPDO{
         /**
-         * Función cargarArrayDepartamentos
+         * Función buscarDepartamentos
          * 
-         * Funcion para cargar el array de departamentos
+         * Funcion buscar departamentos dadas unas condiciones
          * 
          * @param array $aCondiciones Array con las condiciones de busqueda
          * @return array Array con todos los departamentos que se adhieren a las condiciones
@@ -23,7 +24,7 @@
          * @version 1.0.2 Fecha última modificación: 06/02/2025
          * @since 1.0.2
          */
-        public static function cargarArrayDepartamentos($aCondiciones){
+        public static function buscarDepartamentos($aCondiciones){
             try{
                 $aDepartamentos=[];
                 $consulta=<<<QUERY
@@ -178,9 +179,10 @@
         public static function crearDepartamento($codigo, $descripcion, $volumen){
             $consulta=<<<SQL
                 INSERT INTO DB208DWESAppFinal.T02_Departamento
-                    (T01_CodUsuario, T01_Password, T01_DescUsuario)
+                    (T02_CodDepartamento, T02_DescDepartamento, T02_VolumenDeNegocio)
                 VALUES
-                    ('{$codigo}', '{$descripcion}', {$volumen});
+                    ('{$codigo}', '{$descripcion}', {$volumen})
+                ;
             SQL;
             $resultado=DBPDO::ejecutarConsulta($consulta);
             if($resultado instanceof PDOException){

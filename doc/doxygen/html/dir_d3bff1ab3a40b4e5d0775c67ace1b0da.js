@@ -1,5 +1,6 @@
 var dir_d3bff1ab3a40b4e5d0775c67ace1b0da =
 [
+    [ "cCrearDepartamento.php", "c_crear_departamento_8php.html", "c_crear_departamento_8php" ],
     [ "cDetalle.php", "c_detalle_8php.html", "c_detalle_8php" ],
     [ "cEliminarDepartamento.php", "c_eliminar_departamento_8php.html", "c_eliminar_departamento_8php" ],
     [ "cError.php", "c_error_8php.html", "c_error_8php" ],

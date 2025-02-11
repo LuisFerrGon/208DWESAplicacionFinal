@@ -1,50 +1,54 @@
 \doxysection{c\+Mto\+Departamento.\+php}
-\hypertarget{c_mto_departamento_8php_source}{}\label{c_mto_departamento_8php_source}\index{controller/cMtoDepartamento.php@{controller/cMtoDepartamento.php}}
-\mbox{\hyperlink{c_mto_departamento_8php}{Go to the documentation of this file.}}
+\label{c_mto_departamento_8php_source}\index{controller/cMtoDepartamento.php@{controller/cMtoDepartamento.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/modificar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'modificarDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00017}00017\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/mostrar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'mostrarDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00024}00024\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00025}\mbox{\hyperlink{c_mto_departamento_8php_aa4ef10876e103af8a3955ca5310b1d2a}{00025}}\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/eliminar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'eliminarDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00031}00031\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00032}00032\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Departamento.php'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00033}00033\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DepartamentoPDO.php'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'wip'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00039}00039\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(!isset(\$\_REQUEST[\textcolor{stringliteral}{'descripionDep'}]))\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'descripionDep'}]=\textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00042}\mbox{\hyperlink{c_mto_departamento_8php_ab1b5f31d2c71ffc5d251882b6dcce53f}{00042}}\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'descripionDep'}]=\$\_REQUEST[\textcolor{stringliteral}{'descripionDep'}];}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00044}00044\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00045}\mbox{\hyperlink{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4}{00045}}\ \ \ \ \ \mbox{\hyperlink{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4}{\$aCondicionesBusqueda}}=[}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':descripcion'}\ =>\ \textcolor{stringliteral}{"{}\%"{}}.\$\_SESSION[\textcolor{stringliteral}{'descripionDep'}].\textcolor{stringliteral}{"{}\%"{}}}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00047}00047\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00048}\mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{00048}}\ \ \ \ \ \mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{\$aDepartamentos}}=\ \mbox{\hyperlink{class_departamento_p_d_o_a9ce64bce40f1fa50bea67547e7ab2b1a}{DepartamentoPDO::cargarArrayDepartamentos}}(\mbox{\hyperlink{c_mto_departamento_8php_a042e20993351c77009ef32918e6887f4}{\$aCondicionesBusqueda}});}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00049}\mbox{\hyperlink{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{00049}}\ \ \ \ \ \mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00050}\mbox{\hyperlink{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3}{00050}}\ \ \ \ \ \mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}=\$\_SESSION[\textcolor{stringliteral}{'usuarioDAW208LoginLogoff'}];}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00051}00051\ \ \ \ \ require\_once\ \mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{\$aVistas}}[\textcolor{stringliteral}{'layout'}];}
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00052}00052\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{c_mto_departamento_8php_source_l00053}00053\ ?>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00012\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/Departamento.php'};}
+\DoxyCodeLine{00013\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/DepartamentoPDO.php'};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/modificar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'modificarDepartamento'};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/mostrar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'mostrarDepartamento'};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado=preg\_grep(\textcolor{stringliteral}{'/eliminar[A-\/Z]\{3\}/'},\ array\_keys(\$\_REQUEST)))\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}]=DepartamentoPDO::buscarPorCodigo(substr(\$resultado[0],\ -\/3));}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'eliminarDepartamento'};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'crear'}]))\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'crearDepartamento'};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'inicioPrivado'};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'descripcionDep'}]))\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'descripcionDep'}]=\$\_REQUEST[\textcolor{stringliteral}{'descripcionDep'}];}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \$aCondicionesBusqueda=[}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':descripcion'}\ =>\ \textcolor{stringliteral}{"{}\%"{}}.\$\_SESSION[\textcolor{stringliteral}{'descripcionDep'}].\textcolor{stringliteral}{"{}\%"{}}}
+\DoxyCodeLine{00052\ \ \ \ \ ];}
+\DoxyCodeLine{00053\ \ \ \ \ \$aDepartamentos=\ DepartamentoPDO::cargarArrayDepartamentos(\$aCondicionesBusqueda);}
+\DoxyCodeLine{00054\ \ \ \ \ \$idioma=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{00055\ \ \ \ \ \$oUsuarioActivo=\$\_SESSION[\textcolor{stringliteral}{'usuarioDAW208AppFinal'}];}
+\DoxyCodeLine{00056\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ ?>}
 
 \end{DoxyCode}

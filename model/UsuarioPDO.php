@@ -5,9 +5,10 @@
      * Clase para funciones de usuario
      * 
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 30/01/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 11/02/2025
      * @since 1.0.0
      * @since 1.0.1 Modificación del phpDOC
+     * @since 2.0.3 altaUsuario funcional
      */
     class UsuarioPDO implements UsuarioDB{
         /**
@@ -94,12 +95,13 @@
          * @return null|\PDOException En caso de error devuelve PDOException.
          *                            Si todo va bien devuelve null.
          * @author Luis Ferreras González
-         * @version 1.0.0 Fecha última modificación del archivo: 20/01/2025
+         * @version 2.0.3 Fecha última modificación del archivo: 11/02/2025
          * @since 1.0.0
+         * @since 2.0.3 Funcional
          */
         public static function altaUsuario(string $sCodigo, string $sContrasena, string $sDescripcion){
             $consulta=<<<SQL
-            INSERT INTO DB208DWESLoginLogoff.T01_Usuario
+            INSERT INTO DB208DWESAppFinal.T01_Usuario
                 (T01_CodUsuario, T01_Password, T01_DescUsuario)
             VALUES
                 ('{$sCodigo}', SHA2('{$sCodigo}{$sContrasena}',256), '{$sDescripcion}');

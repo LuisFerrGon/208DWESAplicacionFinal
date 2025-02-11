@@ -1,40 +1,40 @@
 \doxysection{c\+REST.\+php}
-\hypertarget{c_r_e_s_t_8php_source}{}\label{c_r_e_s_t_8php_source}\index{controller/cREST.php@{controller/cREST.php}}
-\mbox{\hyperlink{c_r_e_s_t_8php}{Go to the documentation of this file.}}
+\label{c_r_e_s_t_8php_source}\index{controller/cREST.php@{controller/cREST.php}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00007}00007\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/REST.php'};}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'rest'};}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'inicioPrivado'};}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00013}00013\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00014}\mbox{\hyperlink{c_r_e_s_t_8php_af3460f55e0c57a63975fe152edaaf049}{00014}}\ \ \ \ \ \mbox{\hyperlink{c_detalle_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}}=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00015}\mbox{\hyperlink{c_r_e_s_t_8php_ab930bc009cbf7b3aecaf44c3280298d3}{00015}}\ \ \ \ \ \mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}=\$\_SESSION[\textcolor{stringliteral}{'usuarioDAW208LoginLogoff'}];}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00016}\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{00016}}\ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}=[}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nasa'}=>[}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'copyright'}=>\textcolor{keyword}{null},}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fecha'}=>\textcolor{keyword}{null},}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}=>\textcolor{keyword}{null},}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}=>\textcolor{keyword}{null},}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'url'}=>null}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ ]}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00024}00024\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]))\{}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=\ date\_create(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]);}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00027}\mbox{\hyperlink{c_r_e_s_t_8php_ac37ecc9aa341baafa99a0af9de2ecd6e}{00027}}\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=date\_create();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00029}00029\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00030}\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{00030}}\ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}=\mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{REST::apiNasa}}(\$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]);}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00031}\mbox{\hyperlink{c_r_e_s_t_8php_a9fd1a3807f50592aa57c1e2b310e8b00}{00031}}\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}\ instanceof\ \mbox{\hyperlink{classfoto_n_a_s_a}{fotoNASA}})\{}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]=\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}-\/>getCopyright();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}]=\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}-\/>getFecha();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]=\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}-\/>getDescripcion();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]=\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}-\/>getTitulo();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$avRest}}[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]=\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$oFotoNasa}}-\/>getUrl();}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00037}00037\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00038}00038\ \ \ \ \ require\_once\ \mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{\$aVistas}}[\textcolor{stringliteral}{'layout'}];}
-\DoxyCodeLine{\Hypertarget{c_r_e_s_t_8php_source_l00039}00039\ ?>}
+\DoxyCodeLine{00001\ <?php}
+\DoxyCodeLine{00007\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'model/REST.php'};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'rest'};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'inicioPrivado'};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \$idioma=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{00015\ \ \ \ \ \$oUsuarioActivo=\$\_SESSION[\textcolor{stringliteral}{'usuarioDAW208AppFinal'}];}
+\DoxyCodeLine{00016\ \ \ \ \ \$avRest=[}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nasa'}=>[}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'copyright'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fecha'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'url'}=>null}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{00024\ \ \ \ \ ];}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]))\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=\ date\_create(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]);}
+\DoxyCodeLine{00027\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=date\_create();}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \$oFotoNasa=REST::apiNasa(\$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}(\$oFotoNasa\ instanceof\ fotoNASA)\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]=\$oFotoNasa-\/>getCopyright();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}]=\$oFotoNasa-\/>getFecha();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]=\$oFotoNasa-\/>getDescripcion();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]=\$oFotoNasa-\/>getTitulo();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]=\$oFotoNasa-\/>getUrl();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{00039\ ?>}
 
 \end{DoxyCode}
