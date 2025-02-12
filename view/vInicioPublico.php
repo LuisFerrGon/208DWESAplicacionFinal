@@ -27,21 +27,22 @@
         https://www.w3schools.com/howto/howto_js_slideshow.asp-->
     <div class="carrusel">
         <div class="mySlides fade">
-            <img src="webroot/images/navegacion.PNG" alt="Mapa de navegación">
             <div class="text">Mapa de navegación</div>
+            <img src="webroot/images/arbolNavegacion.png" alt="Mapa de navegación">
         </div>
         <div class="mySlides fade">
-            <img src="webroot/images/diagramaClases.png" alt="Diagrama de clases">
             <div class="text">Diagrama de clases</div>
+            <img src="webroot/images/diagramaClases.png" alt="Diagrama de clases">
         </div>
         <div class="mySlides fade">
-            <img src="webroot/images/usoSession.PNG" alt="Uso de $_SESSION">
             <div class="text">Uso de $_SESSION</div>
+            <img src="webroot/images/usoSession.PNG" alt="Uso de $_SESSION">
         </div>
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <div style='height: 30px'></div>
 </main>
 <script>
     let slideIndex = 1;

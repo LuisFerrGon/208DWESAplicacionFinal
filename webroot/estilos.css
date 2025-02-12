@@ -73,7 +73,7 @@ main{
                 font-size: 15px;
                 padding: 8px 12px;
                 position: absolute;
-                top: 100%;
+                top: -30px;
                 width: 100%;
                 text-align: center;
             }
@@ -163,6 +163,9 @@ main{
         margin-right: 5%;
         th, td{
             border: 1px solid var(--gris);
+        }
+        tr.departamentoBaja{
+            color: var(--rojoError);
         }
     }
     >form#crear{

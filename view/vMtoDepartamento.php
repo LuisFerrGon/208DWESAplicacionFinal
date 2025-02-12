@@ -1,11 +1,14 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.3 Fecha última modificación del archivo: 10/02/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 12/02/2025
      * @since 1.0.1
      * @since 1.0.2 Cambio del layout
      * @since 2.0.2 Cambio a modificación
-     * @since 2.0.3 Crear
+     * @since 2.0.3 Eliminar
+     *              Crear
+     *              Alta
+     *              Baja
      */
 
     $mensajeBusquedaVacia=[
@@ -69,18 +72,27 @@
                 . "<td colspan='5'>".$mensajeBusquedaVacia[$idioma]."</td>"
                 . "</tr>";
             }else{
-                foreach ($aDepartamentos as $oDepartamento) {
-                    echo "<tr>"
-                    . "<td>".$oDepartamento->getCodigo()."</td>"
+                foreach($aDepartamentos as $oDepartamento){
+                    $codigo=$oDepartamento->getCodigo();
+                    $fechaBaja=$oDepartamento->getFechaBaja();
+                    $altaBaja=($fechaBaja!=null)
+                        ?"<input type='submit' id='alta".$codigo."' name='alta".$codigo."' value='Alta'>"
+                        :"<input type='submit' id='baja".$codigo."' name='baja".$codigo."' value='Baja'>";
+                    $claseDeBaja=($fechaBaja!=null)
+                        ?"class='departamentoBaja'"
+                        :null;
+                    echo "<tr ".$claseDeBaja.">"
+                    . "<td>".$codigo."</td>"
                     . "<td>".$oDepartamento->getDescripcion()."</td>"
                     . "<td>".$oDepartamento->getFechaCreacion()."</td>"
                     . "<td>".$oDepartamento->getVolumenNegocio()."</td>"
-                    . "<td>".$oDepartamento->getFechaBaja()."</td>"
+                    . "<td>".$fechaBaja."</td>"
                     . "<td>"
                         . "<form id='accionDepartamento' method='post'  action='".$_SERVER['PHP_SELF']."'>"
-                            . "<input type='submit' id='modificar".$oDepartamento->getCodigo()."' name='modificar".$oDepartamento->getCodigo()."' value='Modificar'>"
-                            . "<input type='submit' id='mostrar".$oDepartamento->getCodigo()."' name='mostrar".$oDepartamento->getCodigo()."' value='Mostrar'>"
-                            . "<input type='submit' id='eliminar".$oDepartamento->getCodigo()."' name='eliminar".$oDepartamento->getCodigo()."' value='Eliminar'>"
+                            . "<input type='submit' id='modificar".$codigo."' name='modificar".$codigo."' value='Modificar'>"
+                            . "<input type='submit' id='mostrar".$codigo."' name='mostrar".$codigo."' value='Mostrar'>"
+                            . "<input type='submit' id='eliminar".$codigo."' name='eliminar".$codigo."' value='Eliminar'>"
+                            . $altaBaja
                         . "</form>"
                     . "</td>"
                     . "</tr>";
@@ -90,7 +102,7 @@
         </tbody>
     </table>
     <form method='post' id="crear">
-        <input type="submit" id="crear" name="crear" value="+">
+        <input type="submit" name="crear" value="Crear">
     </form>
     <div style='height: 30px'></div>
 </main>

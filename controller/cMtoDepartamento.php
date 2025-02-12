@@ -1,13 +1,15 @@
 <?php
     /**
      * @author Luis Ferreras González
-     * @version 2.0.3 Fecha última modificación del archivo: 11/02/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 12/02/2025
      * @since 1.0.1
      * @since 1.0.2
      * @since 2.0.2 Modificación a modificar
      *              Mostrar
      * @since 2.0.3 Eliminar
      *              Crear
+     *              Baja
+     *              Alta
      */
     require_once 'model/Departamento.php';
     require_once 'model/DepartamentoPDO.php';
@@ -29,6 +31,16 @@
         $_SESSION['departamentoEnCurso']=DepartamentoPDO::buscarPorCodigo(substr($resultado[0], -3));
         $_SESSION['paginaEnCurso']='eliminarDepartamento';
         $_SESSION['paginaAnterior']='mtoDepartamento';
+        header('Location: index.php');
+        exit();
+    }
+    if($resultado=preg_grep('/baja[A-Z]{3}/', array_keys($_REQUEST))){
+        DepartamentoPDO::bajaLogica(substr($resultado[0], -3));
+        header('Location: index.php');
+        exit();
+    }
+    if($resultado=preg_grep('/alta[A-Z]{3}/', array_keys($_REQUEST))){
+        DepartamentoPDO::altaLogica(substr($resultado[0], -3));
         header('Location: index.php');
         exit();
     }

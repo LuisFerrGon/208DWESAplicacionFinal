@@ -1,26 +1,26 @@
 \doxysection{controller/c\+REST.php File Reference}
-\hypertarget{c_r_e_s_t_8php}{}\label{c_r_e_s_t_8php}\index{controller/cREST.php@{controller/cREST.php}}
+\label{c_r_e_s_t_8php}\index{controller/cREST.php@{controller/cREST.php}}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_r_e_s_t_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}} =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}
+\textbf{ if}(isset(\$\+\_\+\+REQUEST[\textquotesingle{}volver\textquotesingle{}])) \textbf{ \$idioma} =isset(\$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}]) ? \$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}] \+: \textquotesingle{}en\textquotesingle{}
 \item 
-\mbox{\hyperlink{c_r_e_s_t_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$o\+Usuario\+Activo}} =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}
+\textbf{ \$o\+Usuario\+Activo} =\$\+\_\+\+SESSION[\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}]
 \item 
-\mbox{\hyperlink{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}{\$av\+Rest}}
+\textbf{ \$av\+Rest}
 \item 
-\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}fechafoto\+Nasa\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_r_e_s_t_8php_ac37ecc9aa341baafa99a0af9de2ecd6e}{else}}
+\textbf{ if}(isset(\$\+\_\+\+REQUEST[\textquotesingle{}fechafoto\+Nasa\textquotesingle{}])) \textbf{ else}
 \item 
-\mbox{\hyperlink{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}{\$o\+Foto\+Nasa}} =\mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{REST\+::api\+Nasa}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}fecha\+NASA\textquotesingle{}\mbox{]})
+\textbf{ \$o\+Foto\+Nasa} =\textbf{ REST\+::api\+Nasa}(\$\+\_\+\+SESSION[\textquotesingle{}fecha\+NASA\textquotesingle{}])
 \item 
-\mbox{\hyperlink{c_r_e_s_t_8php_a9fd1a3807f50592aa57c1e2b310e8b00}{if}} ( \$o\+Foto\+Nasa instanceof \mbox{\hyperlink{classfoto_n_a_s_a}{foto\+NASA}})
+\textbf{ if} ( \$o\+Foto\+Nasa instanceof \textbf{ foto\+NASA})
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8}\index{cREST.php@{cREST.php}!\$avRest@{\$avRest}}
+\index{cREST.php@{cREST.php}!\$avRest@{\$avRest}}
 \index{\$avRest@{\$avRest}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{\$avRest}{\$avRest}}
+\doxysubsubsection{\$avRest}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_a911bea34d27b00daf86074f93e8058b8} 
 \$av\+Rest}
 
@@ -37,11 +37,11 @@
 \DoxyCodeLine{\ \ \ \ ]}
 
 \end{DoxyCode}
-\Hypertarget{c_r_e_s_t_8php_af3460f55e0c57a63975fe152edaaf049}\index{cREST.php@{cREST.php}!\$idioma@{\$idioma}}
+\index{cREST.php@{cREST.php}!\$idioma@{\$idioma}}
 \index{\$idioma@{\$idioma}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{\$idioma}{\$idioma}}
+\doxysubsubsection{\$idioma}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_af3460f55e0c57a63975fe152edaaf049} 
-\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \$idioma =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}}
+\textbf{ if} (isset( \$\+\_\+\+REQUEST[ \textquotesingle{}volver\textquotesingle{}])) \$idioma =isset(\$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}]) ? \$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}] \+: \textquotesingle{}en\textquotesingle{}}
 
 \begin{DoxyAuthor}{Author}
 Luis Ferreras González 
@@ -52,23 +52,23 @@ Luis Ferreras González
 \begin{DoxySince}{Since}
 1.\+0.\+1 
 \end{DoxySince}
-\Hypertarget{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016}\index{cREST.php@{cREST.php}!\$oFotoNasa@{\$oFotoNasa}}
+\index{cREST.php@{cREST.php}!\$oFotoNasa@{\$oFotoNasa}}
 \index{\$oFotoNasa@{\$oFotoNasa}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{\$oFotoNasa}{\$oFotoNasa}}
+\doxysubsubsection{\$oFotoNasa}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_a137294803dca43920ec1f04c6fccd016} 
-\$o\+Foto\+Nasa =\mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{REST\+::api\+Nasa}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}fecha\+NASA\textquotesingle{}\mbox{]})}
+\$o\+Foto\+Nasa =\textbf{ REST\+::api\+Nasa}(\$\+\_\+\+SESSION[\textquotesingle{}fecha\+NASA\textquotesingle{}])}
 
-\Hypertarget{c_r_e_s_t_8php_ab930bc009cbf7b3aecaf44c3280298d3}\index{cREST.php@{cREST.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
+\index{cREST.php@{cREST.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
 \index{\$oUsuarioActivo@{\$oUsuarioActivo}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{\$oUsuarioActivo}{\$oUsuarioActivo}}
+\doxysubsubsection{\$oUsuarioActivo}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_ab930bc009cbf7b3aecaf44c3280298d3} 
-\$o\+Usuario\+Activo =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}}
+\$o\+Usuario\+Activo =\$\+\_\+\+SESSION[\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}]}
 
-\Hypertarget{c_r_e_s_t_8php_ac37ecc9aa341baafa99a0af9de2ecd6e}\index{cREST.php@{cREST.php}!else@{else}}
+\index{cREST.php@{cREST.php}!else@{else}}
 \index{else@{else}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{else}{else}}
+\doxysubsubsection{else}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_ac37ecc9aa341baafa99a0af9de2ecd6e} 
-\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}fechafoto\+Nasa\textquotesingle{}\mbox{]})) else}
+\textbf{ if} (isset( \$\+\_\+\+REQUEST[ \textquotesingle{}fechafoto\+Nasa\textquotesingle{}])) else}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
@@ -76,9 +76,9 @@ Luis Ferreras González
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=date\_create()}
 
 \end{DoxyCode}
-\Hypertarget{c_r_e_s_t_8php_a9fd1a3807f50592aa57c1e2b310e8b00}\index{cREST.php@{cREST.php}!if@{if}}
+\index{cREST.php@{cREST.php}!if@{if}}
 \index{if@{if}!cREST.php@{cREST.php}}
-\doxysubsubsection{\texorpdfstring{if}{if}}
+\doxysubsubsection{if}
 {\footnotesize\ttfamily \label{c_r_e_s_t_8php_a9fd1a3807f50592aa57c1e2b310e8b00} 
-if(\$o\+Foto\+Nasa instanceof \mbox{\hyperlink{classfoto_n_a_s_a}{foto\+NASA}}) (\begin{DoxyParamCaption}\item[{}]{\$o\+Foto\+Nasa instanceof}{}\end{DoxyParamCaption})}
+if(\$o\+Foto\+Nasa instanceof \textbf{ foto\+NASA}) (\begin{DoxyParamCaption}\item[{}]{\$o\+Foto\+Nasa instanceof}{}\end{DoxyParamCaption})}
 

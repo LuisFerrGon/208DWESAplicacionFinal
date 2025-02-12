@@ -306,6 +306,16 @@ Search.appendIndex(
             "summary": "Funci\u00F3n\u0020crearDepartamento",
             "url": "classes/DepartamentoPDO.html#method_crearDepartamento"
         },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbajaLogica\u0028\u0029",
+            "name": "bajaLogica",
+            "summary": "Funci\u00F3n\u0020bajaLogica",
+            "url": "classes/DepartamentoPDO.html#method_bajaLogica"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AaltaLogica\u0028\u0029",
+            "name": "altaLogica",
+            "summary": "Funci\u00F3n\u0020altaLogica",
+            "url": "classes/DepartamentoPDO.html#method_altaLogica"
+        },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
             "summary": "Clase\u0020ErrorApp",
