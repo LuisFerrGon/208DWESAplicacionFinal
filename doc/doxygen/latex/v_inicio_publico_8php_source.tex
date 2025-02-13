@@ -24,43 +24,44 @@
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ https:\textcolor{comment}{//www.w3schools.com/howto/howto\_js\_slideshow.asp-\/-\/>}}
 \DoxyCodeLine{00028\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}carrusel"{}}>}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mySlides\ fade"{}}>}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/navegacion.PNG"{}}\ alt=\textcolor{stringliteral}{"{}Mapa\ de\ navegación"{}}>}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Mapa\ de\ navegación</div>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Mapa\ de\ navegación</div>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/arbolNavegacion.png"{}}\ alt=\textcolor{stringliteral}{"{}Mapa\ de\ navegación"{}}>}
 \DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ </div>}
 \DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mySlides\ fade"{}}>}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/diagramaClases.png"{}}\ alt=\textcolor{stringliteral}{"{}Diagrama\ de\ clases"{}}>}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Diagrama\ de\ clases</div>}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Diagrama\ de\ clases</div>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/diagramaClases.png"{}}\ alt=\textcolor{stringliteral}{"{}Diagrama\ de\ clases"{}}>}
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ </div>}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mySlides\ fade"{}}>}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/usoSession.PNG"{}}\ alt=\textcolor{stringliteral}{"{}Uso\ de\ \$\_SESSION"{}}>}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Uso\ de\ \$\_SESSION</div>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text"{}}>Uso\ de\ \$\_SESSION</div>}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}webroot/images/usoSession.PNG"{}}\ alt=\textcolor{stringliteral}{"{}Uso\ de\ \$\_SESSION"{}}>}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ </div>}
 \DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ <!-\/-\/\ Next\ and\ previous\ buttons\ -\/-\/>}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ <a\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}prev"{}}\ onclick=\textcolor{stringliteral}{"{}plusSlides(-\/1)"{}}>\&\#10094;</a>}
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ <a\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}next"{}}\ onclick=\textcolor{stringliteral}{"{}plusSlides(1)"{}}>\&\#10095;</a>}
 \DoxyCodeLine{00044\ \ \ \ \ </div>}
-\DoxyCodeLine{00045\ </main>}
-\DoxyCodeLine{00046\ <script>}
-\DoxyCodeLine{00047\ \ \ \ \ let\ slideIndex\ =\ 1;}
-\DoxyCodeLine{00048\ \ \ \ \ showSlides(slideIndex);}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Next/previous\ controls}}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{function}\ plusSlides(n)\ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ showSlides(slideIndex\ +=\ n);}
-\DoxyCodeLine{00052\ \ \ \ \ \}}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Thumbnail\ image\ controls}}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{function}\ currentSlide(n)\ \{}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ showSlides(slideIndex\ =\ n);}
-\DoxyCodeLine{00056\ \ \ \ \ \}}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{function}\ showSlides(n)\ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ let\ i;}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ let\ slides\ =\ document.getElementsByClassName(\textcolor{stringliteral}{"{}mySlides"{}});}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ slides.length)\{slideIndex\ =\ 1;\}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 1)\{slideIndex\ =\ slides.length;\}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ slides.length;\ i++)\ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ slides[i].style.display\ =\ \textcolor{stringliteral}{"{}none"{}};}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ slides[slideIndex-\/1].style.display\ =\ \textcolor{stringliteral}{"{}block"{}};}
-\DoxyCodeLine{00066\ \ \ \ \ \}}
-\DoxyCodeLine{00067\ </script>}
+\DoxyCodeLine{00045\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{00046\ </main>}
+\DoxyCodeLine{00047\ <script>}
+\DoxyCodeLine{00048\ \ \ \ \ let\ slideIndex\ =\ 1;}
+\DoxyCodeLine{00049\ \ \ \ \ showSlides(slideIndex);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Next/previous\ controls}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{function}\ plusSlides(n)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ showSlides(slideIndex\ +=\ n);}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Thumbnail\ image\ controls}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{function}\ currentSlide(n)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ showSlides(slideIndex\ =\ n);}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{function}\ showSlides(n)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ let\ i;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ let\ slides\ =\ document.getElementsByClassName(\textcolor{stringliteral}{"{}mySlides"{}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ slides.length)\{slideIndex\ =\ 1;\}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 1)\{slideIndex\ =\ slides.length;\}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ slides.length;\ i++)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ slides[i].style.display\ =\ \textcolor{stringliteral}{"{}none"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ slides[slideIndex-\/1].style.display\ =\ \textcolor{stringliteral}{"{}block"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ </script>}
 
 \end{DoxyCode}

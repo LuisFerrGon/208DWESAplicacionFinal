@@ -45,6 +45,80 @@
                     echo "<p>".$avRest['nasa']['fecha']."</p>";
                 }
             ?>
+            <p><b>Parámetros:</b> fecha</p>
+            <p><a href="https://api.nasa.gov/">Página de la API</a></p>
+        </section>
+        <section class="api" id="horoscopo">
+            <form method="post">
+                <input type="date" value="<?php echo $_SESSION['fechaHoroscopo']->format('Y-m-d');?>" id="fechaHoroscopo" name="fechaHoroscopo"
+                    min="<?php echo ((new DateTime('tomorrow'))->sub(new DateInterval('P364D')))->format('Y-m-d');?>"
+                    max="<?php echo (new DateTime('tomorrow'))->format('Y-m-d');?>"
+                >
+                <select name="signo" id="signo">
+                    <option value="Aries" <?php if($avRest['horoscopo']['signo']=='Aries'){echo 'selected';}?>>Aries</option>
+                    <option value="Taurus" <?php if($avRest['horoscopo']['signo']=='Taurus'){echo 'selected';}?>>Taurus</option>
+                    <option value="Gemini" <?php if($avRest['horoscopo']['signo']=='Gemini'){echo 'selected';}?>>Gemini</option>
+                    <option value="Cancer" <?php if($avRest['horoscopo']['signo']=='Cancer'){echo 'selected';}?>>Cancer</option>
+                    <option value="Leo" <?php if($avRest['horoscopo']['signo']=='Leo'){echo 'selected';}?>>Leo</option>
+                    <option value="Virgo" <?php if($avRest['horoscopo']['signo']=='Virgo'){echo 'selected';}?>>Virgo</option>
+                    <option value="Libra" <?php if($avRest['horoscopo']['signo']=='Libra'){echo 'selected';}?>>Libra</option>
+                    <option value="Scorpio" <?php if($avRest['horoscopo']['signo']=='Scorpio'){echo 'selected';}?>>Scorpio</option>
+                    <option value="Sagittarius" <?php if($avRest['horoscopo']['signo']=='Sagittarius'){echo 'selected';}?>>Sagittarius</option>
+                    <option value="Capricorn" <?php if($avRest['horoscopo']['signo']=='Capricorn'){echo 'selected';}?>>Capricorn</option>
+                    <option value="Aquarius" <?php if($avRest['horoscopo']['signo']=='Aquarius'){echo 'selected';}?>>Aquarius</option>
+                    <option value="Pisces" <?php if($avRest['horoscopo']['signo']=='Pisces'){echo 'selected';}?>>Pisces</option>
+                </select>
+                <input type="submit" name="cambiarHoroscopo" value="Cambiar">
+            </form>
+            <?php
+                if($avRest['horoscopo']['mensaje']==null){
+                    echo "<h2>Ha ourrido un error</h2>";
+                }else{
+                    echo "<h2>";
+                    switch ($avRest['horoscopo']['signo']) {
+                        case 'Aries':
+                            echo "&#9800;";
+                            break;
+                        case 'Taurus':
+                            echo "&#9801;";
+                            break;
+                        case 'Gemini':
+                            echo "&#9802;";
+                            break;
+                        case 'Cancer':
+                            echo "&#9803;";
+                            break;
+                        case 'Leo':
+                            echo "&#9804;";
+                            break;
+                        case 'Virgo':
+                            echo "&#9805;";
+                            break;
+                        case 'Libra':
+                            echo "&#9806;";
+                            break;
+                        case 'Scorpio':
+                            echo "&#9807;";
+                            break;
+                        case 'Sagittarius':
+                            echo "&#9808;";
+                            break;
+                        case 'Capricorn':
+                            echo "&#9809;";
+                            break;
+                        case 'Aquarius':
+                            echo "&#9810;";
+                            break;
+                        case 'Pisces':
+                            echo "&#9811;";
+                            break;
+                    }
+                    echo $avRest['horoscopo']['fecha']."</h2>";
+                    echo "<p>".$avRest['horoscopo']['mensaje']=$oHoroscopo->getMensaje()."</p>";
+                }
+            ?>
+            <p><b>Parámetros:</b> fecha, sgino zodiacal</p>
+            <p><a href="https://horoscope-app-api.vercel.app/">Página de la API</a></p>
         </section>
     </div>
     <div style='height: 30px'></div>

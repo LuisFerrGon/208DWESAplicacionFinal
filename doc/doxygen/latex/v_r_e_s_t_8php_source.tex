@@ -43,21 +43,95 @@
 \DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}].\textcolor{stringliteral}{"{}</p>"{}};}
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ </section>}
-\DoxyCodeLine{00049\ \ \ \ \ </div>}
-\DoxyCodeLine{00050\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
-\DoxyCodeLine{00051\ </main>}
-\DoxyCodeLine{00052\ <script>}
-\DoxyCodeLine{00053\ \ \ \ \ var\ inputFechaNASA=document.getElementById(\textcolor{stringliteral}{"{}fechafotoNasa"{}});}
-\DoxyCodeLine{00054\ \ \ \ \ let\ valorFechaInput=\textcolor{keyword}{new}\ Date(inputFechaNASA.value);}
-\DoxyCodeLine{00055\ \ \ \ \ let\ fechaFotoNasa=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}});}
-\DoxyCodeLine{00056\ \ \ \ \ let\ fechaMax=\textcolor{keyword}{new}\ Date();}
-\DoxyCodeLine{00057\ \ \ \ \ let\ fechaMin=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}1995-\/06-\/16"{}});}
-\DoxyCodeLine{00058\ \ \ \ \ inputFechaNASA.addEventListener(\textcolor{stringliteral}{"{}change"{}},\ ()=>\{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(valorFechaInput<=fechaMax\ \&\&\ valorFechaInput>=fechaMin\ \&\&\ valorFechaInput!==fechaFotoNasa)\{}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ inputFechaNASA.parentElement.submit();}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00062\ \ \ \ \ \});}
-\DoxyCodeLine{00063\ </script>}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ <p><b>Parámetros:</b>\ fecha</p>}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ <p><a\ href=\textcolor{stringliteral}{"{}https://api.nasa.gov/"{}}>Página\ de\ la\ API</a></p>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ <section\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}api"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}horoscopo"{}}>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ <form\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaHoroscopo']-\/>format('Y-\/m-\/d');?>"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaHoroscopo"{}}\ name=\textcolor{stringliteral}{"{}fechaHoroscopo"{}}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min=\textcolor{stringliteral}{"{}<?php\ echo\ ((new\ DateTime('tomorrow'))-\/>sub(new\ DateInterval('P364D')))-\/>format('Y-\/m-\/d');?>"{}}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max=\textcolor{stringliteral}{"{}<?php\ echo\ (new\ DateTime('tomorrow'))-\/>format('Y-\/m-\/d');?>"{}}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <select\ name=\textcolor{stringliteral}{"{}signo"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}signo"{}}>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Aries"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Aries'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Aries</option>}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Taurus"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Taurus'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Taurus</option>}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Gemini"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Gemini'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Gemini</option>}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Cancer"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Cancer'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Cancer</option>}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Leo"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Leo'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Leo</option>}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Virgo"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Virgo'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Virgo</option>}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Libra"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Libra'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Libra</option>}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Scorpio"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Scorpio'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Scorpio</option>}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Sagittarius"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Sagittarius'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Sagittarius</option>}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Capricorn"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Capricorn'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Capricorn</option>}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Aquarius"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Aquarius'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Aquarius</option>}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Pisces"{}}\ <?php\ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]==\textcolor{stringliteral}{'Pisces'})\{echo\ \textcolor{stringliteral}{'selected'};\}?>>Pisces</option>}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </select>}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}cambiarHoroscopo"{}}\ value=\textcolor{stringliteral}{"{}Cambiar"{}}>}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'mensaje'}]==\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>Ha\ ourrido\ un\ error</h2>"{}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h2>"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}])\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Aries'}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9800;"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Taurus'}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9801;"{}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Gemini'}:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9802;"{}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Cancer'}:}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9803;"{}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Leo'}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9804;"{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Virgo'}:}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9805;"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Libra'}:}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9806;"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Scorpio'}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9807;"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Sagittarius'}:}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9808;"{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Capricorn'}:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9809;"{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Aquarius'}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9810;"{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'Pisces'}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\&\#9811;"{}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'fecha'}].\textcolor{stringliteral}{"{}</h2>"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'mensaje'}]=\$oHoroscopo-\/>getMensaje().\textcolor{stringliteral}{"{}</p>"{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ <p><b>Parámetros:</b>\ fecha,\ sgino\ zodiacal</p>}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ <p><a\ href=\textcolor{stringliteral}{"{}https://horoscope-\/app-\/api.vercel.app/"{}}>Página\ de\ la\ API</a></p>}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00123\ \ \ \ \ </div>}
+\DoxyCodeLine{00124\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{00125\ </main>}
+\DoxyCodeLine{00126\ <script>}
+\DoxyCodeLine{00127\ \ \ \ \ var\ inputFechaNASA=document.getElementById(\textcolor{stringliteral}{"{}fechafotoNasa"{}});}
+\DoxyCodeLine{00128\ \ \ \ \ let\ valorFechaInput=\textcolor{keyword}{new}\ Date(inputFechaNASA.value);}
+\DoxyCodeLine{00129\ \ \ \ \ let\ fechaFotoNasa=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['fechaNASA']-\/>format('Y-\/m-\/d');?>"{}});}
+\DoxyCodeLine{00130\ \ \ \ \ let\ fechaMax=\textcolor{keyword}{new}\ Date();}
+\DoxyCodeLine{00131\ \ \ \ \ let\ fechaMin=\textcolor{keyword}{new}\ Date(\textcolor{stringliteral}{"{}1995-\/06-\/16"{}});}
+\DoxyCodeLine{00132\ \ \ \ \ inputFechaNASA.addEventListener(\textcolor{stringliteral}{"{}change"{}},\ ()=>\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(valorFechaInput<=fechaMax\ \&\&\ valorFechaInput>=fechaMin\ \&\&\ valorFechaInput!==fechaFotoNasa)\{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ inputFechaNASA.parentElement.submit();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \});}
+\DoxyCodeLine{00137\ </script>}
 
 \end{DoxyCode}

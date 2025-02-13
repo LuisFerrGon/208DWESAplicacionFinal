@@ -4,6 +4,8 @@
 \begin{DoxyCompactItemize}
 \item 
 static \textbf{ api\+Nasa} (\$fecha)
+\item 
+static \textbf{ api\+Horoscopo} (\$fecha, \$signo)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -21,14 +23,53 @@ Clase para los rests
 Luis Ferreras González 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.\+0.\+1 Fecha última modificación del archivo\+: 28/01/2025 
+2.\+0.\+3 Fecha última modificación del archivo\+: 13/02/2025 
 \end{DoxyVersion}
 \begin{DoxySince}{Since}
 1.\+0.\+1 
+
+2.\+0.\+3 Horoscopo 
 \end{DoxySince}
 
 
+Definition at line \textbf{ 14} of file \textbf{ REST.\+php}.
+
+
+
 \doxysubsection{Member Function Documentation}
+\index{REST@{REST}!apiHoroscopo@{apiHoroscopo}}
+\index{apiHoroscopo@{apiHoroscopo}!REST@{REST}}
+\doxysubsubsection{apiHoroscopo()}
+{\footnotesize\ttfamily \label{class_r_e_s_t_ad5c80a51c6c1718ab23bc2a1af76e5f4} 
+static api\+Horoscopo (\begin{DoxyParamCaption}\item[{}]{\$fecha}{, }\item[{}]{\$signo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Funcion para el \doxyref{REST}{p.}{class_r_e_s_t} del horoscopo
+
+Funcion que devuelve un horoscopo dado el signo y la fecha
+
+
+\begin{DoxyParams}[1]{Parameters}
+timestamp & {\em \$fecha} & Fecha del horoscopo \\
+\hline
+string & {\em \$signo} & Signo del horoscopo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null$\vert$\textbackslash{}horoscopo Devuelve un objeto horoscopo si es exitoso. Devuelve null en caso de fallo. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0.\+3 Fecha última modificación del archivo\+: 13/02/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+2.\+0.\+36 
+\end{DoxySince}
+
+
+Definition at line \textbf{ 74} of file \textbf{ REST.\+php}.
+
 \index{REST@{REST}!apiNasa@{apiNasa}}
 \index{apiNasa@{apiNasa}!REST@{REST}}
 \doxysubsubsection{apiNasa()}
@@ -58,12 +99,20 @@ Luis Ferreras González
 \end{DoxySince}
 
 
+Definition at line \textbf{ 28} of file \textbf{ REST.\+php}.
+
+
+
 \doxysubsection{Field Documentation}
 \index{REST@{REST}!apiKeyNasa@{apiKeyNasa}}
 \index{apiKeyNasa@{apiKeyNasa}!REST@{REST}}
 \doxysubsubsection{apiKeyNasa}
 {\footnotesize\ttfamily \label{class_r_e_s_t_ad13c3c00474efe09ba004fb729a54870} 
 const api\+Key\+Nasa = "{}2CQ2qj\+Sy8q\+JNf\+T8\+RW0fkl\+Awyb\+ZCBgq\+Xx2\+Ko\+I99\+JQ"{}}
+
+
+
+Definition at line \textbf{ 15} of file \textbf{ REST.\+php}.
 
 
 

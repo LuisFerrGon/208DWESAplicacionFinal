@@ -3,95 +3,95 @@
 \textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ <?php}
-\DoxyCodeLine{00009\ ?>}
-\DoxyCodeLine{00010\ <header>}
-\DoxyCodeLine{00011\ \ \ \ \ <h1>Modificar\ Departamento</h1>}
-\DoxyCodeLine{00012\ </header>}
-\DoxyCodeLine{00013\ <main>}
-\DoxyCodeLine{00014\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ </section>}
-\DoxyCodeLine{00017\ \ \ \ \ </div>}
-\DoxyCodeLine{00018\ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}modificarDepartamento"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modificarDepartamento"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ <table>}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}>Código:</label>}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ name=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(\$departamentoEnCurso-\/>getCodigo());?>"{}}\ disabled>}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}>Descripción:</label>}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
-\DoxyCodeLine{00035\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(empty(\$aErrores['descripcionDepartamento'])\ \&\&\ !empty(\$\_REQUEST['descripcionDepartamento']))\{}}
-\DoxyCodeLine{00036\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamentoEnCurso-\/>setDescripcion(\$\_REQUEST['descripcionDepartamento']);}}
-\DoxyCodeLine{00037\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
-\DoxyCodeLine{00038\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ (\$departamentoEnCurso-\/>getDescripcion());}}
-\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}]))\{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}>Fecha\ de\ creación:</label>}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(date('Y-\/m-\/d',\ strtotime(\$departamentoEnCurso-\/>getFechaCreacion())));?>"{}}\ disabled>}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}>Volumen:</label>}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}number"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ name=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
-\DoxyCodeLine{00061\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(empty(\$aErrores['volumenDepartamento'])\ \&\&\ !empty(\$\_REQUEST['volumenDepartamento']))\{}}
-\DoxyCodeLine{00062\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamentoEnCurso-\/>setDescripcion(\$\_REQUEST['volumenDepartamento']);}}
-\DoxyCodeLine{00063\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
-\DoxyCodeLine{00064\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ (\$departamentoEnCurso-\/>getVolumenNegocio());}}
-\DoxyCodeLine{00065\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ step=\textcolor{stringliteral}{"{}0.01"{}}\ required>}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}]))\{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}>Fecha\ de\ baja:</label>}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
-\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(\$departamentoEnCurso-\/>getFechaBaja()!=null)\{}}
-\DoxyCodeLine{00080\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo(date('Y-\/m-\/d',\ strtotime(\$departamentoEnCurso-\/>getFechaBaja())));}}
-\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
-\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ disabled>}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modificar"{}}\ name=\textcolor{stringliteral}{"{}modificar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Modificar"{}}>}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ </table>}
-\DoxyCodeLine{00097\ \ \ \ \ </form>}
-\DoxyCodeLine{00098\ </main>}
+\DoxyCodeLine{00010\ ?>}
+\DoxyCodeLine{00011\ <header>}
+\DoxyCodeLine{00012\ \ \ \ \ <h1>Modificar\ Departamento</h1>}
+\DoxyCodeLine{00013\ </header>}
+\DoxyCodeLine{00014\ <main>}
+\DoxyCodeLine{00015\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{00018\ \ \ \ \ </div>}
+\DoxyCodeLine{00019\ \ \ \ \ <form\ name=\textcolor{stringliteral}{"{}modificarDepartamento"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modificarDepartamento"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SERVER['PHP\_SELF'];\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}\ novalidate>}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}>Código:</label>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ name=\textcolor{stringliteral}{"{}codigoDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(\$departamentoEnCurso-\/>getCodigo());?>"{}}\ disabled>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}>Descripción:</label>}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}descripcionDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
+\DoxyCodeLine{00036\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(empty(\$aErrores['descripcionDepartamento'])\ \&\&\ !empty(\$\_REQUEST['descripcionDepartamento']))\{}}
+\DoxyCodeLine{00037\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamentoEnCurso-\/>setDescripcion(\$\_REQUEST['descripcionDepartamento']);}}
+\DoxyCodeLine{00038\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ (\$departamentoEnCurso-\/>getDescripcion());}}
+\DoxyCodeLine{00040\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ required>}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}]))\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'descripcionDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}>Fecha\ de\ creación:</label>}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaCreacionDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo(date('Y-\/m-\/d',\ strtotime(\$departamentoEnCurso-\/>getFechaCreacion())));?>"{}}\ disabled>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}>Volumen:</label>}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}number"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ name=\textcolor{stringliteral}{"{}volumenDepartamento"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}obligatorio"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
+\DoxyCodeLine{00062\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(empty(\$aErrores['volumenDepartamento'])\ \&\&\ !empty(\$\_REQUEST['volumenDepartamento']))\{}}
+\DoxyCodeLine{00063\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamentoEnCurso-\/>setDescripcion(\$\_REQUEST['volumenDepartamento']);}}
+\DoxyCodeLine{00064\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00065\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ (\$departamentoEnCurso-\/>getVolumenNegocio());}}
+\DoxyCodeLine{00066\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ step=\textcolor{stringliteral}{"{}0.01"{}}\ required>}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!empty(\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}]))\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<td\ class='error'>"{}}.\$aErrores[\textcolor{stringliteral}{'volumenDepartamento'}].\textcolor{stringliteral}{"{}</td>"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}>Fecha\ de\ baja:</label>}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}date"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ name=\textcolor{stringliteral}{"{}fechaBajaDepartamento"{}}\ value=\textcolor{stringliteral}{"{}<?php}}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(\$departamentoEnCurso-\/>getFechaBaja()!=null)\{}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo(date('Y-\/m-\/d',\ strtotime(\$departamentoEnCurso-\/>getFechaBaja())));}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>"{}}\ disabled>}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modificar"{}}\ name=\textcolor{stringliteral}{"{}modificar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Modificar"{}}>}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{00098\ \ \ \ \ </form>}
+\DoxyCodeLine{00099\ </main>}
 
 \end{DoxyCode}

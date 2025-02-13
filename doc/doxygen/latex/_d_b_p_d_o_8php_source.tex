@@ -4,25 +4,25 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ <?php}
 \DoxyCodeLine{00002\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }DBPDO\ \textcolor{keyword}{implements}\ DB\{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ ejecutarConsulta(\$sentenciaSQL,\ \$aParametros=\textcolor{keyword}{null},\ \$devolverPrimeraLinea=\textcolor{keyword}{true})\{}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion=\textcolor{keyword}{new}\ PDO(SERVIDOR,\ USUARIO,\ CONTRASENA);}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion-\/>setAttribute(PDO::ATTR\_ERRMODE,\ PDO::ERRMODE\_EXCEPTION);}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query=\$conexion-\/>prepare(\$sentenciaSQL);}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query-\/>execute(\$aParametros);}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$devolverPrimeraLinea)\{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query-\/>fetchObject();}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}(PDOException\ \$ex)\{}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ex;}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{finally}\{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unset(\$conexion);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00051\ \ \ \ \ \}}
-\DoxyCodeLine{00052\ ?>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }DBPDO\ \textcolor{keyword}{implements}\ DB\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ ejecutarConsulta(\$sentenciaSQL,\ \$aParametros=\textcolor{keyword}{null},\ \$devolverPrimeraLinea=\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion=\textcolor{keyword}{new}\ PDO(SERVIDOR,\ USUARIO,\ CONTRASENA);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$conexion-\/>setAttribute(PDO::ATTR\_ERRMODE,\ PDO::ERRMODE\_EXCEPTION);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query=\$conexion-\/>prepare(\$sentenciaSQL);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$query-\/>execute(\$aParametros);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$devolverPrimeraLinea)\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query-\/>fetchObject();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}(PDOException\ \$ex)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ex;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{finally}\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unset(\$conexion);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ ?>}
 
 \end{DoxyCode}

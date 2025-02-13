@@ -3,92 +3,92 @@
 \textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ <?php}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }UsuarioPDO\ \textcolor{keyword}{implements}\ UsuarioDB\{}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ validarUsuario(\$codigoUsuario,\ \$contrasenaUsuario)\{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \$oUsuario=\textcolor{keyword}{null};}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$codigoUsuario\}'}\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=SHA2(\textcolor{stringliteral}{'\{\$codigoUsuario\}\{\$contrasenaUsuario\}'},\ 256);}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado!=\textcolor{keyword}{null})\{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$oUsuario=\textcolor{keyword}{new}\ Usuario(}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_CodUsuario,}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_Password,}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_DescUsuario,}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\$resultado-\/>T01\_NumConexiones)+1,}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ date\_create(\textcolor{stringliteral}{"{}now"{}}),}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_FechaHoraUltimaConexion,}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_Perfil}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$oUsuario;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ registrarUltimaConexion(Usuario\ \$oUsuario)\{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \$sCodigo=\$oUsuario-\/>getCodUsuario();}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \$sPassword=\$oUsuario-\/>getPassword();}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \$iConexiones=\$oUsuario-\/>getNumConexiones();}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \$dtUltimaConexion=\$oUsuario-\/>getFechaHoraUltimaConexion();}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T01\_Usuario\ SET}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T01\_NumConexiones=\{\$iConexiones\},}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T01\_FechaHoraUltimaConexion=\textcolor{stringliteral}{'\{\$dtUltimaConexion-\/>format('}Y-\/m-\/d\ H:i:s\textcolor{stringliteral}{')\}'}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'}}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=\textcolor{stringliteral}{'\{\$sPassword\}'};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarUsuarioPorCod()\{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ altaUsuario(\textcolor{keywordtype}{string}\ \$sCodigo,\ \textcolor{keywordtype}{string}\ \$sContrasena,\ \textcolor{keywordtype}{string}\ \$sDescripcion)\{}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ DB208DWESLoginLogoff.T01\_Usuario}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (T01\_CodUsuario,\ T01\_Password,\ T01\_DescUsuario)}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ VALUES}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'\{\$sCodigo\}'},\ SHA2(\textcolor{stringliteral}{'\{\$sCodigo\}\{\$sContrasena\}'},256),\ \textcolor{stringliteral}{'\{\$sDescripcion\}'});}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ validarCodNoExiste(\textcolor{keywordtype}{string}\ \$sCodigo)\{}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'};}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(\$resultado!=\textcolor{keyword}{null});}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificarUsuario()\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }UsuarioPDO\ \textcolor{keyword}{implements}\ UsuarioDB\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ validarUsuario(\$codigoUsuario,\ \$contrasenaUsuario)\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \$oUsuario=\textcolor{keyword}{null};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$codigoUsuario\}'}\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=SHA2(\textcolor{stringliteral}{'\{\$codigoUsuario\}\{\$contrasenaUsuario\}'},\ 256);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$oUsuario=\textcolor{keyword}{new}\ Usuario(}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_CodUsuario,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_Password,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_DescUsuario,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\$resultado-\/>T01\_NumConexiones)+1,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ date\_create(\textcolor{stringliteral}{"{}now"{}}),}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_FechaHoraUltimaConexion,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T01\_Perfil}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$oUsuario;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ registrarUltimaConexion(Usuario\ \$oUsuario)\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \$sCodigo=\$oUsuario-\/>getCodUsuario();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \$sPassword=\$oUsuario-\/>getPassword();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \$iConexiones=\$oUsuario-\/>getNumConexiones();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \$dtUltimaConexion=\$oUsuario-\/>getFechaHoraUltimaConexion();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T01\_Usuario\ SET}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T01\_NumConexiones=\{\$iConexiones\},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T01\_FechaHoraUltimaConexion=\textcolor{stringliteral}{'\{\$dtUltimaConexion-\/>format('}Y-\/m-\/d\ H:i:s\textcolor{stringliteral}{')\}'}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T01\_Password=\textcolor{stringliteral}{'\{\$sPassword\}'};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarUsuarioPorCod()\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ altaUsuario(\textcolor{keywordtype}{string}\ \$sCodigo,\ \textcolor{keywordtype}{string}\ \$sContrasena,\ \textcolor{keywordtype}{string}\ \$sDescripcion)\{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ DB208DWESAppFinal.T01\_Usuario}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (T01\_CodUsuario,\ T01\_Password,\ T01\_DescUsuario)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ VALUES}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'\{\$sCodigo\}'},\ SHA2(\textcolor{stringliteral}{'\{\$sCodigo\}\{\$sContrasena\}'},256),\ \textcolor{stringliteral}{'\{\$sDescripcion\}'});}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ validarCodNoExiste(\textcolor{keywordtype}{string}\ \$sCodigo)\{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T01\_Usuario\ WHERE\ T01\_CodUsuario=\textcolor{stringliteral}{'\{\$sCodigo\}'};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$resultado;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(\$resultado!=\textcolor{keyword}{null});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ cambiarPassword()\{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificarUsuario()\{}
 \DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ borrarUSuario()\{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ cambiarPassword()\{}
 \DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarUsuariosPorDesc()\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ borrarUSuario()\{}
 \DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ creaOpinion()\{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarUsuariosPorDesc()\{}
 \DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificaOpinion()\{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ creaOpinion()\{}
 \DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ borraOpinion()\{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificaOpinion()\{}
 \DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarOpinionUsuario()\{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ borraOpinion()\{}
 \DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00154\ \ \ \ \ \}}
-\DoxyCodeLine{00155\ ?>}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarOpinionUsuario()\{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ ?>}
 
 \end{DoxyCode}

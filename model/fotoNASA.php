@@ -32,7 +32,7 @@
         /**
          * Funcion __construct
          * 
-         * Funcion para crear un objeto Usuario
+         * Funcion para crear un objeto fotoNASA
          * 
          * @param string $copyright
          * @param string $fecha
@@ -48,31 +48,31 @@
             $this->url = $url;
         }
         /**
-         * @return string Devuelve el copyright de la oto
+         * @return string Devuelve el copyright de la foto
          */
         public function getCopyright() {
             return $this->copyright;
         }
         /**
-         * @return string Devuelve la fecha de la oto
+         * @return string Devuelve la fecha de la foto
          */
         public function getFecha() {
             return $this->fecha;
         }
         /**
-         * @return string Devuelve la descripcion de la oto
+         * @return string Devuelve la descripcion de la foto
          */
         public function getDescripcion() {
             return $this->descripcion;
         }
         /**
-         * @return string Devuelve el titulo de la oto
+         * @return string Devuelve el titulo de la foto
          */
         public function getTitulo() {
             return $this->titulo;
         }
         /**
-         * @return string Devuelve el url de la oto
+         * @return string Devuelve el url de la foto
          */
         public function getUrl() {
             return $this->url;

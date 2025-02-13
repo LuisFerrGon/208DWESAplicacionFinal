@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rest_1',['REST',['../class_r_e_s_t.html',1,'']]],
-  ['rest_2ephp_2',['REST.php',['../_r_e_s_t_8php.html',1,'']]]
+  ['obligatorio_0',['OBLIGATORIO',['../c_crear_departamento_8php.html#ac1f06fbd464e825f89f18cb9cf5ba357',1,'OBLIGATORIO:&#160;cCrearDepartamento.php'],['../c_login_8php.html#a61e6cf9c8a86417a9b196d26300d506a',1,'OBLIGATORIO:&#160;cLogin.php'],['../c_modificar_departamento_8php.html#ac1f06fbd464e825f89f18cb9cf5ba357',1,'OBLIGATORIO:&#160;cModificarDepartamento.php'],['../c_registro_8php.html#a61e6cf9c8a86417a9b196d26300d506a',1,'OBLIGATORIO:&#160;cRegistro.php']]]
 ];

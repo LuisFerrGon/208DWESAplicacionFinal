@@ -19,22 +19,43 @@
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}=>\textcolor{keyword}{null},}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}=>\textcolor{keyword}{null},}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'url'}=>null}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ]}
-\DoxyCodeLine{00024\ \ \ \ \ ];}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]))\{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=\ date\_create(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]);}
-\DoxyCodeLine{00027\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=date\_create();}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \$oFotoNasa=REST::apiNasa(\$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]);}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}(\$oFotoNasa\ instanceof\ fotoNASA)\{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]=\$oFotoNasa-\/>getCopyright();}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}]=\$oFotoNasa-\/>getFecha();}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]=\$oFotoNasa-\/>getDescripcion();}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]=\$oFotoNasa-\/>getTitulo();}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]=\$oFotoNasa-\/>getUrl();}
-\DoxyCodeLine{00037\ \ \ \ \ \}}
-\DoxyCodeLine{00038\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
-\DoxyCodeLine{00039\ ?>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'horoscopo'}=>[}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'signo'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fecha'}=>\textcolor{keyword}{null},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}=>null}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{00029\ \ \ \ \ ];}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]))\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=\ date\_create(\$\_REQUEST[\textcolor{stringliteral}{'fechafotoNasa'}]);}
+\DoxyCodeLine{00032\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]=date\_create();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'fechaHoroscopo'}]))\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaHoroscopo'}]=\ date\_create(\$\_REQUEST[\textcolor{stringliteral}{'fechaHoroscopo'}]);}
+\DoxyCodeLine{00037\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'fechaHoroscopo'}]=date\_create();}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'signo'}]))\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'signo'}]=\ \$\_REQUEST[\textcolor{stringliteral}{'signo'}];}
+\DoxyCodeLine{00042\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'signo'}]=\textcolor{stringliteral}{'Aries'};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \$oFotoNasa=REST::apiNasa(\$\_SESSION[\textcolor{stringliteral}{'fechaNASA'}]);}
+\DoxyCodeLine{00046\ \ \ \ \ \$oHoroscopo=REST::apiHoroscopo(\$\_SESSION[\textcolor{stringliteral}{'fechaHoroscopo'}],\ \$\_SESSION[\textcolor{stringliteral}{'signo'}]);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}(\$oFotoNasa\ instanceof\ fotoNASA)\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'copyright'}]=\$oFotoNasa-\/>getCopyright();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'fecha'}]=\$oFotoNasa-\/>getFecha();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'descripcion'}]=\$oFotoNasa-\/>getDescripcion();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'titulo'}]=\$oFotoNasa-\/>getTitulo();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'nasa'}][\textcolor{stringliteral}{'url'}]=\$oFotoNasa-\/>getUrl();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}(\$oHoroscopo\ instanceof\ horoscopo)\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'signo'}]=\$\_SESSION[\textcolor{stringliteral}{'signo'}];}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'fecha'}]=\$oHoroscopo-\/>getFecha();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \$avRest[\textcolor{stringliteral}{'horoscopo'}][\textcolor{stringliteral}{'mensaje'}]=\$oHoroscopo-\/>getMensaje();}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{00060\ ?>}
 
 \end{DoxyCode}

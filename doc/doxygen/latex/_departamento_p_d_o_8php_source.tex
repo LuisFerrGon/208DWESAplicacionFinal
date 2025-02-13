@@ -3,137 +3,182 @@
 \textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ <?php}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }DepartamentoPDO\{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ cargarArrayDepartamentos(\$aCondiciones)\{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$aDepartamentos=[];}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<QUERY}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T02\_Departamento}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_DescDepartamento\ LIKE\ :descripcion}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QUERY;}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta,\ \$aCondiciones,\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\$departamento=\$resultado-\/>fetchObject())\{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ array\_push(\$aDepartamentos,\ \textcolor{keyword}{new}\ Departamento(}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_CodDepartamento,}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_DescDepartamento,}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_FechaCreacionDepartamento,}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_VolumenDeNegocio,}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_FechaBajaDepartamento}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ));}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$aDepartamentos;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}(Exception\ \$ex)\{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getCode(),}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getMessage(),}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getFile(),}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getLine(),}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarPorCodigo(\$codigo)\{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T02\_Departamento}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado!=\textcolor{keyword}{null})\{}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Departamento(}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$codigo,}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_DescDepartamento,}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_FechaCreacionDepartamento,}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_VolumenDeNegocio,}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_FechaBajaDepartamento}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificarDepartamento(\$codigo,\ \$descripcion,\ \$volumen)\{}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T02\_Departamento\ SET}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_DescDepartamento=\textcolor{stringliteral}{'\{\$descripcion\}'},}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_VolumenDeNegocio=\{\$volumen\}}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ eliminarDepartamento(\$codigo)\{}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DELETE\ FROM\ T02\_Departamento}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ crearDepartamento(\$codigo,\ \$descripcion,\ \$volumen)\{}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ DB208DWESAppFinal.T02\_Departamento}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (T01\_CodUsuario,\ T01\_Password,\ T01\_DescUsuario)}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'\{\$codigo\}'},\ \textcolor{stringliteral}{'\{\$descripcion\}'},\ \{\$volumen\});}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00201\ \ \ \ \ \}}
-\DoxyCodeLine{00202\ ?>}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }DepartamentoPDO\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarDepartamentos(\$aCondiciones)\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$aDepartamentos=[];}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<QUERY}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T02\_Departamento}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_DescDepartamento\ LIKE\ :descripcion}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QUERY;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta,\ \$aCondiciones,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\$departamento=\$resultado-\/>fetchObject())\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ array\_push(\$aDepartamentos,\ \textcolor{keyword}{new}\ Departamento(}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_CodDepartamento,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_DescDepartamento,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_FechaCreacionDepartamento,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_VolumenDeNegocio,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$departamento-\/>T02\_FechaBajaDepartamento}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$aDepartamentos;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}(Exception\ \$ex)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'mtoDepartamento'};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getCode(),}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getMessage(),}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getFile(),}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ex-\/>getLine(),}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ buscarPorCodigo(\$codigo)\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ *\ FROM\ T02\_Departamento}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Departamento(}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$codigo,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_DescDepartamento,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_FechaCreacionDepartamento,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_VolumenDeNegocio,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>T02\_FechaBajaDepartamento}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ modificarDepartamento(\$codigo,\ \$descripcion,\ \$volumen)\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T02\_Departamento\ SET}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_DescDepartamento=\textcolor{stringliteral}{'\{\$descripcion\}'},}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_VolumenDeNegocio=\{\$volumen\}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ eliminarDepartamento(\$codigo)\{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DELETE\ FROM\ T02\_Departamento}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento=\textcolor{stringliteral}{'\{\$codigo\}'};}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ crearDepartamento(\$codigo,\ \$descripcion,\ \$volumen)\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ DB208DWESAppFinal.T02\_Departamento}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (T02\_CodDepartamento,\ T02\_DescDepartamento,\ T02\_VolumenDeNegocio)}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'\{\$codigo\}'},\ \textcolor{stringliteral}{'\{\$descripcion\}'},\ \{\$volumen\})}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado\ instanceof\ PDOException)\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}];}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'error'}]=\textcolor{keyword}{new}\ ErrorApp(}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ bajaLogica(\$codigo)\{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T02\_Departamento\ SET}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_FechaBajaDepartamento=CURRENT\_TIMESTAMP()}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento='\{\$codigo\}\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00216\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ ISNULL(T02\_FechaBajaDepartamento);}}
+\DoxyCodeLine{00217\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SQL;}}
+\DoxyCodeLine{00218\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}}
+\DoxyCodeLine{00219\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ if(\$resultado\ instanceof\ PDOException)\{}}
+\DoxyCodeLine{00220\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaAnterior\textcolor{stringliteral}{']=\$\_SESSION['}paginaEnCurso\textcolor{stringliteral}{'];}}
+\DoxyCodeLine{00221\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}error\textcolor{stringliteral}{']=new\ ErrorApp(}}
+\DoxyCodeLine{00222\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}}
+\DoxyCodeLine{00223\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}}
+\DoxyCodeLine{00224\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}}
+\DoxyCodeLine{00225\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}}
+\DoxyCodeLine{00226\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaAnterior\textcolor{stringliteral}{']}}
+\DoxyCodeLine{00227\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00228\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaEnCurso\textcolor{stringliteral}{']='}error\textcolor{stringliteral}{';}}
+\DoxyCodeLine{00229\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header('}Location:\ index.php\textcolor{stringliteral}{');}}
+\DoxyCodeLine{00230\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}}
+\DoxyCodeLine{00231\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00232\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ public\ static\ function\ altaLogica(\$codigo)\{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta=<<<SQL}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UPDATE\ T02\_Departamento\ SET}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T02\_FechaBajaDepartamento=NULL}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ T02\_CodDepartamento='\{\$codigo\}\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00245\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ T02\_FechaBajaDepartamento\ IS\ NOT\ NULL;}}
+\DoxyCodeLine{00246\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SQL;}}
+\DoxyCodeLine{00247\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \$resultado=DBPDO::ejecutarConsulta(\$consulta);}}
+\DoxyCodeLine{00248\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ if(\$resultado\ instanceof\ PDOException)\{}}
+\DoxyCodeLine{00249\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaAnterior\textcolor{stringliteral}{']=\$\_SESSION['}paginaEnCurso\textcolor{stringliteral}{'];}}
+\DoxyCodeLine{00250\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}error\textcolor{stringliteral}{']=new\ ErrorApp(}}
+\DoxyCodeLine{00251\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getCode(),}}
+\DoxyCodeLine{00252\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getMessage(),}}
+\DoxyCodeLine{00253\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getFile(),}}
+\DoxyCodeLine{00254\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado-\/>getLine(),}}
+\DoxyCodeLine{00255\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaAnterior\textcolor{stringliteral}{']}}
+\DoxyCodeLine{00256\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00257\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION['}paginaEnCurso\textcolor{stringliteral}{']='}error\textcolor{stringliteral}{';}}
+\DoxyCodeLine{00258\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header('}Location:\ index.php\textcolor{stringliteral}{');}}
+\DoxyCodeLine{00259\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}}
+\DoxyCodeLine{00260\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00261\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00262\ \textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{00263\ \textcolor{stringliteral}{?>}}
 
 \end{DoxyCode}

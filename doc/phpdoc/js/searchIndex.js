@@ -436,6 +436,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/fotoNASA.html#property_url"
         },                {
+            "fqsen": "\\horoscopo",
+            "name": "horoscopo",
+            "summary": "Clase\u0020horoscopo",
+            "url": "classes/horoscopo.html"
+        },                {
+            "fqsen": "\\horoscopo\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Funci\u00F3n\u0020__construct",
+            "url": "classes/horoscopo.html#method___construct"
+        },                {
+            "fqsen": "\\horoscopo\u003A\u003AgetFecha\u0028\u0029",
+            "name": "getFecha",
+            "summary": "",
+            "url": "classes/horoscopo.html#method_getFecha"
+        },                {
+            "fqsen": "\\horoscopo\u003A\u003AgetMensaje\u0028\u0029",
+            "name": "getMensaje",
+            "summary": "",
+            "url": "classes/horoscopo.html#method_getMensaje"
+        },                {
+            "fqsen": "\\horoscopo\u003A\u003A\u0024fecha",
+            "name": "fecha",
+            "summary": "",
+            "url": "classes/horoscopo.html#property_fecha"
+        },                {
+            "fqsen": "\\horoscopo\u003A\u003A\u0024mensaje",
+            "name": "mensaje",
+            "summary": "",
+            "url": "classes/horoscopo.html#property_mensaje"
+        },                {
             "fqsen": "\\REST",
             "name": "REST",
             "summary": "Clase\u0020REST",
@@ -445,6 +475,11 @@ Search.appendIndex(
             "name": "apiNasa",
             "summary": "Funci\u00F3n\u0020para\u0020el\u0020REST\u0020de\u0020nasa",
             "url": "classes/REST.html#method_apiNasa"
+        },                {
+            "fqsen": "\\REST\u003A\u003AapiHoroscopo\u0028\u0029",
+            "name": "apiHoroscopo",
+            "summary": "Funcion\u0020para\u0020el\u0020REST\u0020del\u0020horoscopo",
+            "url": "classes/REST.html#method_apiHoroscopo"
         },                {
             "fqsen": "\\REST\u003A\u003AapiKeyNasa",
             "name": "apiKeyNasa",

@@ -6,6 +6,7 @@ var annotated_dup =
     [ "DepartamentoPDO", "class_departamento_p_d_o.html", null ],
     [ "ErrorApp", "class_error_app.html", "class_error_app" ],
     [ "fotoNASA", "classfoto_n_a_s_a.html", "classfoto_n_a_s_a" ],
+    [ "horoscopo", "classhoroscopo.html", "classhoroscopo" ],
     [ "REST", "class_r_e_s_t.html", "class_r_e_s_t" ],
     [ "Usuario", "class_usuario.html", "class_usuario" ],
     [ "UsuarioDB", "interface_usuario_d_b.html", null ],
