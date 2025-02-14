@@ -7,11 +7,11 @@
      */
 
     //Datos en entorno desarrollo de clase
-//        const SERVIDOR="mysql:host=daw208.isauces.local;dbname=DB208DWESAppFinal";
-//        const USUARIO="user208DWESAppFinal";
-//        const CONTRASENA="paso";
+    const SERVIDOR="mysql:host=daw208.isauces.local;dbname=DB208DWESAppFinal";
+    const USUARIO="user208DWESAppFinal";
+    const CONTRASENA="paso";
     //Datos en entorno explotacion
-    const SERVIDOR="mysql:host=localhost:3306;dbname=DB208DWES";
-    const USUARIO="user208DWES";
-    const CONTRASENA="paso1234321osap";
+//    const SERVIDOR="mysql:host=localhost:3306;dbname=DB208DWES";
+//    const USUARIO="user208DWES";
+//    const CONTRASENA="paso1234321osap";
 ?>
