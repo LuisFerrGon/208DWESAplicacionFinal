@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>208DWESAplicacionFinal: DepartamentoPDO Class Reference</title>
+<title>208DWESAplicaionFinal: DepartamentoPDO Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicaionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -111,22 +111,26 @@ $(function(){initNavTree('class_departamento_p_d_o.html',''); initResizable(true
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ce64bce40f1fa50bea67547e7ab2b1a" id="r_a9ce64bce40f1fa50bea67547e7ab2b1a"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ce64bce40f1fa50bea67547e7ab2b1a">cargarArrayDepartamentos</a> ($aCondiciones)</td></tr>
-<tr class="separator:a9ce64bce40f1fa50bea67547e7ab2b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202c4eded9fc9e163dc6da1d30f509dd" id="r_a202c4eded9fc9e163dc6da1d30f509dd"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a202c4eded9fc9e163dc6da1d30f509dd">buscarDepartamentos</a> ($aCondiciones)</td></tr>
+<tr class="separator:a202c4eded9fc9e163dc6da1d30f509dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase <a class="el" href="class_departamento_p_d_o.html">DepartamentoPDO</a></p>
 <p>Clase para funciones de departamento</p>
 <dl class="section author"><dt>Author</dt><dd>Luis Ferreras González </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0.2 Fecha última modificación: 06/02/2025 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.0.3 Fecha última modificación: 14/02/2025 </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0.1 </dd>
 <dd>
-1.0.2 Función modificarDepartamento, buscarPorCodigo </dd></dl>
+1.0.2 Función modificarDepartamento, buscarPorCodigo </dd>
+<dd>
+2.0.2 Modificación a buscarPorCodigo Función eliminarDepartamento </dd>
+<dd>
+2.0.3 Función crearDepartamento Función bajaLogica Función altaLogica Modificacion buscarDepartamentos </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_departamento_p_d_o_8php_source.html#l00012">12</a> of file <a class="el" href="_departamento_p_d_o_8php_source.html">DepartamentoPDO.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_departamento_p_d_o_8php_source.html#l00018">18</a> of file <a class="el" href="_departamento_p_d_o_8php_source.html">DepartamentoPDO.php</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9ce64bce40f1fa50bea67547e7ab2b1a" name="a9ce64bce40f1fa50bea67547e7ab2b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce64bce40f1fa50bea67547e7ab2b1a">&#9670;&#160;</a></span>cargarArrayDepartamentos()</h2>
+<a id="a202c4eded9fc9e163dc6da1d30f509dd" name="a202c4eded9fc9e163dc6da1d30f509dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a202c4eded9fc9e163dc6da1d30f509dd">&#9670;&#160;</a></span>buscarDepartamentos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +139,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static cargarArrayDepartamentos </td>
+          <td class="memname">static buscarDepartamentos </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$aCondiciones</em></span></td><td>)</td>
           <td></td>
@@ -147,8 +151,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Función cargarArrayDepartamentos</p>
-<p>Funcion para cargar el array de departamentos</p>
+<p>Función buscarDepartamentos</p>
+<p>Funcion buscar departamentos dadas unas condiciones</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$aCondiciones</td><td>Array con las condiciones de busqueda </td></tr>
@@ -157,10 +161,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array Array con todos los departamentos que se adhieren a las condiciones </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Luis Ferreras González </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0.2 Fecha última modificación: 06/02/2025 </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>1.0.2 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.0.3 Fecha última modificación: 14/02/2025 </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0.2 </dd>
+<dd>
+2.0.3 Devuelve enBaja y anAlta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_departamento_p_d_o_8php_source.html#l00024">24</a> of file <a class="el" href="_departamento_p_d_o_8php_source.html">DepartamentoPDO.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_departamento_p_d_o_8php_source.html#l00031">31</a> of file <a class="el" href="_departamento_p_d_o_8php_source.html">DepartamentoPDO.php</a>.</p>
 
 </div>
 </div>

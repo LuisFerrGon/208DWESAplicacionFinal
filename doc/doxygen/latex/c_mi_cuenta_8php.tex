@@ -1,0 +1,64 @@
+\doxysection{controller/c\+Mi\+Cuenta.php File Reference}
+\hypertarget{c_mi_cuenta_8php}{}\label{c_mi_cuenta_8php}\index{controller/cMiCuenta.php@{controller/cMiCuenta.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_mi_cuenta_8php_af3460f55e0c57a63975fe152edaaf049}{\$idioma}} =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}
+\item 
+\mbox{\hyperlink{c_mi_cuenta_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$o\+Usuario\+Activo}} =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{c_mi_cuenta_8php_a18b551d356ddf5cd70339dacc07035f1}{\$av\+Mi\+Cuenta}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{c_mi_cuenta_8php_a18b551d356ddf5cd70339dacc07035f1}\index{cMiCuenta.php@{cMiCuenta.php}!\$avMiCuenta@{\$avMiCuenta}}
+\index{\$avMiCuenta@{\$avMiCuenta}!cMiCuenta.php@{cMiCuenta.php}}
+\doxysubsubsection{\texorpdfstring{\$avMiCuenta}{\$avMiCuenta}}
+{\footnotesize\ttfamily \label{c_mi_cuenta_8php_a18b551d356ddf5cd70339dacc07035f1} 
+\$av\+Mi\+Cuenta}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'codigo'}=>\mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}-\/>getCodUsuario(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}=>\mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}-\/>getDescUsuario(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ultimaConexion'}=>\mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}-\/>getFechaHoraUltimaConexion(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'conexionAnterior'}=>strtotime(\mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}-\/>getFechaHoraUltimaConexionAnterior()),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'conexiones'}=>\mbox{\hyperlink{c_detalle_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$oUsuarioActivo}}-\/>getNumConexiones()}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{c_mi_cuenta_8php_source_l00016}{16}} of file \mbox{\hyperlink{c_mi_cuenta_8php_source}{c\+Mi\+Cuenta.\+php}}.
+
+\Hypertarget{c_mi_cuenta_8php_af3460f55e0c57a63975fe152edaaf049}\index{cMiCuenta.php@{cMiCuenta.php}!\$idioma@{\$idioma}}
+\index{\$idioma@{\$idioma}!cMiCuenta.php@{cMiCuenta.php}}
+\doxysubsubsection{\texorpdfstring{\$idioma}{\$idioma}}
+{\footnotesize\ttfamily \label{c_mi_cuenta_8php_af3460f55e0c57a63975fe152edaaf049} 
+\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \$idioma =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}}
+
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 Fecha última modificación del archivo\+: 20/01/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{c_mi_cuenta_8php_source_l00014}{14}} of file \mbox{\hyperlink{c_mi_cuenta_8php_source}{c\+Mi\+Cuenta.\+php}}.
+
+\Hypertarget{c_mi_cuenta_8php_ab930bc009cbf7b3aecaf44c3280298d3}\index{cMiCuenta.php@{cMiCuenta.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
+\index{\$oUsuarioActivo@{\$oUsuarioActivo}!cMiCuenta.php@{cMiCuenta.php}}
+\doxysubsubsection{\texorpdfstring{\$oUsuarioActivo}{\$oUsuarioActivo}}
+{\footnotesize\ttfamily \label{c_mi_cuenta_8php_ab930bc009cbf7b3aecaf44c3280298d3} 
+\$o\+Usuario\+Activo =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{c_mi_cuenta_8php_source_l00015}{15}} of file \mbox{\hyperlink{c_mi_cuenta_8php_source}{c\+Mi\+Cuenta.\+php}}.
+

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>208DWESAplicacionFinal: index.php Source File</title>
+<title>208DWESAplicaionFinal: index.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicaionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,7 +106,7 @@ $(function(){initNavTree('index_8php_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">index.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<a href="index_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">//Configuración de la aplicación</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    require_once <span class="stringliteral">&#39;config/confAPP.php&#39;</span>;</div>
@@ -123,20 +123,21 @@ $(function(){initNavTree('index_8php_source.html',''); initResizable(true); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        setcookie(<span class="stringliteral">&#39;idioma&#39;</span>, <span class="stringliteral">&#39;en&#39;</span>, time()+60, <span class="charliteral">&#39;/&#39;</span>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Si el idioma enviado está vacio o es null</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;idioma&#39;</span>])){</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="index_8php.html#a8da536a680d59b7951cf45ffdd84901e">   23</a></span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;idioma&#39;</span>])){</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        setcookie(<span class="stringliteral">&#39;idioma&#39;</span>, $_REQUEST[<span class="stringliteral">&#39;idioma&#39;</span>], time() + 60, <span class="charliteral">&#39;/&#39;</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        header(<span class="stringliteral">&#39;Location: &#39;</span> . $_SERVER[<span class="stringliteral">&#39;PHP_SELF&#39;</span>]);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        exit();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//Se carga la página</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    require_once $aControladores[$_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#a7d4dfcce3eeb0ad6c5dfe30f7140cf19">$aControladores</a>[$_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]];</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>?&gt;</div>
+<div class="ttc" id="aconf_a_p_p_8php_html_a7d4dfcce3eeb0ad6c5dfe30f7140cf19"><div class="ttname"><a href="conf_a_p_p_8php.html#a7d4dfcce3eeb0ad6c5dfe30f7140cf19">$aControladores</a></div><div class="ttdeci">$aControladores</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00027">confAPP.php:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>index.php</b></li>
+    <li class="navelem"><a class="el" href="index_8php.html">index.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

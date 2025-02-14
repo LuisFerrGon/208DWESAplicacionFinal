@@ -93,7 +93,7 @@
             }
             if($oUsuarioActivo instanceof Usuario){
                 UsuarioPDO::registrarUltimaConexion($oUsuarioActivo);
-                $_SESSION['usuarioDAW208LoginLogoff']=$oUsuarioActivo;
+                $_SESSION['usuarioDAW208AppFinal']=$oUsuarioActivo;
                 $_SESSION['paginaAnterior']='registro';
                 $_SESSION['paginaEnCurso']='inicioPrivado';
                 header('Location: index.php');

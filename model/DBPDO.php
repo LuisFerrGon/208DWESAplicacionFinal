@@ -6,9 +6,11 @@
      * Clase para crear conexiones con una base de datos
      * 
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación: 31/01/2025
+     * @version 2.0.3 Fecha última modificación: 12/02/2025
      * @since 1.0.0
-     * @since 1.0.1 Modificación del phpDOC, función ejecutarConsulta
+     * @since 1.0.1 Modificación del phpDOC
+     *              Función ejecutarConsulta
+     * @since 2.0.3 Modificación a la documentación
      */
     class DBPDO implements DB{
         /**
@@ -21,23 +23,24 @@
          *                              seguir.
          * @param mixed[] $aParametros Opcional. Array en el que se ponen los
          *                              paramteros en el orden deseado.
-         * @param boolean $volverObjeto Opcional, por defecto true.
-         *                              Si es true devuelve con fetchObject.
-         *                              Si es false lo devuelve sin haberlo hecho.
+         * @param boolean $devolverPrimeraLinea Opcional, por defecto true.
+         *                                      Si es true devuelve unicamente la primera linea.
+         *                                      Si es false devuelve todos los objetos.
          * @return object|PDOException Devuelve un objeto si no hay error; sino
          *                              un PDOException.
          * @author Luis Ferreras González
-         * @version 1.0.1 Fecha última modificación: 31/01/2025
+         * @version 2.0.3 Fecha última modificación: 12/02/2025
          * @since 1.0.0
          * @since 1.0.1 Variable $volverObjeto añadido.
+         * @since 2.0.3 Moificación a la documentación
          */
-        public static function ejecutarConsulta($sentenciaSQL, $aParametros=null, $volverObjeto=true){
+        public static function ejecutarConsulta($sentenciaSQL, $aParametros=null, $devolverPrimeraLinea=true){
             try{
                 $conexion=new PDO(SERVIDOR, USUARIO, CONTRASENA);
                 $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query=$conexion->prepare($sentenciaSQL);
                 $query->execute($aParametros);
-                if($volverObjeto){
+                if($devolverPrimeraLinea){
                     return $query->fetchObject();
                 }else{
                     return $query;

@@ -1,13 +1,15 @@
 <?php
     require_once 'model/fotoNASA.php';
+    require_once 'model/horoscopo.php';
     /**
      * Clase REST
      * 
      * Clase para los rests
      * 
      * @author Luis Ferreras González
-     * @version 1.0.1 Fecha última modificación del archivo: 28/01/2025
+     * @version 2.0.3 Fecha última modificación del archivo: 13/02/2025
      * @since 1.0.1
+     * @since 2.0.3 Horoscopo
      */
     class REST{
         const apiKeyNasa = "2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ";
@@ -55,6 +57,35 @@
                 header('Location: index.php');
                 exit();
             }
+        }
+        /**
+         * Funcion para el REST del horoscopo
+         * 
+         * Funcion que devuelve un horoscopo dado el signo y la fecha
+         * 
+         * @param timestamp $fecha  Fecha del horoscopo
+         * @param string $signo Signo del horoscopo
+         * @return null|\horoscopo  Devuelve un objeto horoscopo si es exitoso.
+         *                          Devuelve null en caso de fallo.
+         * @author Luis Ferreras González
+         * @version 2.0.3 Fecha última modificación del archivo: 13/02/2025
+         * @since 2.0.36
+         */
+        public static function apiHoroscopo($fecha, $signo) {
+            $resultado= file_get_contents("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=".$signo."&day=".$fecha->format('Y-m-d'));
+            $array=json_decode($resultado, true);
+                if(isset($array)){
+                    if(array_key_exists('data', $array)){
+                        return new horoscopo(
+                            $array['data']['date'],
+                            $array['data']['horoscope_data']
+                        );
+                    }else{
+                        return null;
+                    }
+                }else{
+                    return null;
+                }
         }
     }
 ?>

@@ -2,9 +2,7 @@
     /**
      * @author Luis Ferreras González
      * @version 2.0.2 Fecha última modificación del archivo: 07/02/2025
-     * @since 1.0.2
-     * @since 2.0.2 Modificaciones para mostrar información
-     *              Posicionamiento de volver
+     * @since 2.0.2
      */
 ?>
 <header>
@@ -47,7 +45,7 @@
                         <label for="volumenDepartamento">Volumen:</label>
                     </td>
                     <td>
-                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" value="<?php echo ($departamentoEnCurso->getVolumenNegocio());?>" step="0.01" disabled>
+                        <input type="number" id="volumenDepartamento" name="volumenDepartamento" value="<?php echo ($departamentoEnCurso->getVolumenNegocio());?>" step="0.01" min="0" disabled>
                     </td>
                 </tr>
                 <tr>

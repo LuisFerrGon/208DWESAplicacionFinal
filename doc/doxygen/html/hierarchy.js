@@ -7,6 +7,7 @@ var hierarchy =
     [ "DepartamentoPDO", "class_departamento_p_d_o.html", null ],
     [ "ErrorApp", "class_error_app.html", null ],
     [ "fotoNASA", "classfoto_n_a_s_a.html", null ],
+    [ "horoscopo", "classhoroscopo.html", null ],
     [ "REST", "class_r_e_s_t.html", null ],
     [ "Usuario", "class_usuario.html", null ],
     [ "UsuarioDB", "interface_usuario_d_b.html", [

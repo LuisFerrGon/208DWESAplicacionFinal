@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>208DWESAplicacionFinal: view/vLogin.php Source File</title>
+<title>208DWESAplicaionFinal: view/vLogin.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicaionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -106,63 +106,68 @@ $(function(){initNavTree('v_login_8php_source.html',''); initResizable(true); })
   <div class="headertitle"><div class="title">vLogin.php</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<a href="v_login_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>?&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>&lt;header&gt;&lt;h1&gt;Iniciar Sesión&lt;/h1&gt;&lt;/header&gt;&lt;main&gt;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>&lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;top&quot;</span>&gt;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    &lt;section <span class="keywordtype">id</span>=<span class="stringliteral">&quot;idiomas&quot;</span>&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        &lt;a href=<span class="stringliteral">&quot;?idioma=es&quot;</span> &lt;?php <span class="keywordflow">if</span>($idioma==<span class="stringliteral">&quot;es&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Español&lt;/a&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        &lt;a href=<span class="stringliteral">&quot;?idioma=en&quot;</span> &lt;?php <span class="keywordflow">if</span>($idioma==<span class="stringliteral">&quot;en&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Inglés&lt;/a&gt;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        &lt;a href=<span class="stringliteral">&quot;?idioma=pt&quot;</span> &lt;?php <span class="keywordflow">if</span>($idioma==<span class="stringliteral">&quot;pt&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Portugués&lt;/a&gt;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    &lt;/section&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    &lt;section <span class="keywordtype">id</span>=<span class="stringliteral">&quot;botones&quot;</span>&gt;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;form&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;volver&quot;</span> value=<span class="stringliteral">&quot;Volver&quot;</span>&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        &lt;/form&gt;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        &lt;form&gt;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;registro&quot;</span> value=<span class="stringliteral">&quot;Registrarse&quot;</span>&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        &lt;/form&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    &lt;/section&gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>&lt;/div&gt;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>&lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;formulariologin&quot;</span>&gt;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    &lt;h2&gt;Log in&lt;/h2&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    &lt;form name=<span class="stringliteral">&quot;plantilla&quot;</span> action=<span class="stringliteral">&quot;&lt;?php echo $_SERVER[&#39;PHP_SELF&#39;]; ?&gt;&quot;</span> method=<span class="stringliteral">&quot;post&quot;</span> novalidate&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        &lt;table&gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            &lt;tbody&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                &lt;tr&gt;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;codigoUsuario&quot;</span>&gt;<a class="code hl_class" href="class_usuario.html">Usuario</a>:&lt;/label&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                        &lt;input type=<span class="stringliteral">&quot;text&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;codigoUsuario&quot;</span> name=<span class="stringliteral">&quot;codigoUsuario&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;obligatorio&quot;</span> required&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                &lt;/tr&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                &lt;tr&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                        &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span>&gt;Contraseña:&lt;/label&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        &lt;input type=<span class="stringliteral">&quot;password&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span> name=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;obligatorio&quot;</span> required&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                &lt;/tr&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            &lt;/tbody&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            &lt;tfoot&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                &lt;tr&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        &lt;input <span class="keywordtype">id</span>=<span class="stringliteral">&quot;login&quot;</span> name=<span class="stringliteral">&quot;login&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> value=<span class="stringliteral">&quot;Iniciar sesión&quot;</span>&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                &lt;/tr&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            &lt;/tfoot&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        &lt;/table&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    &lt;/form&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>&lt;/div&gt;&lt;/main&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>&lt;header&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    &lt;h1&gt;Iniciar Sesión&lt;/h1&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>&lt;/header&gt;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>&lt;main&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;top&quot;</span>&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        &lt;section <span class="keywordtype">id</span>=<span class="stringliteral">&quot;idiomas&quot;</span>&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            &lt;a href=<span class="stringliteral">&quot;?idioma=es&quot;</span> &lt;?php <span class="keywordflow">if</span>(<a class="code hl_variable" href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a>==<span class="stringliteral">&quot;es&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Español&lt;/a&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            &lt;a href=<span class="stringliteral">&quot;?idioma=en&quot;</span> &lt;?php <span class="keywordflow">if</span>(<a class="code hl_variable" href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a>==<span class="stringliteral">&quot;en&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Inglés&lt;/a&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="v_login_8php.html#adbfbdf3fa9117b4aa7a20e97cddd1320">   17</a></span>            &lt;a href=<span class="stringliteral">&quot;?idioma=pt&quot;</span> &lt;?php <span class="keywordflow">if</span>(<a class="code hl_variable" href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a>==<span class="stringliteral">&quot;pt&quot;</span>){echo <span class="stringliteral">&quot;id=&#39;idiomaEscogido&#39;&quot;</span>;}?&gt;&gt;Portugués&lt;/a&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        &lt;section <span class="keywordtype">id</span>=<span class="stringliteral">&quot;botones&quot;</span>&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            &lt;form&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;volver&quot;</span> value=<span class="stringliteral">&quot;Volver&quot;</span>&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            &lt;/form&gt;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            &lt;form&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;registro&quot;</span> value=<span class="stringliteral">&quot;Registrarse&quot;</span>&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            &lt;/form&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;formulariologin&quot;</span>&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        &lt;h2&gt;Log in&lt;/h2&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        &lt;form name=<span class="stringliteral">&quot;plantilla&quot;</span> action=<span class="stringliteral">&quot;&lt;?php echo $_SERVER[&#39;PHP_SELF&#39;]; ?&gt;&quot;</span> method=<span class="stringliteral">&quot;post&quot;</span> novalidate&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            &lt;table&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                &lt;tbody&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    &lt;tr&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                        &lt;td&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                            &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;codigoUsuario&quot;</span>&gt;<a class="code hl_class" href="class_usuario.html">Usuario</a>:&lt;/label&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        &lt;/td&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                        &lt;td&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                            &lt;input type=<span class="stringliteral">&quot;text&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;codigoUsuario&quot;</span> name=<span class="stringliteral">&quot;codigoUsuario&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;obligatorio&quot;</span> required&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        &lt;/td&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    &lt;/tr&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    &lt;tr&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                        &lt;td&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                            &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span>&gt;Contraseña:&lt;/label&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        &lt;/td&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                        &lt;td&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                            &lt;input type=<span class="stringliteral">&quot;password&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span> name=<span class="stringliteral">&quot;contrasenaUsuario&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;obligatorio&quot;</span> required&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        &lt;/td&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    &lt;/tr&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                &lt;/tbody&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                &lt;tfoot&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    &lt;tr&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        &lt;td&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                            &lt;input <span class="keywordtype">id</span>=<span class="stringliteral">&quot;login&quot;</span> name=<span class="stringliteral">&quot;login&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> value=<span class="stringliteral">&quot;Iniciar sesión&quot;</span>&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                        &lt;/td&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    &lt;/tr&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                &lt;/tfoot&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            &lt;/table&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        &lt;/form&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>&lt;/main&gt;</div>
+<div class="ttc" id="ac_crear_departamento_8php_html_a9f7ca24786e24b62c75101dbc55583e8"><div class="ttname"><a href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a></div><div class="ttdeci">$idioma</div><div class="ttdef"><b>Definition</b> <a href="c_crear_departamento_8php_source.html#l00007">cCrearDepartamento.php:7</a></div></div>
 <div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition</b> <a href="_usuario_8php_source.html#l00012">Usuario.php:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b2f003339c516cc00c8cadcafbe82f13.html">view</a></li><li class="navelem"><b>vLogin.php</b></li>
+    <li class="navelem"><a class="el" href="dir_b2f003339c516cc00c8cadcafbe82f13.html">view</a></li><li class="navelem"><a class="el" href="v_login_8php.html">vLogin.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

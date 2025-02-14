@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>208DWESAplicacionFinal: DB Interface Reference</title>
+<title>208DWESAplicaionFinal: DB Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.0</span>
+   <div id="projectname">208DWESAplicaionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -120,8 +120,8 @@ Inheritance diagram for DB:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a96bcec5fa550222d20f479f999619b68" id="r_a96bcec5fa550222d20f479f999619b68"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96bcec5fa550222d20f479f999619b68">ejecutarConsulta</a> ($sentenciaSQL, $aParametros)</td></tr>
-<tr class="separator:a96bcec5fa550222d20f479f999619b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120f134e1c8364c750e49a9c6746ce88" id="r_a120f134e1c8364c750e49a9c6746ce88"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a120f134e1c8364c750e49a9c6746ce88">ejecutarConsulta</a> ($sentenciaSQL, $aParametros, $devolverPrimeraLinea)</td></tr>
+<tr class="separator:a120f134e1c8364c750e49a9c6746ce88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interfaz <a class="el" href="interface_d_b.html">DB</a></p>
@@ -134,8 +134,8 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_b_8php_source.html#l00012">12</a> of file <a class="el" href="_d_b_8php_source.html">DB.php</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a96bcec5fa550222d20f479f999619b68" name="a96bcec5fa550222d20f479f999619b68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96bcec5fa550222d20f479f999619b68">&#9670;&#160;</a></span>ejecutarConsulta()</h2>
+<a id="a120f134e1c8364c750e49a9c6746ce88" name="a120f134e1c8364c750e49a9c6746ce88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120f134e1c8364c750e49a9c6746ce88">&#9670;&#160;</a></span>ejecutarConsulta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +151,12 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$aParametros</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$aParametros</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$devolverPrimeraLinea</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -166,9 +171,12 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$sentenciaSQL</td><td>Sentencia sql </td></tr>
     <tr><td class="paramtype">array</td><td class="paramname">$aParametros</td><td>Array de los parametros </td></tr>
+    <tr><td class="paramtype">boolean</td><td class="paramname">$devolverPrimeraLinea</td><td></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="class_d_b_p_d_o.html#a2f25a05d5ac45285ef715d58df320fbe">DBPDO</a>.</p>
 
 </div>
 </div>

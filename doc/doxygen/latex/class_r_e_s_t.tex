@@ -4,6 +4,8 @@
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}{api\+Nasa}} (\$fecha)
+\item 
+static \mbox{\hyperlink{class_r_e_s_t_ad5c80a51c6c1718ab23bc2a1af76e5f4}{api\+Horoscopo}} (\$fecha, \$signo)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -21,18 +23,53 @@ Clase para los rests
 Luis Ferreras González 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.\+0.\+1 Fecha última modificación del archivo\+: 28/01/2025 
+2.\+0.\+3 Fecha última modificación del archivo\+: 13/02/2025 
 \end{DoxyVersion}
 \begin{DoxySince}{Since}
 1.\+0.\+1 
+
+2.\+0.\+3 Horoscopo 
 \end{DoxySince}
 
 
-Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00012}{12}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
+Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00014}{14}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_e_s_t_ad5c80a51c6c1718ab23bc2a1af76e5f4}\index{REST@{REST}!apiHoroscopo@{apiHoroscopo}}
+\index{apiHoroscopo@{apiHoroscopo}!REST@{REST}}
+\doxysubsubsection{\texorpdfstring{apiHoroscopo()}{apiHoroscopo()}}
+{\footnotesize\ttfamily \label{class_r_e_s_t_ad5c80a51c6c1718ab23bc2a1af76e5f4} 
+static api\+Horoscopo (\begin{DoxyParamCaption}\item[{}]{\$fecha}{, }\item[{}]{\$signo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Funcion para el \doxylink{class_r_e_s_t}{REST} del horoscopo
+
+Funcion que devuelve un horoscopo dado el signo y la fecha
+
+
+\begin{DoxyParams}[1]{Parameters}
+timestamp & {\em \$fecha} & Fecha del horoscopo \\
+\hline
+string & {\em \$signo} & Signo del horoscopo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null\texorpdfstring{$\vert$}{|}\textbackslash{}horoscopo Devuelve un objeto horoscopo si es exitoso. Devuelve null en caso de fallo. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Luis Ferreras González 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0.\+3 Fecha última modificación del archivo\+: 13/02/2025 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+2.\+0.\+36 
+\end{DoxySince}
+
+
+Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00074}{74}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
+
 \Hypertarget{class_r_e_s_t_a96798874633adde8fd41fbce21e6ef73}\index{REST@{REST}!apiNasa@{apiNasa}}
 \index{apiNasa@{apiNasa}!REST@{REST}}
 \doxysubsubsection{\texorpdfstring{apiNasa()}{apiNasa()}}
@@ -62,7 +99,7 @@ Luis Ferreras González
 \end{DoxySince}
 
 
-Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00026}{26}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
+Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00028}{28}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
 
 
 
@@ -75,10 +112,10 @@ const api\+Key\+Nasa = "{}2CQ2qj\+Sy8q\+JNf\+T8\+RW0fkl\+Awyb\+ZCBgq\+Xx2\+Ko\+I
 
 
 
-Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00013}{13}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
+Definition at line \mbox{\hyperlink{_r_e_s_t_8php_source_l00015}{15}} of file \mbox{\hyperlink{_r_e_s_t_8php_source}{REST.\+php}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-model/REST.\+php\end{DoxyCompactItemize}
+model/\mbox{\hyperlink{_r_e_s_t_8php}{REST.\+php}}\end{DoxyCompactItemize}

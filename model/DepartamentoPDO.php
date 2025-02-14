@@ -5,33 +5,52 @@
      * Clase para funciones de departamento
      * 
      * @author Luis Ferreras González
-     * @version 2.0.2 Fecha última modificación: 07/02/2025
+     * @version 2.0.3 Fecha última modificación: 14/02/2025
      * @since 1.0.1
      * @since 1.0.2 Función modificarDepartamento, buscarPorCodigo
      * @since 2.0.2 Modificación a buscarPorCodigo
      *              Función eliminarDepartamento
+     * @since 2.0.3 Función crearDepartamento
+     *              Función bajaLogica
+     *              Función altaLogica
+     *              Modificacion buscarDepartamentos
      */
     class DepartamentoPDO{
         /**
-         * Función cargarArrayDepartamentos
+         * Función buscarDepartamentos
          * 
-         * Funcion para cargar el array de departamentos
+         * Funcion buscar departamentos dadas unas condiciones
          * 
          * @param array $aCondiciones Array con las condiciones de busqueda
          * @return array Array con todos los departamentos que se adhieren a las condiciones
          * @author Luis Ferreras González
-         * @version 1.0.2 Fecha última modificación: 06/02/2025
+         * @version 2.0.3 Fecha última modificación: 14/02/2025
          * @since 1.0.2
+         * @since 2.0.3 Devuelve enBaja y anAlta
          */
-        public static function cargarArrayDepartamentos($aCondiciones){
+        public static function buscarDepartamentos($aCondiciones){
             try{
                 $aDepartamentos=[];
-                $consulta=<<<QUERY
+                $consultaInicio=<<<QUERY
                     SELECT * FROM T02_Departamento
-                    WHERE T02_DescDepartamento LIKE :descripcion
+                    WHERE T02_DescDepartamento LIKE '{$aCondiciones['descripcion']}'
+                QUERY;
+                switch($aCondiciones['altaBaja']){
+                    case 'En alta':
+                        $consultaMedio="AND T02_FechaBajaDepartamento IS NULL";
+                        break;
+                    case 'En baja':
+                        $consultaMedio="AND T02_FechaBajaDepartamento IS NOT NULL";
+                        break;
+                    default:
+                        $consultaMedio="";
+                        break;
+                }
+                $consultaFin=<<<QUERY
                     ;
                 QUERY;
-                $resultado=DBPDO::ejecutarConsulta($consulta, $aCondiciones, false);
+                $consulta=$consultaInicio.$consultaMedio.$consultaFin;
+                $resultado=DBPDO::ejecutarConsulta($consulta, null, false);
                 while($departamento=$resultado->fetchObject()){
                     array_push($aDepartamentos, new Departamento(
                         $departamento->T02_CodDepartamento,
@@ -147,6 +166,99 @@
             $consulta=<<<SQL
                 DELETE FROM T02_Departamento
                 WHERE T02_CodDepartamento='{$codigo}';
+            SQL;
+            $resultado=DBPDO::ejecutarConsulta($consulta);
+            if($resultado instanceof PDOException){
+                $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+                $_SESSION['error']=new ErrorApp(
+                    $resultado->getCode(),
+                    $resultado->getMessage(),
+                    $resultado->getFile(),
+                    $resultado->getLine(),
+                    $_SESSION['paginaAnterior']
+                );
+                $_SESSION['paginaEnCurso']='error';
+                header('Location: index.php');
+                exit();
+            }
+        }
+        /**
+         * Función crearDepartamento
+         * 
+         * Función para crear un departamento
+         * 
+         * @param string $codigo Código del departamento
+         * @param string $descripcion Descripción del departamento
+         * @param float $volumen Volumen del departamento
+         * @author Luis Ferreras González
+         * @version 2.0.3 Fecha última modificación: 10/02/2025
+         * @since 2.0.3
+         */
+        public static function crearDepartamento($codigo, $descripcion, $volumen){
+            $consulta=<<<SQL
+                INSERT INTO DB208DWESAppFinal.T02_Departamento
+                    (T02_CodDepartamento, T02_DescDepartamento, T02_VolumenDeNegocio)
+                VALUES
+                    ('{$codigo}', '{$descripcion}', {$volumen})
+                ;
+            SQL;
+            $resultado=DBPDO::ejecutarConsulta($consulta);
+            if($resultado instanceof PDOException){
+                $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+                $_SESSION['error']=new ErrorApp(
+                    $resultado->getCode(),
+                    $resultado->getMessage(),
+                    $resultado->getFile(),
+                    $resultado->getLine(),
+                    $_SESSION['paginaAnterior']
+                );
+                $_SESSION['paginaEnCurso']='error';
+                header('Location: index.php');
+                exit();
+            }
+        }
+        /**
+         * Función bajaLogica
+         * 
+         * Función que pone en estado de baja lógica un departamento dado su código
+         * 
+         * @param string $codigo Código del departamento
+         */
+        public static function bajaLogica($codigo){
+            $consulta=<<<SQL
+                UPDATE T02_Departamento SET
+                    T02_FechaBajaDepartamento=CURRENT_TIMESTAMP()
+                WHERE T02_CodDepartamento='{$codigo}'
+                AND ISNULL(T02_FechaBajaDepartamento);
+            SQL;
+            $resultado=DBPDO::ejecutarConsulta($consulta);
+            if($resultado instanceof PDOException){
+                $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+                $_SESSION['error']=new ErrorApp(
+                    $resultado->getCode(),
+                    $resultado->getMessage(),
+                    $resultado->getFile(),
+                    $resultado->getLine(),
+                    $_SESSION['paginaAnterior']
+                );
+                $_SESSION['paginaEnCurso']='error';
+                header('Location: index.php');
+                exit();
+            }
+        }
+        /**
+         * Función altaLogica
+         * 
+         * Función que pone en estado de alta lógica un departamento dado su código
+         * 
+         * @param string $codigo Código del departamento
+         */
+        public static function altaLogica($codigo){
+            $consulta=<<<SQL
+                UPDATE T02_Departamento SET
+                    T02_FechaBajaDepartamento=NULL
+                WHERE T02_CodDepartamento='{$codigo}'
+                AND T02_FechaBajaDepartamento IS NOT NULL;
             SQL;
             $resultado=DBPDO::ejecutarConsulta($consulta);
             if($resultado instanceof PDOException){

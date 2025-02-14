@@ -5,6 +5,7 @@
      * @since 1.0.2
      * @since 2.0.2 Modificaciones para mostrar información
      *              Posicionamiento de volver
+     * @since 2.0.3 novalidate
      */
 ?>
 <header>
@@ -15,7 +16,7 @@
         <section id="botones">
         </section>
     </div>
-    <form name="modificarDepartamento" id="modificarDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form name="modificarDepartamento" id="modificarDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>
         <table>
             <tbody>
                 <tr>

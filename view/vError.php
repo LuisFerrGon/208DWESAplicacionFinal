@@ -21,20 +21,24 @@
         'pt'=>"pt error"
     ];
 ?>
-<header><h1>Error</h1></header><main>
-<div id="top">
-    <section id="idiomas">
-        <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
-        <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
-        <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
-    </section>
-    <section id="botones">
-        <form>
-            <input type="submit" name="volver" value="Volver">
-        </form>
-    </section>
-</div>
-<?php
-    echo "<p>".$mensajeError[$idioma]."</p>";
-?>
-<div style='height: 30px'></div></main>
+<header>
+    <h1>Error</h1>
+</header>
+<main>
+    <div id="top">
+        <section id="idiomas">
+            <a href="?idioma=es" <?php if($idioma=="es"){echo "id='idiomaEscogido'";}?>>Español</a>
+            <a href="?idioma=en" <?php if($idioma=="en"){echo "id='idiomaEscogido'";}?>>Inglés</a>
+            <a href="?idioma=pt" <?php if($idioma=="pt"){echo "id='idiomaEscogido'";}?>>Portugués</a>
+        </section>
+        <section id="botones">
+            <form>
+                <input type="submit" name="volver" value="Volver">
+            </form>
+        </section>
+    </div>
+    <?php
+        echo "<p>".$mensajeError[$idioma]."</p>";
+    ?>
+    <div style='height: 30px'></div>
+</main>

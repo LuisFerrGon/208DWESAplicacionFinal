@@ -1,83 +1,110 @@
 \doxysection{v\+Mto\+Departamento.\+php}
 \hypertarget{v_mto_departamento_8php_source}{}\label{v_mto_departamento_8php_source}\index{view/vMtoDepartamento.php@{view/vMtoDepartamento.php}}
-
+\mbox{\hyperlink{v_mto_departamento_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00009}00009\ \ \ \ \ \$mensajeBusquedaVacia=[}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}es"{}}=>\textcolor{stringliteral}{'No\ hay\ departamentos\ que\ se\ adhieran\ a\ la\ busqueda.'},}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}en"{}}=>\textcolor{stringliteral}{'There\ aren\(\backslash\)'t\ departments\ that\ fit\ that\ search.'},}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pt"{}}=>\textcolor{stringliteral}{'There\ aren\(\backslash\)'t\ departments\ that\ fit\ that\ search.'}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00013}00013\ \ \ \ \ ];}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00014}00014\ ?>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00015}00015\ <header><h1>Mantenimiento\ de\ Departamentos</h1></header><main>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00016}00016\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00017}00017\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00021}00021\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00022}00022\ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00026}00026\ \ \ \ \ </section>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00027}00027\ </div>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00028}00028\ <form\ method=\textcolor{stringliteral}{"{}post"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioCondicionesBusqueda"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00029}00029\ \ \ \ \ <table>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ <tbody>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripionDep"{}}>Descripción\ departamento:</label>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripionDep"{}}\ name=\textcolor{stringliteral}{"{}descripionDep"{}}\ placeholder=\textcolor{stringliteral}{"{}Ej:\ Descripción"{}}\ maxlength=\textcolor{stringliteral}{"{}255"{}}\ minlength=\textcolor{stringliteral}{"{}0"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ (isset(\$\_REQUEST['descripionDep'])\ ?\ \$\_REQUEST['descripionDep']\ :\ '');\ ?>"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ </tbody>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ <tfoot>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}enviar"{}}\ name=\textcolor{stringliteral}{"{}enviar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Buscar"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ </tfoot>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00047}00047\ \ \ \ \ </table>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00048}00048\ </form>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00049}00049\ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaDepartamentos"{}}>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00050}00050\ \ \ \ \ <thead>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ <tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Código</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Descripción</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Fecha\ creación</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Volumen</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Fecha\ baja</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Operaciones</th>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ </tr>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00059}00059\ \ \ \ \ </thead>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00060}00060\ \ \ \ \ <tbody>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ <?php}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$aDepartamentos)==0)\{}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<tr>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td\ colspan='5'>"{}}.\$mensajeBusquedaVacia[\$idioma].\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</tr>"{}};}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$aDepartamentos\ as\ \$oDepartamento)\ \{}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<tr>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getCodigo().\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getDescripcion().\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getFechaCreacion().\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getVolumenNegocio().\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getFechaBaja().\textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\textcolor{stringliteral}{"{}<input\ type='submit'\ id='modificar("{}}.\$oDepartamento-\/>getCodigo().\textcolor{stringliteral}{"{})'\ name="{}}.\$oDepartamento-\/>getCodigo().\textcolor{stringliteral}{"{}\ value='Modificar'>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</td>"{}}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</tr>"{}};}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ ?>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00081}00081\ \ \ \ \ </tbody>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00082}00082\ </table>}
-\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00083}00083\ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div></main>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00014}\mbox{\hyperlink{v_mto_departamento_8php_a7b81d44d7e557600d6007043fb171643}{00014}}\ \ \ \ \ \mbox{\hyperlink{v_mto_departamento_8php_a7b81d44d7e557600d6007043fb171643}{\$mensajeBusquedaVacia}}=[}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}es"{}}=>\textcolor{stringliteral}{'No\ hay\ departamentos\ que\ se\ adhieran\ a\ la\ busqueda.'},}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}en"{}}=>\textcolor{stringliteral}{'There\ aren\(\backslash\)'t\ departments\ that\ fit\ that\ search.'},}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pt"{}}=>\textcolor{stringliteral}{'There\ aren\(\backslash\)'t\ departments\ that\ fit\ that\ search.'}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00018}00018\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00019}00019\ ?>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00020}00020\ <header>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00021}00021\ \ \ \ \ <h1>Mantenimiento\ de\ Departamentos</h1>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00022}00022\ </header>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00023}00023\ <main>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00024}00024\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00028}\mbox{\hyperlink{v_mto_departamento_8php_adbfbdf3fa9117b4aa7a20e97cddd1320}{00028}}\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}volver"{}}\ value=\textcolor{stringliteral}{"{}Volver"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00035}00035\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00036}00036\ \ \ \ \ <form\ method=\textcolor{stringliteral}{"{}post"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioCondicionesBusqueda"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}descripcionDep"{}}>Descripción\ departamento:</label>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}descripcionDep"{}}\ name=\textcolor{stringliteral}{"{}descripcionDep"{}}\ placeholder=\textcolor{stringliteral}{"{}Ej:\ Descripción"{}}\ maxlength=\textcolor{stringliteral}{"{}255"{}}\ minlength=\textcolor{stringliteral}{"{}0"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$\_SESSION['criterioBusquedaDepartamento']['descripcionDep'];\ ?>"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <select\ name=\textcolor{stringliteral}{"{}estado"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}estado"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Todos"{}}\ <?php\ \textcolor{keywordflow}{if}(\$\_SESSION[\textcolor{stringliteral}{'criterioBusquedaDepartamento'}][\textcolor{stringliteral}{'estado'}]==\textcolor{stringliteral}{'Todos'})\{echo\ \textcolor{stringliteral}{"{}selected"{}};\}?>>Todos</option>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}En\ alta"{}}\ <?php\ \textcolor{keywordflow}{if}(\$\_SESSION[\textcolor{stringliteral}{'criterioBusquedaDepartamento'}][\textcolor{stringliteral}{'estado'}]==\textcolor{stringliteral}{'En\ alta'})\{echo\ \textcolor{stringliteral}{"{}selected"{}};\}?>>En\ alta</option>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}En\ baja"{}}\ <?php\ \textcolor{keywordflow}{if}(\$\_SESSION[\textcolor{stringliteral}{'criterioBusquedaDepartamento'}][\textcolor{stringliteral}{'estado'}]==\textcolor{stringliteral}{'En\ baja'})\{echo\ \textcolor{stringliteral}{"{}selected"{}};\}?>>En\ baja</option>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </select>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ <tfoot>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}enviar"{}}\ name=\textcolor{stringliteral}{"{}enviar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Buscar"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ </tfoot>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00063}00063\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00064}00064\ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaDepartamentos"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Código</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Descripción</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Fecha\ creación</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Volumen</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Fecha\ baja</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th\ span=\textcolor{stringliteral}{"{}col"{}}>Operaciones</th>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{\$aDepartamentos}})==0)\{}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<tr>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td\ colspan='6'>"{}}.\$mensajeBusquedaVacia[\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}].\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</tr>"{}};}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{\$aDepartamentos}}\ as\ \$oDepartamento)\{}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$codigo=\$oDepartamento-\/>getCodigo();}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$fechaBaja=\$oDepartamento-\/>getFechaBaja();}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$altaBaja=(\$fechaBaja!=\textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\textcolor{stringliteral}{"{}<input\ type='submit'\ id='alta"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ name='alta"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ value='Alta'>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\textcolor{stringliteral}{"{}<input\ type='submit'\ id='baja"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ name='baja"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ value='Baja'>"{}};}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$claseDeBaja=(\$fechaBaja!=\textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\textcolor{stringliteral}{"{}class='departamentoBaja'"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :null;}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<tr\ "{}}.\$claseDeBaja.\textcolor{stringliteral}{"{}>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$codigo.\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getDescripcion().\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getFechaCreacion().\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$oDepartamento-\/>getVolumenNegocio().\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}.\$fechaBaja.\textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<form\ id='accionDepartamento'\ method='post'\ \ action='"{}}.\$\_SERVER[\textcolor{stringliteral}{'PHP\_SELF'}].\textcolor{stringliteral}{"{}'>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<input\ type='submit'\ id='modificar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ name='modificar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ value='Modificar'>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<input\ type='submit'\ id='mostrar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ name='mostrar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ value='Mostrar'>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}<input\ type='submit'\ id='eliminar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ name='eliminar"{}}.\$codigo.\textcolor{stringliteral}{"{}'\ value='Eliminar'>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \$altaBaja}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</form>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</td>"{}}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\ \textcolor{stringliteral}{"{}</tr>"{}};}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00110}00110\ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00111}00111\ \ \ \ \ <form\ method=\textcolor{stringliteral}{'post'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}crear"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}crear"{}}\ value=\textcolor{stringliteral}{"{}Crear"{}}>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00113}00113\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00114}00114\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{\Hypertarget{v_mto_departamento_8php_source_l00115}00115\ </main>}
 
 \end{DoxyCode}

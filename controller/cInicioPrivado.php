@@ -44,7 +44,7 @@
     }
     
     $idioma=isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'en';
-    $oUsuarioActivo=$_SESSION['usuarioDAW208LoginLogoff'];
+    $oUsuarioActivo=$_SESSION['usuarioDAW208AppFinal'];
     $avInicioPrivado=[
         'descripcion'=>$oUsuarioActivo->getDescUsuario(),
         'fecha'=>strtotime($oUsuarioActivo->getFechaHoraUltimaConexionAnterior()),

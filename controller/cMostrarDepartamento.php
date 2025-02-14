@@ -10,7 +10,7 @@
     $departamentoEnCurso=$_SESSION['departamentoEnCurso'];
     if(isset($_REQUEST['volver'])){
         $_SESSION['paginaEnCurso']=$_SESSION['paginaAnterior'];
-        $_SESSION['paginaAnterior']='wip';
+        $_SESSION['paginaAnterior']='mostrarDepartamento';
         header('Location: index.php');
         exit();
     }
