@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>208DWESAplicacionFinal: view/vMtoDepartamento.php Source File</title>
+<title>208DWESAplicaionFinal: view/vMtoDepartamento.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">208DWESAplicacionFinal<span id="projectnumber">&#160;2.0.3</span>
+   <div id="projectname">208DWESAplicaionFinal<span id="projectnumber">&#160;2.0.3</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -138,73 +138,80 @@ $(function(){initNavTree('v_mto_departamento_8php_source.html',''); initResizabl
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                        &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;descripcionDep&quot;</span>&gt;Descripción departamento:&lt;/label&gt;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    &lt;/td&gt;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        &lt;input type=<span class="stringliteral">&quot;text&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;descripcionDep&quot;</span> name=<span class="stringliteral">&quot;descripcionDep&quot;</span> placeholder=<span class="stringliteral">&quot;Ej: Descripción&quot;</span> maxlength=<span class="stringliteral">&quot;255&quot;</span> minlength=<span class="stringliteral">&quot;0&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $_SESSION[&#39;descripcionDep&#39;]; ?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        &lt;input type=<span class="stringliteral">&quot;text&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;descripcionDep&quot;</span> name=<span class="stringliteral">&quot;descripcionDep&quot;</span> placeholder=<span class="stringliteral">&quot;Ej: Descripción&quot;</span> maxlength=<span class="stringliteral">&quot;255&quot;</span> minlength=<span class="stringliteral">&quot;0&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $_SESSION[&#39;criterioBusquedaDepartamento&#39;][&#39;descripcionDep&#39;]; ?&gt;&quot;</span>&gt;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    &lt;/td&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                &lt;/tr&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            &lt;/tbody&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            &lt;tfoot&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                &lt;tr&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    &lt;td&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        &lt;input <span class="keywordtype">id</span>=<span class="stringliteral">&quot;enviar&quot;</span> name=<span class="stringliteral">&quot;enviar&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> value=<span class="stringliteral">&quot;Buscar&quot;</span>&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    &lt;td&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        &lt;select name=<span class="stringliteral">&quot;estado&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;estado&quot;</span>&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                            &lt;option value=<span class="stringliteral">&quot;Todos&quot;</span> &lt;?php <span class="keywordflow">if</span>($_SESSION[<span class="stringliteral">&#39;criterioBusquedaDepartamento&#39;</span>][<span class="stringliteral">&#39;estado&#39;</span>]==<span class="stringliteral">&#39;Todos&#39;</span>){echo <span class="stringliteral">&quot;selected&quot;</span>;}?&gt;&gt;Todos&lt;/option&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                            &lt;option value=<span class="stringliteral">&quot;En alta&quot;</span> &lt;?php <span class="keywordflow">if</span>($_SESSION[<span class="stringliteral">&#39;criterioBusquedaDepartamento&#39;</span>][<span class="stringliteral">&#39;estado&#39;</span>]==<span class="stringliteral">&#39;En alta&#39;</span>){echo <span class="stringliteral">&quot;selected&quot;</span>;}?&gt;&gt;En alta&lt;/option&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                            &lt;option value=<span class="stringliteral">&quot;En baja&quot;</span> &lt;?php <span class="keywordflow">if</span>($_SESSION[<span class="stringliteral">&#39;criterioBusquedaDepartamento&#39;</span>][<span class="stringliteral">&#39;estado&#39;</span>]==<span class="stringliteral">&#39;En baja&#39;</span>){echo <span class="stringliteral">&quot;selected&quot;</span>;}?&gt;&gt;En baja&lt;/option&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        &lt;/select&gt;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    &lt;/td&gt;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                &lt;/tr&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &lt;/tfoot&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        &lt;/table&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    &lt;/form&gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    &lt;table <span class="keywordtype">id</span>=<span class="stringliteral">&quot;tablaDepartamentos&quot;</span>&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        &lt;thead&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            &lt;tr&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Código&lt;/th&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Descripción&lt;/th&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Fecha creación&lt;/th&gt;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Volumen&lt;/th&gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Fecha baja&lt;/th&gt;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Operaciones&lt;/th&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            &lt;/tr&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        &lt;/thead&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        &lt;tbody&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            &lt;?php</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span>(count(<a class="code hl_variable" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a>)==0){</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                echo <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                . <span class="stringliteral">&quot;&lt;td colspan=&#39;5&#39;&gt;&quot;</span>.$mensajeBusquedaVacia[<a class="code hl_variable" href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a>].<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                . <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }<span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">foreach</span>(<a class="code hl_variable" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a> as $oDepartamento){</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    $codigo=$oDepartamento-&gt;getCodigo();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    $fechaBaja=$oDepartamento-&gt;getFechaBaja();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    $altaBaja=($fechaBaja!=<span class="keyword">null</span>)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        ?<span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;alta&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;alta&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Alta&#39;&gt;&quot;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        :<span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;baja&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;baja&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Baja&#39;&gt;&quot;</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    $claseDeBaja=($fechaBaja!=<span class="keyword">null</span>)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        ?<span class="stringliteral">&quot;class=&#39;departamentoBaja&#39;&quot;</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        :null;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    echo <span class="stringliteral">&quot;&lt;tr &quot;</span>.$claseDeBaja.<span class="stringliteral">&quot;&gt;&quot;</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$codigo.<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getDescripcion().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getFechaCreacion().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getVolumenNegocio().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$fechaBaja.<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                        . <span class="stringliteral">&quot;&lt;form id=&#39;accionDepartamento&#39; method=&#39;post&#39;  action=&#39;&quot;</span>.$_SERVER[<span class="stringliteral">&#39;PHP_SELF&#39;</span>].<span class="stringliteral">&quot;&#39;&gt;&quot;</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;modificar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;modificar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Modificar&#39;&gt;&quot;</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;mostrar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;mostrar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Mostrar&#39;&gt;&quot;</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;eliminar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;eliminar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Eliminar&#39;&gt;&quot;</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                            . $altaBaja</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        . <span class="stringliteral">&quot;&lt;/form&gt;&quot;</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    . <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    . <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            ?&gt;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        &lt;/tbody&gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    &lt;/table&gt;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    &lt;form method=<span class="stringliteral">&#39;post&#39;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;crear&quot;</span>&gt;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;crear&quot;</span> value=<span class="stringliteral">&quot;Crear&quot;</span>&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    &lt;/form&gt;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    &lt;div style=<span class="stringliteral">&#39;height: 30px&#39;</span>&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>&lt;/main&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &lt;/tbody&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            &lt;tfoot&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                &lt;tr&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    &lt;td&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        &lt;input <span class="keywordtype">id</span>=<span class="stringliteral">&quot;enviar&quot;</span> name=<span class="stringliteral">&quot;enviar&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> value=<span class="stringliteral">&quot;Buscar&quot;</span>&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    &lt;/td&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                &lt;/tr&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            &lt;/tfoot&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        &lt;/table&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    &lt;/form&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    &lt;table <span class="keywordtype">id</span>=<span class="stringliteral">&quot;tablaDepartamentos&quot;</span>&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        &lt;thead&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            &lt;tr&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Código&lt;/th&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Descripción&lt;/th&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Fecha creación&lt;/th&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Volumen&lt;/th&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Fecha baja&lt;/th&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                &lt;th span=<span class="stringliteral">&quot;col&quot;</span>&gt;Operaciones&lt;/th&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            &lt;/tr&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        &lt;/thead&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        &lt;tbody&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            &lt;?php</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span>(count(<a class="code hl_variable" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a>)==0){</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                echo <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                . <span class="stringliteral">&quot;&lt;td colspan=&#39;6&#39;&gt;&quot;</span>.$mensajeBusquedaVacia[<a class="code hl_variable" href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a>].<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                . <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }<span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">foreach</span>(<a class="code hl_variable" href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a> as $oDepartamento){</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    $codigo=$oDepartamento-&gt;getCodigo();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    $fechaBaja=$oDepartamento-&gt;getFechaBaja();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    $altaBaja=($fechaBaja!=<span class="keyword">null</span>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        ?<span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;alta&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;alta&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Alta&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        :<span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;baja&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;baja&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Baja&#39;&gt;&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    $claseDeBaja=($fechaBaja!=<span class="keyword">null</span>)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                        ?<span class="stringliteral">&quot;class=&#39;departamentoBaja&#39;&quot;</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        :null;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    echo <span class="stringliteral">&quot;&lt;tr &quot;</span>.$claseDeBaja.<span class="stringliteral">&quot;&gt;&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$codigo.<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getDescripcion().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getFechaCreacion().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$oDepartamento-&gt;getVolumenNegocio().<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span>.$fechaBaja.<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    . <span class="stringliteral">&quot;&lt;td&gt;&quot;</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        . <span class="stringliteral">&quot;&lt;form id=&#39;accionDepartamento&#39; method=&#39;post&#39;  action=&#39;&quot;</span>.$_SERVER[<span class="stringliteral">&#39;PHP_SELF&#39;</span>].<span class="stringliteral">&quot;&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;modificar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;modificar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Modificar&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;mostrar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;mostrar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Mostrar&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                            . <span class="stringliteral">&quot;&lt;input type=&#39;submit&#39; id=&#39;eliminar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; name=&#39;eliminar&quot;</span>.$codigo.<span class="stringliteral">&quot;&#39; value=&#39;Eliminar&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                            . $altaBaja</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        . <span class="stringliteral">&quot;&lt;/form&gt;&quot;</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    . <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    . <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            ?&gt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        &lt;/tbody&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    &lt;/table&gt;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    &lt;form method=<span class="stringliteral">&#39;post&#39;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;crear&quot;</span>&gt;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        &lt;input type=<span class="stringliteral">&quot;submit&quot;</span> name=<span class="stringliteral">&quot;crear&quot;</span> value=<span class="stringliteral">&quot;Crear&quot;</span>&gt;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    &lt;/form&gt;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    &lt;div style=<span class="stringliteral">&#39;height: 30px&#39;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>&lt;/main&gt;</div>
 <div class="ttc" id="ac_crear_departamento_8php_html_a9f7ca24786e24b62c75101dbc55583e8"><div class="ttname"><a href="c_crear_departamento_8php.html#a9f7ca24786e24b62c75101dbc55583e8">$idioma</a></div><div class="ttdeci">$idioma</div><div class="ttdef"><b>Definition</b> <a href="c_crear_departamento_8php_source.html#l00007">cCrearDepartamento.php:7</a></div></div>
-<div class="ttc" id="ac_mto_departamento_8php_html_aa0c3c83f69b805145e209ff0fcdb590f"><div class="ttname"><a href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a></div><div class="ttdeci">$aDepartamentos</div><div class="ttdef"><b>Definition</b> <a href="c_mto_departamento_8php_source.html#l00068">cMtoDepartamento.php:68</a></div></div>
+<div class="ttc" id="ac_mto_departamento_8php_html_aa0c3c83f69b805145e209ff0fcdb590f"><div class="ttname"><a href="c_mto_departamento_8php.html#aa0c3c83f69b805145e209ff0fcdb590f">$aDepartamentos</a></div><div class="ttdeci">$aDepartamentos</div><div class="ttdef"><b>Definition</b> <a href="c_mto_departamento_8php_source.html#l00075">cMtoDepartamento.php:75</a></div></div>
 <div class="ttc" id="av_mto_departamento_8php_html_a7b81d44d7e557600d6007043fb171643"><div class="ttname"><a href="v_mto_departamento_8php.html#a7b81d44d7e557600d6007043fb171643">$mensajeBusquedaVacia</a></div><div class="ttdeci">$mensajeBusquedaVacia</div><div class="ttdef"><b>Definition</b> <a href="#l00014">vMtoDepartamento.php:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

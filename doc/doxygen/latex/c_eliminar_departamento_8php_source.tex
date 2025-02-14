@@ -1,26 +1,26 @@
 \doxysection{c\+Eliminar\+Departamento.\+php}
-\label{c_eliminar_departamento_8php_source}\index{controller/cEliminarDepartamento.php@{controller/cEliminarDepartamento.php}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{c_eliminar_departamento_8php_source}{}\label{c_eliminar_departamento_8php_source}\index{controller/cEliminarDepartamento.php@{controller/cEliminarDepartamento.php}}
+\mbox{\hyperlink{c_eliminar_departamento_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ <?php}
-\DoxyCodeLine{00007\ \ \ \ \ \$idioma=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
-\DoxyCodeLine{00008\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
-\DoxyCodeLine{00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
-\DoxyCodeLine{00010\ \ \ \ \ \$departamentoEnCurso=\$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}];}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'eliminarDepartamento'};}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00016\ \ \ \ \ \}}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'eliminar'}]))\{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ DepartamentoPDO::eliminarDepartamento(\$departamentoEnCurso-\/>getCodigo());}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'wip'};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{00023\ \ \ \ \ \}}
-\DoxyCodeLine{00024\ \ \ \ \ require\_once\ \$aVistas[\textcolor{stringliteral}{'layout'}];}
-\DoxyCodeLine{00025\ ?>}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00007}\mbox{\hyperlink{c_eliminar_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{00007}}\ \ \ \ \ \mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}=isset(\$\_COOKIE[\textcolor{stringliteral}{'idioma'}])\ ?\ \$\_COOKIE[\textcolor{stringliteral}{'idioma'}]\ :\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00008}00008\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'core/lValidacionFormularios.php'};}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00009}00009\ \ \ \ \ require\_once\ \textcolor{stringliteral}{'config/confDB.php'};}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00010}\mbox{\hyperlink{c_eliminar_departamento_8php_aacd692316fb0f969d7898d8e88a5417b}{00010}}\ \ \ \ \ \mbox{\hyperlink{c_eliminar_departamento_8php_aacd692316fb0f969d7898d8e88a5417b}{\$departamentoEnCurso}}=\$\_SESSION[\textcolor{stringliteral}{'departamentoEnCurso'}];}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'volver'}]))\{}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'eliminarDepartamento'};}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00017}\mbox{\hyperlink{c_eliminar_departamento_8php_afb82b3da0d2ff4027b1502ed8f689dcd}{00017}}\ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_REQUEST[\textcolor{stringliteral}{'eliminar'}]))\{}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ DepartamentoPDO::eliminarDepartamento(\mbox{\hyperlink{c_eliminar_departamento_8php_aacd692316fb0f969d7898d8e88a5417b}{\$departamentoEnCurso}}-\/>getCodigo());}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaEnCurso'}]=\$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}];}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'paginaAnterior'}]=\textcolor{stringliteral}{'wip'};}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ index.php'});}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00024}00024\ \ \ \ \ require\_once\ \mbox{\hyperlink{conf_a_p_p_8php_a7d5be1d8baec6c38421a0ab65783fd6d}{\$aVistas}}[\textcolor{stringliteral}{'layout'}];}
+\DoxyCodeLine{\Hypertarget{c_eliminar_departamento_8php_source_l00025}00025\ ?>}
 
 \end{DoxyCode}

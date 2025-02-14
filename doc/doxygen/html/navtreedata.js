@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "208DWESAplicacionFinal", "index.html", [
+  [ "208DWESAplicaionFinal", "index.html", [
     [ "208DWESAplicacionFinal", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]

@@ -1,29 +1,30 @@
 \doxysection{controller/c\+Mto\+Departamento.php File Reference}
-\label{c_mto_departamento_8php}\index{controller/cMtoDepartamento.php@{controller/cMtoDepartamento.php}}
+\hypertarget{c_mto_departamento_8php}{}\label{c_mto_departamento_8php}\index{controller/cMtoDepartamento.php@{controller/cMtoDepartamento.php}}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ if}(\$resultado=preg\+\_\+grep(\textquotesingle{}/modificar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \textbf{ if}( \$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \textbf{ if}(\$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \textbf{ if}( \$resultado=preg\+\_\+grep(\textquotesingle{}/baja[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \textbf{ if}(\$resultado=preg\+\_\+grep(\textquotesingle{}/alta[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \textbf{ if}(isset( \$\+\_\+\+REQUEST[ \textquotesingle{}crear\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+REQUEST[\textquotesingle{}volver\textquotesingle{}])) \textbf{ if}(isset( \$\+\_\+\+REQUEST[ \textquotesingle{}descripcion\+Dep\textquotesingle{}])) \textbf{ if}(!isset(\$\+\_\+\+SESSION[\textquotesingle{}descripcion\+Dep\textquotesingle{}])) \textbf{ \$a\+Condiciones\+Busqueda}
+\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(\$resultado=preg\+\_\+grep(\textquotesingle{}/modificar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}( \$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(\$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}( \$resultado=preg\+\_\+grep(\textquotesingle{}/baja\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(\$resultado=preg\+\_\+grep(\textquotesingle{}/alta\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}crear\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}descripcion\+Dep\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(!isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}criterio\+Busqueda\+Departamento\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}descripcion\+Dep\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}estado\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(!isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}criterio\+Busqueda\+Departamento\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}estado\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_mto_departamento_8php_a426d114b5a43af3e3e08d0ff5366708c}{\$a\+Condiciones\+Busqueda}}
 \item 
-\textbf{ \$a\+Departamentos} = \textbf{ Departamento\+PDO\+::buscar\+Departamentos}(\$a\+Condiciones\+Busqueda)
+\mbox{\hyperlink{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}{\$a\+Departamentos}} = \mbox{\hyperlink{class_departamento_p_d_o_a202c4eded9fc9e163dc6da1d30f509dd}{Departamento\+PDO\+::buscar\+Departamentos}}(\$a\+Condiciones\+Busqueda)
 \item 
-\textbf{ \$idioma} =isset(\$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}]) ? \$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}] \+: \textquotesingle{}en\textquotesingle{}
+\mbox{\hyperlink{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}} =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}
 \item 
-\textbf{ \$o\+Usuario\+Activo} =\$\+\_\+\+SESSION[\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}]
+\mbox{\hyperlink{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3}{\$o\+Usuario\+Activo}} =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Variable Documentation}
-\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aCondicionesBusqueda@{\$aCondicionesBusqueda}}
+\Hypertarget{c_mto_departamento_8php_a426d114b5a43af3e3e08d0ff5366708c}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aCondicionesBusqueda@{\$aCondicionesBusqueda}}
 \index{\$aCondicionesBusqueda@{\$aCondicionesBusqueda}!cMtoDepartamento.php@{cMtoDepartamento.php}}
-\doxysubsubsection{\$aCondicionesBusqueda}
-{\footnotesize\ttfamily \label{c_mto_departamento_8php_a3348b5bf29f46a48e7fcb9d576192a29} 
-\textbf{ if}( \$resultado=preg\+\_\+grep(\textquotesingle{}/modificar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \textbf{ if}(\$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \textbf{ if}( \$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \textbf{ if}(\$resultado=preg\+\_\+grep(\textquotesingle{}/baja[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \textbf{ if}( \$resultado=preg\+\_\+grep(\textquotesingle{}/alta[A-\/Z]\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \textbf{ if}(isset(\$\+\_\+\+REQUEST[\textquotesingle{}crear\textquotesingle{}])) \textbf{ if}(isset( \$\+\_\+\+REQUEST[ \textquotesingle{}volver\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+REQUEST[\textquotesingle{}descripcion\+Dep\textquotesingle{}])) \textbf{ if} (!isset( \$\+\_\+\+SESSION[ \textquotesingle{}descripcion\+Dep\textquotesingle{}])) \$a\+Condiciones\+Busqueda}
+\doxysubsubsection{\texorpdfstring{\$aCondicionesBusqueda}{\$aCondicionesBusqueda}}
+{\footnotesize\ttfamily \label{c_mto_departamento_8php_a426d114b5a43af3e3e08d0ff5366708c} 
+\mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}( \$resultado=preg\+\_\+grep(\textquotesingle{}/modificar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(\$resultado=preg\+\_\+grep(\textquotesingle{}/mostrar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}( \$resultado=preg\+\_\+grep(\textquotesingle{}/eliminar\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(\$resultado=preg\+\_\+grep(\textquotesingle{}/baja\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys(\$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}( \$resultado=preg\+\_\+grep(\textquotesingle{}/alta\mbox{[}A-\/Z\mbox{]}\{3\}/\textquotesingle{}, array\+\_\+keys( \$\+\_\+\+REQUEST))) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}crear\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}descripcion\+Dep\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(!isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}criterio\+Busqueda\+Departamento\textquotesingle{}\mbox{]}\mbox{[} \textquotesingle{}descripcion\+Dep\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}estado\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_crear_departamento_8php_a51c9bca007df9e8c593e135caabe3476}{if}} (!isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}criterio\+Busqueda\+Departamento\textquotesingle{}\mbox{]}\mbox{[} \textquotesingle{}estado\textquotesingle{}\mbox{]})) \$a\+Condiciones\+Busqueda}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=[}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{':descripcion'}\ =>\ \textcolor{stringliteral}{"{}\%"{}}.\$\_SESSION[\textcolor{stringliteral}{'descripcionDep'}].\textcolor{stringliteral}{"{}\%"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'descripcion'}\ =>\ \textcolor{stringliteral}{"{}\%"{}}.\$\_SESSION[\textcolor{stringliteral}{'criterioBusquedaDepartamento'}][\textcolor{stringliteral}{'descripcionDep'}].\textcolor{stringliteral}{"{}\%"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'altaBaja'}\ =>\ \$\_SESSION[\textcolor{stringliteral}{'criterioBusquedaDepartamento'}][\textcolor{stringliteral}{'estado'}]}
 \DoxyCodeLine{\ \ \ \ ]}
 
 \end{DoxyCode}
@@ -44,35 +45,35 @@ Luis Ferreras González
 \end{DoxySince}
 
 
-Definition at line \textbf{ 65} of file \textbf{ c\+Mto\+Departamento.\+php}.
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00071}{71}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
 
-\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aDepartamentos@{\$aDepartamentos}}
+\Hypertarget{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$aDepartamentos@{\$aDepartamentos}}
 \index{\$aDepartamentos@{\$aDepartamentos}!cMtoDepartamento.php@{cMtoDepartamento.php}}
-\doxysubsubsection{\$aDepartamentos}
+\doxysubsubsection{\texorpdfstring{\$aDepartamentos}{\$aDepartamentos}}
 {\footnotesize\ttfamily \label{c_mto_departamento_8php_aa0c3c83f69b805145e209ff0fcdb590f} 
-\$a\+Departamentos = \textbf{ Departamento\+PDO\+::buscar\+Departamentos}(\$a\+Condiciones\+Busqueda)}
+\$a\+Departamentos = \mbox{\hyperlink{class_departamento_p_d_o_a202c4eded9fc9e163dc6da1d30f509dd}{Departamento\+PDO\+::buscar\+Departamentos}}(\$a\+Condiciones\+Busqueda)}
 
 
 
-Definition at line \textbf{ 68} of file \textbf{ c\+Mto\+Departamento.\+php}.
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00075}{75}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
 
-\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$idioma@{\$idioma}}
+\Hypertarget{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$idioma@{\$idioma}}
 \index{\$idioma@{\$idioma}!cMtoDepartamento.php@{cMtoDepartamento.php}}
-\doxysubsubsection{\$idioma}
+\doxysubsubsection{\texorpdfstring{\$idioma}{\$idioma}}
 {\footnotesize\ttfamily \label{c_mto_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8} 
-\$idioma =isset(\$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}]) ? \$\+\_\+\+COOKIE[\textquotesingle{}idioma\textquotesingle{}] \+: \textquotesingle{}en\textquotesingle{}}
+\$idioma =isset(\$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]}) ? \$\+\_\+\+COOKIE\mbox{[}\textquotesingle{}idioma\textquotesingle{}\mbox{]} \+: \textquotesingle{}en\textquotesingle{}}
 
 
 
-Definition at line \textbf{ 69} of file \textbf{ c\+Mto\+Departamento.\+php}.
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00076}{76}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
 
-\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
+\Hypertarget{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3}\index{cMtoDepartamento.php@{cMtoDepartamento.php}!\$oUsuarioActivo@{\$oUsuarioActivo}}
 \index{\$oUsuarioActivo@{\$oUsuarioActivo}!cMtoDepartamento.php@{cMtoDepartamento.php}}
-\doxysubsubsection{\$oUsuarioActivo}
+\doxysubsubsection{\texorpdfstring{\$oUsuarioActivo}{\$oUsuarioActivo}}
 {\footnotesize\ttfamily \label{c_mto_departamento_8php_ab930bc009cbf7b3aecaf44c3280298d3} 
-\$o\+Usuario\+Activo =\$\+\_\+\+SESSION[\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}]}
+\$o\+Usuario\+Activo =\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}usuario\+DAW208\+App\+Final\textquotesingle{}\mbox{]}}
 
 
 
-Definition at line \textbf{ 70} of file \textbf{ c\+Mto\+Departamento.\+php}.
+Definition at line \mbox{\hyperlink{c_mto_departamento_8php_source_l00077}{77}} of file \mbox{\hyperlink{c_mto_departamento_8php_source}{c\+Mto\+Departamento.\+php}}.
 

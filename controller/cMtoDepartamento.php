@@ -57,17 +57,23 @@
         exit();
     }
     if(isset($_REQUEST['descripcionDep'])){
-        $_SESSION['descripcionDep']=$_REQUEST['descripcionDep'];
+        $_SESSION['criterioBusquedaDepartamento']['descripcionDep']=$_REQUEST['descripcionDep'];
     }
-    if(!isset($_SESSION['descripcionDep'])){
-        $_SESSION['descripcionDep']=null;
+    if(!isset($_SESSION['criterioBusquedaDepartamento']['descripcionDep'])){
+        $_SESSION['criterioBusquedaDepartamento']['descripcionDep']=null;
+    }
+    if(isset($_REQUEST['estado'])){
+        $_SESSION['criterioBusquedaDepartamento']['estado']=$_REQUEST['estado'];
+    }
+    if(!isset($_SESSION['criterioBusquedaDepartamento']['estado'])){
+        $_SESSION['criterioBusquedaDepartamento']['estado']='Todos';
     }
     $aCondicionesBusqueda=[
-        ':descripcion' => "%".$_SESSION['descripcionDep']."%"
+        'descripcion' => "%".$_SESSION['criterioBusquedaDepartamento']['descripcionDep']."%",
+        'altaBaja' => $_SESSION['criterioBusquedaDepartamento']['estado']
     ];
     $aDepartamentos= DepartamentoPDO::buscarDepartamentos($aCondicionesBusqueda);
     $idioma=isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'en';
     $oUsuarioActivo=$_SESSION['usuarioDAW208AppFinal'];
-    require_once $aVistas['layout'];
-    
+    require_once $aVistas['layout']; 
 ?>

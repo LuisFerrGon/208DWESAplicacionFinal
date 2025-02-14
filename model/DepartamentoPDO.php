@@ -5,7 +5,7 @@
      * Clase para funciones de departamento
      * 
      * @author Luis Ferreras González
-     * @version 2.0.3 Fecha última modificación: 12/02/2025
+     * @version 2.0.3 Fecha última modificación: 14/02/2025
      * @since 1.0.1
      * @since 1.0.2 Función modificarDepartamento, buscarPorCodigo
      * @since 2.0.2 Modificación a buscarPorCodigo
@@ -13,6 +13,7 @@
      * @since 2.0.3 Función crearDepartamento
      *              Función bajaLogica
      *              Función altaLogica
+     *              Modificacion buscarDepartamentos
      */
     class DepartamentoPDO{
         /**
@@ -23,18 +24,33 @@
          * @param array $aCondiciones Array con las condiciones de busqueda
          * @return array Array con todos los departamentos que se adhieren a las condiciones
          * @author Luis Ferreras González
-         * @version 1.0.2 Fecha última modificación: 06/02/2025
+         * @version 2.0.3 Fecha última modificación: 14/02/2025
          * @since 1.0.2
+         * @since 2.0.3 Devuelve enBaja y anAlta
          */
         public static function buscarDepartamentos($aCondiciones){
             try{
                 $aDepartamentos=[];
-                $consulta=<<<QUERY
+                $consultaInicio=<<<QUERY
                     SELECT * FROM T02_Departamento
-                    WHERE T02_DescDepartamento LIKE :descripcion
+                    WHERE T02_DescDepartamento LIKE '{$aCondiciones['descripcion']}'
+                QUERY;
+                switch($aCondiciones['altaBaja']){
+                    case 'En alta':
+                        $consultaMedio="AND T02_FechaBajaDepartamento IS NULL";
+                        break;
+                    case 'En baja':
+                        $consultaMedio="AND T02_FechaBajaDepartamento IS NOT NULL";
+                        break;
+                    default:
+                        $consultaMedio="";
+                        break;
+                }
+                $consultaFin=<<<QUERY
                     ;
                 QUERY;
-                $resultado=DBPDO::ejecutarConsulta($consulta, $aCondiciones, false);
+                $consulta=$consultaInicio.$consultaMedio.$consultaFin;
+                $resultado=DBPDO::ejecutarConsulta($consulta, null, false);
                 while($departamento=$resultado->fetchObject()){
                     array_push($aDepartamentos, new Departamento(
                         $departamento->T02_CodDepartamento,

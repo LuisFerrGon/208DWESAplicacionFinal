@@ -1,76 +1,76 @@
 \doxysection{v\+Inicio\+Privado.\+php}
-\label{v_inicio_privado_8php_source}\index{view/vInicioPrivado.php@{view/vInicioPrivado.php}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{v_inicio_privado_8php_source}{}\label{v_inicio_privado_8php_source}\index{view/vInicioPrivado.php@{view/vInicioPrivado.php}}
+\mbox{\hyperlink{v_inicio_privado_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ <?php}
-\DoxyCodeLine{00012\ \ \ \ \ \$bienvenida=[}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>[}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}¡Bienvenido\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ es\ la\ primera\ vez\ que\ te\ conectas."{}},}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}¡Bienvenido\ de\ nuevo\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ es\ la\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}ª\ vez\ que\ te\ conectas,\ te\ conectaste\ por\ última\ vez\ el\ "{}}.date(\textcolor{stringliteral}{'d/m/Y\ H:i:s'},\ \$avInicioPrivado[\textcolor{stringliteral}{'fecha'}])}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ],}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>[}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}Welcome\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ This\ is\ the\ first\ time\ you\ log\ in."{}},}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}Welcome\ again\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ You\ have\ logged\ in\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}\ times,\ last\ time\ was\ "{}}.date(\textcolor{stringliteral}{'m/d/Y\ H:i:s'},\ \$avInicioPrivado[\textcolor{stringliteral}{'fecha'}])}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ ],}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}\ =>\ [}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}Bem-\/vindo\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ é\ a\ primeira\ vez\ que\ você\ se\ conecta."{}},}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}Bem-\/vindo\ de\ volta\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ é\ a\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}\ vez\ que\ você\ se\ conecta,\ e\ você\ se\ conectou\ pela\ última\ vez\ em\ "{}}.date(\textcolor{stringliteral}{'d/m/Y\ H:i:s'},\ \$avInicioPrivado[\textcolor{stringliteral}{'fecha'}])}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ ]}
-\DoxyCodeLine{00025\ \ \ \ \ ];}
-\DoxyCodeLine{00026\ ?>}
-\DoxyCodeLine{00027\ <header>}
-\DoxyCodeLine{00028\ \ \ \ \ <h1>Aplicación\ Final</h1>}
-\DoxyCodeLine{00029\ </header>}
-\DoxyCodeLine{00030\ <main>}
-\DoxyCodeLine{00031\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\$idioma==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ </section>}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}cerrarsesion"{}}\ value=\textcolor{stringliteral}{"{}Cerrar\ Sesión"{}}>}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}detalle"{}}\ value=\textcolor{stringliteral}{"{}Detalle"{}}>}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}rest"{}}\ value=\textcolor{stringliteral}{"{}REST"{}}>}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}mtoDepartamento"{}}\ value=\textcolor{stringliteral}{"{}Mantenimiento\ Departamentos"{}}>}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}error"{}}\ value=\textcolor{stringliteral}{"{}Error"{}}>}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}cuenta"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$avInicioPrivado['descripcion'];?>"{}}>}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ </section>}
-\DoxyCodeLine{00057\ \ \ \ \ </div>}
-\DoxyCodeLine{00058\ \ \ \ \ <?php}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$bienvenida[\$idioma][\$avInicioPrivado[\textcolor{stringliteral}{'conexiones'}]>1].\textcolor{stringliteral}{"{}</p>"{}};}
-\DoxyCodeLine{00060\ \ \ \ \ ?>}
-\DoxyCodeLine{00061\ \ \ \ \ <img\ alt=\textcolor{stringliteral}{"{}Imagen\ del\ día\ de\ NASA"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fotoNasaJs"{}}/>}
-\DoxyCodeLine{00062\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
-\DoxyCodeLine{00063\ </main>}
-\DoxyCodeLine{00064\ <script\ type=\textcolor{stringliteral}{"{}module"{}}>}
-\DoxyCodeLine{00065\ \ \ \ \ fetch(\textcolor{stringliteral}{"{}https://api.nasa.gov/planetary/apod?api\_key=2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ"{}})}
-\DoxyCodeLine{00066\ \ \ \ \ .then(response=>\{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(response.ok)\{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response.json();}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Error(\textcolor{stringliteral}{"{}Error:\ "{}}+response.status);}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00072\ \ \ \ \ \})}
-\DoxyCodeLine{00073\ \ \ \ \ .then(data=>\{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ document.getElementById(\textcolor{stringliteral}{"{}fotoNasaJs"{}}).src=data.url;}
-\DoxyCodeLine{00075\ \ \ \ \ \})}
-\DoxyCodeLine{00076\ \ \ \ \ .\textcolor{keywordflow}{catch}(error=>\{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ document.getElementById(\textcolor{stringliteral}{"{}fotoNasaJs"{}}).alt=\textcolor{stringliteral}{"{}Ha\ ocurrido\ un\ error\ al\ intentar\ conseguir\ la\ imagen."{}};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ console.log(error);}
-\DoxyCodeLine{00079\ \ \ \ \ \});}
-\DoxyCodeLine{00080\ </script>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00012}\mbox{\hyperlink{v_inicio_privado_8php_a4ac2ec8453d74660948d753ae245380e}{00012}}\ \ \ \ \ \mbox{\hyperlink{v_inicio_privado_8php_a4ac2ec8453d74660948d753ae245380e}{\$bienvenida}}=[}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'es'}=>[}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}¡Bienvenido\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ es\ la\ primera\ vez\ que\ te\ conectas."{}},}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}¡Bienvenido\ de\ nuevo\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ es\ la\ "{}}.\mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}ª\ vez\ que\ te\ conectas,\ te\ conectaste\ por\ última\ vez\ el\ "{}}.date(\textcolor{stringliteral}{'d/m/Y\ H:i:s'},\ \mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'fecha'}])}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'en'}=>[}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}Welcome\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ This\ is\ the\ first\ time\ you\ log\ in."{}},}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}Welcome\ again\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ You\ have\ logged\ in\ "{}}.\mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}\ times,\ last\ time\ was\ "{}}.date(\textcolor{stringliteral}{'m/d/Y\ H:i:s'},\ \mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'fecha'}])}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pt'}\ =>\ [}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ 0=>\textcolor{stringliteral}{"{}Bem-\/vindo\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ é\ a\ primeira\ vez\ que\ você\ se\ conecta."{}},}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ 1=>\textcolor{stringliteral}{"{}Bem-\/vindo\ de\ volta\ "{}}.\$avInicioPrivado[\textcolor{stringliteral}{'descripcion'}].\textcolor{stringliteral}{"{}!\ Esta\ é\ a\ "{}}.\mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'conexiones'}].\textcolor{stringliteral}{"{}\ vez\ que\ você\ se\ conecta,\ e\ você\ se\ conectou\ pela\ última\ vez\ em\ "{}}.date(\textcolor{stringliteral}{'d/m/Y\ H:i:s'},\ \mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'fecha'}])}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00025}00025\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00026}00026\ ?>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00027}00027\ <header>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00028}00028\ \ \ \ \ <h1>Aplicación\ Final</h1>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00029}00029\ </header>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00030}00030\ <main>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00031}00031\ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}top"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}idiomas"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=es"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}es"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Español</a>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=en"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}en"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Inglés</a>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00035}\mbox{\hyperlink{v_inicio_privado_8php_adbfbdf3fa9117b4aa7a20e97cddd1320}{00035}}\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}?idioma=pt"{}}\ <?php\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}==\textcolor{stringliteral}{"{}pt"{}})\{echo\ \textcolor{stringliteral}{"{}id='idiomaEscogido'"{}};\}?>>Portugués</a>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ <section\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}botones"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}cerrarsesion"{}}\ value=\textcolor{stringliteral}{"{}Cerrar\ Sesión"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}detalle"{}}\ value=\textcolor{stringliteral}{"{}Detalle"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}rest"{}}\ value=\textcolor{stringliteral}{"{}REST"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}mtoDepartamento"{}}\ value=\textcolor{stringliteral}{"{}Mantenimiento\ Departamentos"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}error"{}}\ value=\textcolor{stringliteral}{"{}Error"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ <form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}submit"{}}\ name=\textcolor{stringliteral}{"{}cuenta"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$avInicioPrivado['descripcion'];?>"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ </section>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00057}00057\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00058}00058\ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<p>"{}}.\$bienvenida[\mbox{\hyperlink{c_crear_departamento_8php_a9f7ca24786e24b62c75101dbc55583e8}{\$idioma}}][\mbox{\hyperlink{c_inicio_privado_8php_add72cd2f768b91ea1047df19363e0024}{\$avInicioPrivado}}[\textcolor{stringliteral}{'conexiones'}]>1].\textcolor{stringliteral}{"{}</p>"{}};}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00060}00060\ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00061}00061\ \ \ \ \ <img\ alt=\textcolor{stringliteral}{"{}Imagen\ del\ día\ de\ NASA"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fotoNasaJs"{}}/>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00062}00062\ \ \ \ \ <div\ style=\textcolor{stringliteral}{'height:\ 30px'}></div>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00063}00063\ </main>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00064}00064\ <script\ type=\textcolor{stringliteral}{"{}module"{}}>}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00065}00065\ \ \ \ \ fetch(\textcolor{stringliteral}{"{}https://api.nasa.gov/planetary/apod?api\_key=2CQ2qjSy8qJNfT8RW0fklAwybZCBgqXx2KoI99JQ"{}})}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00066}00066\ \ \ \ \ .then(response=>\{}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(response.ok)\{}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response.json();}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Error(\textcolor{stringliteral}{"{}Error:\ "{}}+response.status);}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00072}00072\ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00073}00073\ \ \ \ \ .then(data=>\{}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ document.getElementById(\textcolor{stringliteral}{"{}fotoNasaJs"{}}).src=data.url;}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00075}00075\ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00076}00076\ \ \ \ \ .\textcolor{keywordflow}{catch}(error=>\{}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ document.getElementById(\textcolor{stringliteral}{"{}fotoNasaJs"{}}).alt=\textcolor{stringliteral}{"{}Ha\ ocurrido\ un\ error\ al\ intentar\ conseguir\ la\ imagen."{}};}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ console.log(error);}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00079}00079\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{v_inicio_privado_8php_source_l00080}00080\ </script>}
 
 \end{DoxyCode}

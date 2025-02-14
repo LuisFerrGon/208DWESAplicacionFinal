@@ -41,7 +41,14 @@
                         <label for="descripcionDep">Descripción departamento:</label>
                     </td>
                     <td>
-                        <input type="text" id="descripcionDep" name="descripcionDep" placeholder="Ej: Descripción" maxlength="255" minlength="0" value="<?php echo $_SESSION['descripcionDep']; ?>">
+                        <input type="text" id="descripcionDep" name="descripcionDep" placeholder="Ej: Descripción" maxlength="255" minlength="0" value="<?php echo $_SESSION['criterioBusquedaDepartamento']['descripcionDep']; ?>">
+                    </td>
+                    <td>
+                        <select name="estado" id="estado">
+                            <option value="Todos" <?php if($_SESSION['criterioBusquedaDepartamento']['estado']=='Todos'){echo "selected";}?>>Todos</option>
+                            <option value="En alta" <?php if($_SESSION['criterioBusquedaDepartamento']['estado']=='En alta'){echo "selected";}?>>En alta</option>
+                            <option value="En baja" <?php if($_SESSION['criterioBusquedaDepartamento']['estado']=='En baja'){echo "selected";}?>>En baja</option>
+                        </select>
                     </td>
                 </tr>
             </tbody>
@@ -69,7 +76,7 @@
             <?php
             if(count($aDepartamentos)==0){
                 echo "<tr>"
-                . "<td colspan='5'>".$mensajeBusquedaVacia[$idioma]."</td>"
+                . "<td colspan='6'>".$mensajeBusquedaVacia[$idioma]."</td>"
                 . "</tr>";
             }else{
                 foreach($aDepartamentos as $oDepartamento){
